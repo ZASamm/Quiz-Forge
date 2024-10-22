@@ -2,7 +2,6 @@
 // The different questions can be handled by a function called inside the modal.
 // The modal function needs to receive the squareID to know which square is pressed 
 
-
 function handleModal() {
 
     const qModal = document.getElementById("qModal");
@@ -15,7 +14,7 @@ function handleModal() {
         square.setAttribute("squareIndex", index);
         square.addEventListener("click", function () {
             
-            loadQuestion(square.getAttribute("squareIndex"));
+            loadQuestion(square.getAttribute("squareIndex"), qModal);
 
             qModal.style.display = "block";
 
@@ -57,6 +56,20 @@ window.onclick = function (event) {
 
 document.addEventListener('DOMContentLoaded', handleModal);
 
-function loadQuestion(square) {
+function generateQuestionList () {
+    let questionList = [];
+    return questionList;
+}
+
+function loadQuestion(squareIndex, modal) {
     //alert(`Question ${square} Clicked`);
+    let modalContent = document.querySelector(".modal-content");
+    document.querySelector(".category").innerHTML = `Question ${Number(squareIndex) + 1}`;
+    document.querySelector(".questionSection").innerHTML = `What is Lorum Ipsum?`;
+    document.querySelector(".answerSection").innerHTML = `
+    <button class="answer-button">Answer 1</button>
+    <button class="answer-button">Answer 2</button>
+    <button class="answer-button">Answer 3</button>
+    <button class="answer-button">Answer 4</button>
+    `;
 }

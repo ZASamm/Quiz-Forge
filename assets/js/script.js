@@ -1,7 +1,7 @@
-
 document.addEventListener('DOMContentLoaded', function(){
     let positon = 0
     movePlayer(0, getSquares());
+
     document.addEventListener('keydown',function(event){ 
         if(event.key === 'ArrowRight'){
             let squares = getSquares();
