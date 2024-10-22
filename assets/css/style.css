@@ -10,6 +10,9 @@
 
 }
 
+body {
+  min-height: 100vh;
+}
 
 .row{
   padding: 0px;
@@ -30,10 +33,11 @@
 #gameBoard{
   position: relative;
   background-color:var(--BGDark);
-  height: 100%;
+  height: auto;
   width:100%;
   /* order:-1; */
   border: var(--Cyan) solid 5px;
+  overflow: hidden;
 }
 
 #screen_scanlines, #screen_bezel {
@@ -45,7 +49,7 @@
 }
 
 #gameMenu{
-  /* position: relative; */
+  bottom: 0;
   background-color:var(--BGDark);
   min-height: 130px;
   border-bottom: var(--Cyan) solid 5px;
@@ -53,6 +57,7 @@
   border-right: var(--Cyan) solid 5px;
   color: var(--CyanBright);
 }
+
 
 .square{
   background-color: var(--CyanBright);
