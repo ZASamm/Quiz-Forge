@@ -57,17 +57,31 @@
 }
 
 .square{
-  /* background-color: var(--CyanBright); */
+  background: url("../images/Closed Folder.svg") no-repeat center center/ 90px;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+}
+
+.player-square{
+  background: url("../images/Open Folder.svg") no-repeat center center/ 90px;
   height:100px;
   width: 100px;
   margin: 10px;
   box-shadow: 0px 0px 20px 0px #0ff;
-  border-radius: 20px;
 }
 
-.player-square{
-  /* background-color: rgb(255, 0, 0); */
-  height:100px;
+
+.correct-square {
+  background: url("../images/Correct Folder.svg") no-repeat center center/ 90px;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+}
+
+.incorrect-square {
+  background: url("../images/Incorrect Folder.svg") no-repeat center center/ 90px;
+  height: 100px;
   width: 100px;
   margin: 10px;
 }
