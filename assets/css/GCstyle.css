@@ -26,6 +26,7 @@
     border: 1px solid cyan;
     width: 90vw;
     max-width: 1400px;
+    color: cyan;
 
 }
 
@@ -51,8 +52,10 @@
 .modal-content h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
+    color: cyan;
 }
 
+/* Submission Modal */
 
 
 
