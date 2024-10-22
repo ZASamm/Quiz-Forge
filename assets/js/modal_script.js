@@ -1,6 +1,7 @@
 // Each square will pop up the same modal with a different question.
 // The different questions can be handled by a function called inside the modal.
-// The modal function needs to receive the squareID to know which square is pressed 
+// The modal function needs to receive the squareID to know which square is pressed
+
 
 function handleModal() {
 
