@@ -27,7 +27,7 @@
 }
 
 #Logo{
-  height: 20vh;
+  height: 8vh;
 }
 
 #gameBoard{
@@ -65,21 +65,29 @@
   background: url("../images/Closed Folder.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100%;
-  height: 100px;
-  width: 100px;
+  background-size: 60%;
+  height: 10vw;
+  width: calc(10vw * 1.083);
   margin: 10px;
+  transition: all 0.05s ease-in-out;
+    -moz-transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.05s ease-in-out;
+    -o-transition: all 0.05s ease-in-out;
 }
 
 .player-square{
   background: url("../images/Open Folder.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100%;
-  height: 100px;
-  width: 100px;
+  background-size: 60%;
+  height: 10vw;
+  width: calc(10vw * 1.214);
   margin: 10px;
-  box-shadow: 0px 0px 20px 0px #0ff;
+  transition: all 0.05s ease-in-out;
+    -moz-transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.05s ease-in-out;
+    -o-transition: all 0.05s ease-in-out;
+  /* box-shadow: 0px 0px 20px 0px #0ff; */
 }
 
 
@@ -87,20 +95,28 @@
   background: url("../images/Correct Folder.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100%;
-  height: 100px;
-  width: 100px;
+  background-size: 60%;
+  height: 10vw;
+  width: calc(10vw * 1.083);
   margin: 10px;
+  transition: all 0.05s ease-in-out;
+    -moz-transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.05s ease-in-out;
+    -o-transition: all 0.05s ease-in-out;
 }
 
 .incorrect-square {
   background: url("../images/Incorrect Folder.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100%;
-  height: 100px;
-  width: 100px;
+  background-size: 60%;
+  height: 10vw;
+  width: calc(10vw * 1.083);
   margin: 10px;
+  transition: all 0.05s ease-in-out;
+    -moz-transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.05s ease-in-out;
+    -o-transition: all 0.05s ease-in-out;
 }
 
 /* Media query for larger screens above 1400px
