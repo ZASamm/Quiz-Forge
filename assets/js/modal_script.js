@@ -115,6 +115,19 @@ function loadQuestionsFromFile(filePaths) {
  */
 function generateQuestionSet(numberOfQuestions, sourceQuestions) {
     let listOfQuestions = [];
-    console.log(Math.floor(Math.random() * sourceQuestions.length));
+    let questionNumbers = [];
+    /*while (questionNumbers.length < numberOfQuestions) {
+
+        // Generate a new number between 0 and the length of the source questions array.
+        let number = Math.floor(Math.random() * sourceQuestions.length);
+
+        // If that number is not already in the questionNumbers array, add it to the question numbers array.
+        if (!(questionNumbers.includes(number))) {
+            questionNumbers.push(number);
+
+            // Also, add that question index to the listOfQuestions array.
+            listOfQuestions.push(sourceQuestions[number]);
+        }
+    }*/
     return listOfQuestions;
 }
