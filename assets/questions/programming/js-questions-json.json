@@ -16,8 +16,7 @@
     "difficulty": "medium",
     "category": "Web Development: JavaScript",
     "question": "In JavaScript, == and === operators are identical.",
-    "correct_answer": "False",
-    "incorrect_answers": ["True"]
+    "correct_answer": "False"
   },
   {
     "type": "multiple",
@@ -36,8 +35,7 @@
     "difficulty": "medium",
     "category": "Web Development: JavaScript",
     "question": "JavaScript is a statically typed language.",
-    "correct_answer": "False",
-    "incorrect_answers": ["True"]
+    "correct_answer": "False"
   },
   {
     "type": "multiple",
@@ -56,8 +54,7 @@
     "difficulty": "medium",
     "category": "Web Development: JavaScript",
     "question": "The let keyword declares a block-scoped variable.",
-    "correct_answer": "True",
-    "incorrect_answers": ["False"]
+    "correct_answer": "True"
   },
   {
     "type": "multiple",
@@ -76,7 +73,20 @@
     "difficulty": "medium",
     "category": "Web Development: JavaScript",
     "question": "Arrow functions in JavaScript always need curly braces {}.",
-    "correct_answer": "False",
-    "incorrect_answers": ["True"]
+    "correct_answer": "False"
+  },
+  {
+    "type": "text",
+    "difficulty": "hard",
+    "category": "Web Development: JavaScript",
+    "question": "Complete the code to create a function:\n_______ greet(name) {\n  return `Hello, ${name\n      }!`;\n    }",
+    "correct_answers": ["function"]
+  },
+  {
+    "type": "text",
+    "difficulty": "hard",
+    "category": "Web Development: JavaScript",
+    "question": "Complete the code to create a Promise object:\nconst myPromise = new ________;",
+    "correct_answers": ["Promise()"]
   }
 ]

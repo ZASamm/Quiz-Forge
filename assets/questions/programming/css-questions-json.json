@@ -16,8 +16,7 @@
     "difficulty": "medium",
     "category": "Web Development: CSS",
     "question": "In CSS, the # symbol is used to select elements by their class.",
-    "correct_answer": "False",
-    "incorrect_answers": ["True"]
+    "correct_answer": "False"
   },
   {
     "type": "multiple",
@@ -36,8 +35,7 @@
     "difficulty": "medium",
     "category": "Web Development: CSS",
     "question": "The z-index property only works on elements with a position value of static.",
-    "correct_answer": "False",
-    "incorrect_answers": ["True"]
+    "correct_answer": "False"
   },
   {
     "type": "multiple",
@@ -56,8 +54,7 @@
     "difficulty": "medium",
     "category": "Web Development: CSS",
     "question": "CSS Grid and Flexbox are the same thing.",
-    "correct_answer": "False",
-    "incorrect_answers": ["True"]
+    "correct_answer": "False"
   },
   {
     "type": "multiple",
@@ -76,7 +73,20 @@
     "difficulty": "medium",
     "category": "Web Development: CSS",
     "question": "The box-sizing: border-box property includes padding and border in the element's total width and height.",
-    "correct_answer": "True",
-    "incorrect_answers": ["False"]
+    "correct_answer": "True"
+  },
+  {
+    "type": "text",
+    "difficulty": "hard",
+    "category": "Web Development: CSS",
+    "question": "Complete the CSS rule to set the text color to red:\ncss {\n  _____ : red;\n}",
+    "correct_answers": ["color", "Color", "COLOR"]
+  },
+  {
+    "type": "text",
+    "difficulty": "hard",
+    "category": "Web Development: CSS",
+    "question": "Complete the CSS rule to create a flexible container:\n.container {\n  display: _____;\n}",
+    "correct_answers": ["flex", "Flex", "FLEX"]
   }
 ]

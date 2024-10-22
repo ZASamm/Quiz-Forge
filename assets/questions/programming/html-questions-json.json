@@ -16,8 +16,7 @@
     "difficulty": "easy",
     "category": "Web Development: HTML",
     "question": "The <head> element is where you put visible page content.",
-    "correct_answer": "False",
-    "incorrect_answers": ["True"]
+    "correct_answer": "False"
   },
   {
     "type": "multiple",
@@ -36,8 +35,7 @@
     "difficulty": "medium",
     "category": "Web Development: HTML",
     "question": "The alt attribute in an <img> tag is optional.",
-    "correct_answer": "False",
-    "incorrect_answers": ["True"]
+    "correct_answer": "False"
   },
   {
     "type": "multiple",
@@ -56,8 +54,7 @@
     "difficulty": "easy",
     "category": "Web Development: HTML",
     "question": "HTML comments start with <!-- and end with -->.",
-    "correct_answer": "True",
-    "incorrect_answers": ["False"]
+    "correct_answer": "True"
   },
   {
     "type": "multiple",
@@ -76,7 +73,20 @@
     "difficulty": "medium",
     "category": "Web Development: HTML",
     "question": "The <article> element specifies independent, self-contained content.",
-    "correct_answer": "True",
-    "incorrect_answers": ["False"]
+    "correct_answer": "True"
+  },
+  {
+    "type": "text",
+    "difficulty": "hard",
+    "category": "Web Development: HTML",
+    "question": "Complete the code to create a dropdown list:\nhtml<_____ name=\"cars\">\n  <option value=\"volvo\">Volvo</option>\n  <option value=\"saab\">Saab</option>\n</select>",
+    "correct_answers": ["select", "Select", "SELECT"]
+  },
+  {
+    "type": "text",
+    "difficulty": "hard",
+    "category": "Web Development: HTML",
+    "question": "Complete the code to create a hyperlink:\n<a _____ = \"https://www.example.com\">Click here</a>",
+    "correct_answers": ["href", "Href", "HREF"]
   }
 ]
