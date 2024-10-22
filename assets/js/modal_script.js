@@ -11,6 +11,7 @@ function handleModal() {
     ];
     let possibleQuestions = loadQuestionsFromFile(filePaths);
     console.log(possibleQuestions);
+    generateQuestionSet(9, possibleQuestions);
 
     const qModal = document.getElementById("qModal");
     const squares = document.querySelectorAll(".square");
@@ -104,4 +105,16 @@ function loadQuestionsFromFile(filePaths) {
         });
     }
     return(questions);
+}
+
+/**
+ * Function that generates a random list of questions.
+ * @param {Number} numberOfQuestions
+ * @param {Array} sourceQuestions 
+ * @returns {Array} List of random questions.
+ */
+function generateQuestionSet(numberOfQuestions, sourceQuestions) {
+    let listOfQuestions = [];
+    console.log(Math.floor(Math.random() * sourceQuestions.length));
+    return listOfQuestions;
 }
