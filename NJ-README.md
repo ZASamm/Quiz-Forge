@@ -43,15 +43,29 @@ There is no particular audience targeted for this application, however with Quiz
   **Acceptance Criteria:** Questions cover various programming topics. There are enough questions to avoid frequent repetition
 
 ### Could-Have User Stories
-- **User Story 1:** Briefly describe the could-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the could-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+- **Timer Toggle:** As a player, I want an optional question timer to challenge myself to answer quickly.
+  **Acceptance Criteria:** A timer can be toggled on/off in the settings, Time remaining is displayed during questions, Time taken to answer affects scoring (if the timer is enabled)
 
+- **Puzzle Integration:** As a learner who enjoys puzzles, I want to solve simple puzzles (like a command-line interface simulation) to apply my programming knowledge more interactively.
+  **Acceptance Criteria:** At least one puzzle type is implemented, Puzzles are interspersed with quiz questions, Clear instructions/hints are provided for how to solve the puzzles
+
+- **Animated Traversal:** As a player who enjoys animated content, I want to see my character move smoothly between stages, so that the game feels more dynamic.
+  **Acceptance Criteria:** Character visibly moves from one stage to the next, Movement animation is smooth (lerping)
+
+- **Visual Theme Toggle:** As a player who values theme customisation, I want to choose between different visual themes, so that I can customize my game experience.
+  **Acceptance Criteria:** At least two themes are available (e.g., light and dark mode), Theme can be changed from the main menu or settings
+
+- **Storyline:** As a player that enjoys story elements, I want to experience an overarching story, so that the game feels more immersive.
+  **Acceptance Criteria:** Brief story snippets are presented between stages or questions, Story elements are relevant to the programming theme
+
+  - **Audio Integration:** As a player who values audio feedback, I want to have sounds attached to actions performed within the game, to make the experience more rounded and immersive
+  **Acceptance Criteria:** At least two themes are available (e.g., light and dark mode), Theme can be changed from the main menu or settings
 
 ## Design Decisions
 
 ### Wireframes
+
+Within the initial planning stage of the project, wireframes were created to provide initial layouts and to 
 
 <br>
 <p align="center">
@@ -79,28 +93,49 @@ There is no particular audience targeted for this application, however with Quiz
 </p>
 <br>
 
-Include wireframes for key sections of your website.  
-Briefly describe the design choices, including layout, colour schemes, and fonts.  
-**Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
+
 
 ### Accessibility Considerations
-Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
-**Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
 
-## AI Tools Usage
+Accessibility considerations have been considered throughout the projects creation. Such as colour schemes, colour contrasts, fonts and alt text attributes are set correctly.
 
-### DALL-E
-Describe how DALL-E was used for image generation, including examples of successes and challenges.  
-**Guidance:** Specifically mention how you used DALL-E for image generation and the impact this had on your design process.
+#### Colour Scheme
+
+<p align="center">
+<img src="assets/readMe Images/colour-scheme.png" alt="Image of the colour scheme being used">
+</p>
+<br>
+
+#### Colour Contrast Checks
+
+<p align="center">
+<img src="assets/readMe Images/colour-contrast-check.png" alt="Image of the colour scheme being used">
+</p>
+<br>
+
+#### Fonts
+
+<p align="center">
+<img src="assets/readMe Images/" alt="Image of font used for the project">
+</p>
+<br>
 
 ## Features Implementation
 
 ### Core Features (Must-Haves)
-- **Feature 1:** Description of the implemented feature.
-- **Feature 2:** Description of the implemented feature.
+- **Game Board:** A digital game board to show the users progression, different indicators to show if players are correct, wrong, and which icon is active.
 
-(Include all must-have features)  
-**Guidance:** Use this section as you complete Phase 2: Must User Stories Implementation & Testing. Document all the must-have features you implemented, explaining how they align with the user stories and acceptance criteria.
+<p align="center">
+<img src="assets/readMe Images/" alt="Image of Game Board">
+</p>
+<br>
+
+- **Quiz Questions:** Quiz questions to help the user revise and test their knowledge on programming. Programming is the default topic. The quiz questions are presented to the user by a modal popup.
+
+<p align="center">
+<img src="assets/readMe Images/" alt="Image of Quiz Questions">
+</p>
+<br>
 
 ### Advanced Features (Should-Haves)
 - **Feature 1:** Description of the implemented feature.
@@ -116,11 +151,6 @@ Describe how DALL-E was used for image generation, including examples of success
 (Include any could-have features that were implemented or considered)  
 **Guidance:** If any could-have features were implemented, describe them here. This is an opportunity to showcase extra work done beyond the initial scope. But remember - keep it simple! Focus on the Must stories first. Could user story features are commonly earmarked for future project iterations.
 
-## AI Tools Usage
-
-### GitHub Copilot
-Describe how GitHub Copilot assisted in coding, including any challenges or adjustments needed.  
-**Guidance:** Reflect on how GitHub Copilot assisted in coding, particularly any challenges or adjustments that were needed to align with project goals.
 
 ## Testing and Validation
 
@@ -129,16 +159,15 @@ Summarize the results of testing across different devices and screen sizes.
 Mention any issues found and how they were resolved.  
 **Guidance:** Summarize the results of your testing across various devices using tools like Chrome DevTools, as outlined in Phase 2. Mention any issues found and how they were resolved.
 
+### Known Bugs
+
+Quiz question icons, don't scale properly on higher resolution screens, the question icons are really small on the screen.
+
 ### Validation
 Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
 Include the results of the validation process.  
 **Guidance:** Document your use of W3C and Jigsaw validators to ensure your HTML and CSS meet web standards. Include any errors or warnings encountered and how they were resolved.
 
-## AI Tools Usage
-
-### GitHub Copilot
-Brief reflection on the effectiveness of using AI tools for debugging and validation.  
-**Guidance:** Reflect on how GitHub Copilot assisted with debugging and validation, particularly any issues it helped resolve.
 
 ## Deployment
 
