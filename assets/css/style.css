@@ -33,7 +33,7 @@
 #gameBoard{
   position: relative;
   background-color:var(--BGDark);
-  height:80vh;
+  height:90vh;
   width:100%;
   order:-1;
   border: var(--Cyan) solid 5px;
@@ -57,15 +57,21 @@
 }
 
 .square{
-  background: url("../images/Closed Folder.svg") no-repeat center center/ 90px;
+  background: url("../images/Closed Folder.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
   height: 100px;
   width: 100px;
   margin: 10px;
 }
 
 .player-square{
-  background: url("../images/Open Folder.svg") no-repeat center center/ 90px;
-  height:100px;
+  background: url("../images/Open Folder.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  height: 100px;
   width: 100px;
   margin: 10px;
   box-shadow: 0px 0px 20px 0px #0ff;
@@ -73,15 +79,52 @@
 
 
 .correct-square {
-  background: url("../images/Correct Folder.svg") no-repeat center center/ 90px;
+  background: url("../images/Correct Folder.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
   height: 100px;
   width: 100px;
   margin: 10px;
 }
 
 .incorrect-square {
-  background: url("../images/Incorrect Folder.svg") no-repeat center center/ 90px;
+  background: url("../images/Incorrect Folder.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
   height: 100px;
   width: 100px;
   margin: 10px;
 }
+
+/* Media query for larger screens above 1400px
+
+@media (min-width: 1400px) {
+  .square{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .player-square{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 0px 0px 20px 0px #0ff;
+    border-radius: 50px;
+  }
+  
+  
+  .correct-square {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .incorrect-square {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+  }
+} */
