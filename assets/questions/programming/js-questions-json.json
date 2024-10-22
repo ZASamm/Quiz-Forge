@@ -1,0 +1,92 @@
+[
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Web Development: JavaScript",
+    "question": "What keyword is used to declare a variable that can't be reassigned?",
+    "correct_answer": "const",
+    "incorrect_answers": [
+      "var",
+      "let",
+      "fixed"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Web Development: JavaScript",
+    "question": "In JavaScript, == and === operators are identical.",
+    "correct_answer": "False"
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Web Development: JavaScript",
+    "question": "Which method is used to add an element to the end of an array?",
+    "correct_answer": "push()",
+    "incorrect_answers": [
+      "append()",
+      "add()",
+      "insert()"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Web Development: JavaScript",
+    "question": "JavaScript is a statically typed language.",
+    "correct_answer": "False"
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Web Development: JavaScript",
+    "question": "What will be the output of console.log(typeof [])?",
+    "correct_answer": "object",
+    "incorrect_answers": [
+      "array",
+      "list",
+      "undefined"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Web Development: JavaScript",
+    "question": "The let keyword declares a block-scoped variable.",
+    "correct_answer": "True"
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Web Development: JavaScript",
+    "question": "Which method is used to remove the last element from an array?",
+    "correct_answer": "pop()",
+    "incorrect_answers": [
+      "remove()",
+      "delete()",
+      "slice()"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Web Development: JavaScript",
+    "question": "Arrow functions in JavaScript always need curly braces {}.",
+    "correct_answer": "False"
+  },
+  {
+    "type": "text",
+    "difficulty": "hard",
+    "category": "Web Development: JavaScript",
+    "question": "Complete the code to create a function:\n_______ greet(name) {\n  return `Hello, ${name\n      }!`;\n    }",
+    "correct_answers": ["function"]
+  },
+  {
+    "type": "text",
+    "difficulty": "hard",
+    "category": "Web Development: JavaScript",
+    "question": "Complete the code to create a Promise object:\nconst myPromise = new ________;",
+    "correct_answers": ["Promise()"]
+  }
+]

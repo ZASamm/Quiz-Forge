@@ -1,0 +1,92 @@
+[
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Web Development: CSS",
+    "question": "What does CSS stand for?",
+    "correct_answer": "Cascading Style Sheets",
+    "incorrect_answers": [
+      "Computer Style Sheets",
+      "Creative Style Sheets",
+      "Colorful Style Sheets"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Web Development: CSS",
+    "question": "In CSS, the # symbol is used to select elements by their class.",
+    "correct_answer": "False"
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Web Development: CSS",
+    "question": "Which property is used to change the font of an element?",
+    "correct_answer": "font-family",
+    "incorrect_answers": [
+      "font-style",
+      "text-font",
+      "text-style"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Web Development: CSS",
+    "question": "The z-index property only works on elements with a position value of static.",
+    "correct_answer": "False"
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Web Development: CSS",
+    "question": "Which CSS property is used to control the space between elements?",
+    "correct_answer": "margin",
+    "incorrect_answers": [
+      "spacing",
+      "padding",
+      "border"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Web Development: CSS",
+    "question": "CSS Grid and Flexbox are the same thing.",
+    "correct_answer": "False"
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Web Development: CSS",
+    "question": "Which unit is not relative to the viewport size?",
+    "correct_answer": "px",
+    "incorrect_answers": [
+      "vh",
+      "vw",
+      "vmin"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Web Development: CSS",
+    "question": "The box-sizing: border-box property includes padding and border in the element's total width and height.",
+    "correct_answer": "True"
+  },
+  {
+    "type": "text",
+    "difficulty": "hard",
+    "category": "Web Development: CSS",
+    "question": "Complete the CSS rule to set the text color to red:\ncss {\n  _____ : red;\n}",
+    "correct_answers": ["color", "Color", "COLOR"]
+  },
+  {
+    "type": "text",
+    "difficulty": "hard",
+    "category": "Web Development: CSS",
+    "question": "Complete the CSS rule to create a flexible container:\n.container {\n  display: _____;\n}",
+    "correct_answers": ["flex", "Flex", "FLEX"]
+  }
+]
