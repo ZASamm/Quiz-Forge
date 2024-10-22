@@ -11,22 +11,36 @@ There is no particular audience targeted for this application, however with Quiz
 ## User Stories
 
 ### Must-Have User Stories
-- **User Story 1:** Briefly describe the must-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the must-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+- **Game Board:** As Visual Learner, I want to a gameboard, so that i can track my progression through the quiz, to help me keep engaged  
+  **Acceptance Criteria:** Gameboard must be visible and not intrusive on both desktop and mobile.
 
-(Include all prioritized must-have features)  
-**Guidance:** Draft the user stories during Phase 1: Ideation & Initial Setup and update them as you complete Phase 2: Must User Stories Implementation & Testing. Document each must-have feature here along with its acceptance criteria.
+- **Answer Quiz Questions:** As a player, I want to answer quiz questions, so that I can test my programming knowledge, and advance in the game.
+  **Acceptance Criteria:** Questions are presented clearly, I can submit my answers, I receive feedback on whether my answer was correct
+
+- **Full Responsiveness:** As a player, I want the game to be responsive, so that I can play on different devices.
+  **Acceptance Criteria:** Game is playable on desktop, tablet, and mobile devices, Layout adjusts appropriately to different screen sizes
+
+- **Accessibility:** As a User of the quiz website, I require the site to be accessible, with consideration to colour contrast, fonts, images and screen reading capabilities,So I can utilise the website fully, regardless of potential visual impairments  
+  **Acceptance Criteria:** All Accessibility aspects should be considered, e.g alt text, colours, fonts, colour contrast etc
+
+- **Deployment Tests:** As a Developer, I want my deployed site to function as its supposed to, So that a user can go to the site and play the game.
+  **Acceptance Criteria:** You can play the quiz from the deployed website link. No major game breaking bugs in deployed site.
 
 ### Should-Have User Stories
-- **User Story 1:** Briefly describe the should-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the should-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+- **Quiz Types:** As a player, I want to be able to face different types of questions (multiple choice, true false etc), So I can the game remains engaging
+  **Acceptance Criteria:** Implement at least 3 different types of questions.
 
-(Include all prioritized should-have features)  
-**Guidance:** Document the secondary features that you aim to implement in Phase 3: Should User Stories Implementation & Any Advanced Features. Include clear acceptance criteria for each.
+- **Expandable Question Storage:** As a lazy developer, I want the question data to be stored in an expandable format, so that I can easily add or modify questions in the future.
+  **Acceptance Criteria:** Questions are stored in a structured format (e.g., JSON), New questions can be added without changing the code structure
+
+- **Scoring and Completion:** As a competitive player, I want to see my score and a win/lose screen at the end of the game, so that I know how well I performed.
+  **Acceptance Criteria:** The score is displayed at the end of the game, Win/lose condition is communicated, The option to play again is provided
+
+  - **Randomised Question Devliery:** As a returning player, I want questions to be randomized each time I play, so that the game feels fresh on repeated playthrough.
+  **Acceptance Criteria:** Questions appear in a different order in each game, If possible, a different set of questions is selected for each game
+
+  - **Varied Question Content:** As a player, I want to encounter a variety of programming questions, So that i can test my knowledge on different areas.
+  **Acceptance Criteria:** Questions cover various programming topics. There are enough questions to avoid frequent repetition
 
 ### Could-Have User Stories
 - **User Story 1:** Briefly describe the could-have feature.  
@@ -34,12 +48,37 @@ There is no particular audience targeted for this application, however with Quiz
 - **User Story 2:** Briefly describe the could-have feature.  
   **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
 
-(Include any could-have features considered for future enhancements)  
-**Guidance:** Document any optional features that are nice to have but not essential.
 
 ## Design Decisions
 
 ### Wireframes
+
+<br>
+<p align="center">
+<img src="assets/readMe Images/Desktop-view.png" alt="Wireframe image for Desktop view">
+</p>
+<br>
+<p align="center">
+<img src="assets/readMe Images/tablet-view.png" alt="Wireframe image for Tablet view">
+</p>
+<br>
+<p align="center">
+<img src="assets/readMe Images/Mobile-view.png" alt="Wireframe image for Mobile view">
+</p>
+<br>
+<p align="center">
+<img src="assets/readMe Images/Multi-choice-Q.png" alt="Wireframe image for Multiple answer Questions view">
+</p>
+<br>
+<p align="center">
+<img src="assets/readMe Images/True-False-Q.png" alt="Wireframe image for True or False Questions view">
+</p>
+<br>
+<p align="center">
+<img src="assets/readMe Images/Type-Answer_Q.png" alt="Wireframe image for Type your answer questions view">
+</p>
+<br>
+
 Include wireframes for key sections of your website.  
 Briefly describe the design choices, including layout, colour schemes, and fonts.  
 **Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
