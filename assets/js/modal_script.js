@@ -4,6 +4,14 @@
 
 function handleModal() {
 
+    let filePaths = [
+        'assets/questions/programming/js-questions-json.json',
+        'assets/questions/programming/html-questions-json.json',
+        'assets/questions/programming/css-questions-json.json'
+    ];
+    let possibleQuestions = loadQuestionsFromFile(filePaths);
+    console.log(possibleQuestions);
+
     const qModal = document.getElementById("qModal");
     const squares = document.querySelectorAll(".square");
     const close = document.getElementsByClassName("close")[0];
@@ -13,7 +21,7 @@ function handleModal() {
         const square = squares[index];
         square.setAttribute("squareIndex", index);
         square.addEventListener("click", function () {
-            
+
             loadQuestion(square.getAttribute("squareIndex"), qModal);
 
             qModal.style.display = "block";
@@ -56,7 +64,7 @@ window.onclick = function (event) {
 
 document.addEventListener('DOMContentLoaded', handleModal);
 
-function generateQuestionList () {
+function generateQuestionList() {
     let questionList = [];
     return questionList;
 }
@@ -72,4 +80,28 @@ function loadQuestion(squareIndex, modal) {
     <button class="answer-button">Answer 3</button>
     <button class="answer-button">Answer 4</button>
     `;
+}
+
+/**
+ * Function gets an array of questions from the given JSON files.
+ * @param {Array} Array of file paths.
+ * @returns A list of question objects.
+ */
+function loadQuestionsFromFile(filePaths) {
+    let questions = [];
+    for (let path of filePaths) {
+        fetch(path)
+        .then(response => response.json())
+        .then(data => {
+            for (let index = 0; index < data.length; index++) {
+                const question = data[index];
+                questions.push(question);
+            }
+
+        })
+        .catch(error => {
+            console.error('Error loading JSON file:', error);
+        });
+    }
+    return(questions);
 }
