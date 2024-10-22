@@ -29,11 +29,7 @@ close.addEventListener("click", function() {
 
 }
 
-
-
-
-
-
+// Close modal if clicking anywhere outsde of modal 
 
 window.onclick = function(event) {
     if (event.target == qModal) {
