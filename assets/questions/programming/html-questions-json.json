@@ -1,0 +1,82 @@
+[
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Web Development: HTML",
+    "question": "What does HTML stand for?",
+    "correct_answer": "Hyper Text Markup Language",
+    "incorrect_answers": [
+      "High-Level Text Manipulation Language",
+      "Hyperlink and Text Markup Language",
+      "Home Tool Markup Language"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "easy",
+    "category": "Web Development: HTML",
+    "question": "The <head> element is where you put visible page content.",
+    "correct_answer": "False",
+    "incorrect_answers": ["True"]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Web Development: HTML",
+    "question": "Which tag is used to create an unordered list?",
+    "correct_answer": "<ul>",
+    "incorrect_answers": [
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Web Development: HTML",
+    "question": "The alt attribute in an <img> tag is optional.",
+    "correct_answer": "False",
+    "incorrect_answers": ["True"]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Web Development: HTML",
+    "question": "Which HTML element is used to define the title of a document?",
+    "correct_answer": "<title>",
+    "incorrect_answers": [
+      "<head>",
+      "<header>",
+      "<top>"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "easy",
+    "category": "Web Development: HTML",
+    "question": "HTML comments start with <!-- and end with -->.",
+    "correct_answer": "True",
+    "incorrect_answers": ["False"]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "medium",
+    "category": "Web Development: HTML",
+    "question": "Which attribute is used to specify that an input field must be filled out?",
+    "correct_answer": "required",
+    "incorrect_answers": [
+      "validate",
+      "placeholder",
+      "important"
+    ]
+  },
+  {
+    "type": "boolean",
+    "difficulty": "medium",
+    "category": "Web Development: HTML",
+    "question": "The <article> element specifies independent, self-contained content.",
+    "correct_answer": "True",
+    "incorrect_answers": ["False"]
+  }
+]
