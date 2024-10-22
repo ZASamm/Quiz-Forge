@@ -52,7 +52,7 @@
   color: var(--CyanBright);
 }
 
-.square{
+/* .square{
   background-color: var(--CyanBright);
   height:100px;
   width: 100px;
@@ -66,4 +66,4 @@
   height:100px;
   width: 100px;
   margin: 10px;
-}
+} */
