@@ -1,0 +1,69 @@
+
+:root {
+/* Colour Variables */
+
+--BG : #133F4A;
+--BGDark : #06151E;
+--Cyan : #40E0d0;
+--CyanBright: #6fffe9;
+--offwhite : #fafafafa;
+
+}
+
+.row{
+  padding: 0px;
+  margin: 0px;
+}
+
+#gameTitle{
+  background-color:var(--BGDark);
+  border-top: var(--Cyan) solid 5px;
+  border-right: var(--Cyan) solid 5px;
+  border-left: var(--Cyan) solid 5px;
+}
+
+#Logo{
+  height: 20vh;
+}
+
+#gameBoard{
+  position: relative;
+  background-color:var(--BGDark);
+  height:80vh;
+  width:100%;
+  order:-1;
+  border: var(--Cyan) solid 5px;
+}
+
+#screen_scanlines, #screen_bezel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#gameMenu{
+  background-color:var(--BGDark);
+  min-height: 130px;
+  border-bottom: var(--Cyan) solid 5px;
+  border-left: var(--Cyan) solid 5px;
+  border-right: var(--Cyan) solid 5px;
+  color: var(--CyanBright);
+}
+
+.square{
+  background-color: var(--CyanBright);
+  height:100px;
+  width: 100px;
+  margin: 10px;
+  box-shadow: 120px 80px 40px 20px #0ff;
+
+}
+
+.player-square{
+  background-color: rgb(255, 0, 0);
+  height:100px;
+  width: 100px;
+  margin: 10px;
+}
