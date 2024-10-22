@@ -14,6 +14,7 @@
 
 }
 
+
 .row{
   padding: 0px;
   margin: 0px;
@@ -33,10 +34,13 @@
 #gameBoard{
   position: relative;
   background-color:var(--BGDark);
-  height:90vh;
+  min-height: 80vh;
+  height: auto;
   width:100%;
-  order:-1;
+
   border: var(--Cyan) solid 5px;
+
+
 }
 
 #screen_scanlines, #screen_bezel {
@@ -48,6 +52,7 @@
 }
 
 #gameMenu{
+ 
   background-color:var(--BGDark);
   min-height: 130px;
   border-bottom: var(--Cyan) solid 5px;
@@ -55,6 +60,7 @@
   border-right: var(--Cyan) solid 5px;
   color: var(--CyanBright);
 }
+
 
 .square{
   background: url("../images/Closed Folder.svg");
