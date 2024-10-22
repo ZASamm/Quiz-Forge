@@ -1,93 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Forge</title>
 
-    <!-- Bootstrap CSS  -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Forge</title>
 
-  <body>
-    <div id="gameTitle" class="container-fluid text-center g-0">
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <img
-            id="Logo"
-            src="assets/images/Logo.png"
-            alt="Quiz Forge Logo Image"
-          />
-        </div>
+  <!-- Bootstrap CSS  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div id="gameTitle" class="container-fluid text-center g-0">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <img id="Logo" src="assets/images/Logo.png" alt="Quiz Forge Logo Image" />
       </div>
     </div>
-    <div id="gameBoard" class="container-fluid g-0">
-      <img id="screen_scanlines" src="assets/images/scanlines.png" alt="Scanlines overally image to create old computer screen theme">
-      <img id="screen_bezel" src="assets/images/bezel.png" alt="Computer screen bezel image to create the old computer screen theme">
-      <div class="row">
-        <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center mt-5 mb-4">
-          <div class="square" id="sq1"></div>
-        </div>
-        <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center mt-5 mb-4">
-          <div class="square" id="sq2"></div>
-        </div>
-        <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center mt-5 mb-4">
-          <div class="square" id="sq3"></div>
-        </div>
+  </div>
+  <div id="gameBoard" class="container-fluid g-0">
+    <img id="screen_scanlines" src="assets/images/scanlines.png"
+      alt="Scanlines overally image to create old computer screen theme">
+    <img id="screen_bezel" src="assets/images/bezel.png"
+      alt="Computer screen bezel image to create the old computer screen theme">
+    <div class="row">
+      <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center mt-5 mb-4">
+        <div class="square" id="sq1"></div>
+      </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center mt-5 mb-4">
+        <div class="square" id="sq2"></div>
+      </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center mt-5 mb-4">
+        <div class="square" id="sq3"></div>
+      </div>
       <!-- </div> -->
 
       <!-- <div class="row"> -->
-        <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
-          <div class="square" id="sq4"></div>
-        </div>
-        <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
-          <div class="square" id="sq5"></div>
-        </div>
-        <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
-          <div class="square" id="sq6"></div>
-        </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
+        <div class="square" id="sq4"></div>
+      </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
+        <div class="square" id="sq5"></div>
+      </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
+        <div class="square" id="sq6"></div>
+      </div>
       <!-- </div> -->
       <!-- <div class="row"> -->
-        <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
-          <div class="square" id="sq7"></div>
-        </div>
-        <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
-          <div class="square" id="sq8"></div>
-        </div>
-        <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
-          <div class="square" id="sq9"></div>
+      <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
+        <div class="square" id="sq7"></div>
+      </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
+        <div class="square" id="sq8"></div>
+      </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center my-4">
+        <div class="square" id="sq9"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="gameMenu" class="container-fluid g-0">
+    <div class="row">
+      <div class="col d-flex justify-content-center my-2">
+        <div>
+          <h2>Menu Buttons Here</h2>
         </div>
       </div>
     </div>
+  </div>
 
-    <div id="gameMenu" class="container-fluid g-0">
-      <div class="row">
-        <div class="col d-flex justify-content-center my-2">
-          <div>
-            <h2>Menu Buttons Here</h2>
-          </div>
-        </div>
-      </div>
+
+
+
+
+
+  <!-- MODALS -->
+
+  <!-- QUESTION MODAL -  GUY -->
+
+
+  <div id="qModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="category"></h2>
+      <p class="questionSection"></p>
+      <div class="answerSection"></div>
+
+
     </div>
+  </div>
 
-    <script src="assets/js/script.js"></script>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+
+
+
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/modal_script.js"></script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
