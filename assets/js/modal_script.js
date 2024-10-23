@@ -36,6 +36,18 @@ async function handleModal() {
         });
     }
 
+    document.addEventListener("keydown", function (event) {
+        if (qModal.style.display === "block" && event.key === "Escape") {
+            qModal.style.display = "none";
+        }
+        if (event.key === "Enter") {
+            let currentSquare = document.querySelector(".player-square");
+            loadQuestion(currentSquare.getAttribute("squareIndex"), qModal);
+            qModal.style.display = "block";
+            console.log(`Loading current square ${currentSquare}`);
+        }
+    });
+
     // add click event to close qModal
     close.addEventListener("click", function () {
         qModal.style.display = "none";
@@ -65,8 +77,14 @@ function loadQuestion(squareIndex, modal) {
     let question = questions[squareIndex];
     let modalContent = document.querySelector(".modal-content");
     document.querySelector(".category").innerHTML = `Question ${Number(squareIndex) + 1}`;
-    document.querySelector(".questionSection").innerHTML = `${question.question}`;
-    document.querySelector(".answerSection").innerHTML = "";    
+    
+    let questionString = question.question;
+    questionString = questionString.replaceAll("<", "&lt;");
+    questionString = questionString.replaceAll(">", "&gt;");
+    document.querySelector(".questionSection").innerHTML = `${questionString}`;
+    
+    document.querySelector(".answerSection").innerHTML = "";
+    
     switch (question.type) {
         case 'multiple':
             // missing on click event handler, to be added later.
@@ -75,6 +93,8 @@ function loadQuestion(squareIndex, modal) {
             possibleAnswers.push(question.correct_answer);
             let htmlString = '';
             for (let answer of possibleAnswers) {
+                answer = answer.replaceAll("<", "&lt;");
+                answer = answer.replaceAll(">", "&gt;");
                 htmlString = htmlString + `<button class="answer-button">${answer}</button>`
             };
             document.querySelector(".answerSection").innerHTML = htmlString;
