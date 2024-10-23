@@ -85,6 +85,12 @@
 
 
 
+
+
+
+
+
+
   <!-- MODALS -->
 
   <!-- QUESTION MODAL -  GUY -->
@@ -99,17 +105,75 @@
     </div>
   </div>
 
-  <!-- Submisson Modal -  GUY -->
+  <!-- SUBMISSION QUESTIONS MODAL - GUY -->
   <div id="submit-modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <span class="info"><i class="fa fa-info-circle"></i></span>
       <h2>Paste in your questions in Json format</h2>
-      <div>
-      <input type="text">
-    </div>
+      <!-- QUESTION FORM -->
+      <section class="questionsForm">
+        <form id="addQuestionForm" class="add-question-form">
+          <div>
+            <label for="type" placeholder="Select Question Type">Question Type:</label>
+            <select id="type" required>
+              <option value="boolean">True/False</option>
+              <option value="multiple">Multiple Choice</option>
+              <option value="text">Text Input</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty" required>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="category">Category:</label>
+            <input type="text" id="category" value="Web Development: CSS" required>
+          </div>
+
+          <div>
+            <label for="question">Question:</label>
+            <textarea id="question" required></textarea>
+          </div>
+
+          <div id="answerSection">
+            <label id="correct_answer_label" for="correct_answer">Correct Answer:</label>
+            <input type="text" id="correct_answer" required>
+
+            <!-- should add true/false radio buttons here -->
+
+
+
+            <!-- For multiple choice questions -->
+            <div id="incorrectAnswersSection" style="display: none;">
+              <label>Incorrect Answers:</label>
+              <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 1">
+              <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 2">
+              <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 3">
+            </div>
+
+            <!-- For text questions -->
+            <div id="alternateAnswersSection" style="display: none;">
+              <label>Alternative Correct Answers:</label>
+              <input type="text" class="alternate_answer" placeholder="Alternative Answer 1">
+              <input type="text" class="alternate_answer" placeholder="Alternative Answer 2">
+            </div>
+          </div>
+
+          <button type="submit">Add Question</button>
+        </form>
+
+      </section>
     </div>
   </div>
+
+  
 
 
   <!-- Scripts -->
