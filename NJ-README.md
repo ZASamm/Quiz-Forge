@@ -212,10 +212,10 @@ Google fonts were used within the project to enable additional customisation to 
 </p>
 <br>
 
-- **Varied Question Content:** Quiz questions should have varied content, taking into consideration adding images as question answers
+- **Varied Question Content:** Quiz questions should have varied content, taking into consideration different topics as well as adding images as question answers as well as more visual content.
 
 <p align="center">
-<img src="assets/readMe Images/randomised-questions.png" alt="Image of the randomised questions">
+<img src="assets/readMe Images/varied-questions.png" alt="Varied question content image">
 </p>
 <br>
 
@@ -230,10 +230,31 @@ Google fonts were used within the project to enable additional customisation to 
 </p>
 <br>
 
-- **Custom Json Questions:** Additional customisation of the quiz can be done via the user submitting a custom JSON file
+- **Timer Toggle:** Addition of a timer to increase the difficulty of the quiz and force the user to think quickly.
 
 <p align="center">
-<img src="assets/readMe Images/json-upload-modal.png" alt="Image of JSON Upload Modal">
+<img src="assets/readMe Images/timer.png" alt="Game Board Timer Image">
+</p>
+<br>
+
+- **Puzzle Integration:** The addition of more puzzles, rather than simple answer the question style questions
+
+<p align="center">
+<img src="assets/readMe Images/puzzles.png" alt="Game puzzles Image">
+</p>
+<br>
+
+- **Visual Theme Toggle:** Addition of themes that can be toggled between each other. Proposed colours are aqua by default, orange, green and a light or white. These chosen colours are based off traditional terminal themes.
+
+<p align="center">
+<img src="assets/readMe Images/themes.png" alt="Game themes selection Image">
+</p>
+<br>
+
+- **Audio integration:** Addition of themes that can be toggled between each other. Proposed colours 
+
+<p align="center">
+<img src="assets/readMe Images/audio.png" alt="Game audio Image">
 </p>
 <br>
 
@@ -278,15 +299,13 @@ Validators were used to help address any issues within the projects HTML, CSS an
 ## Deployment
 
 ### Deployment Process
-Briefly describe the deployment process to GitHub Pages or another cloud platform.  
-Mention any specific challenges encountered during deployment.  
-**Guidance:** Describe the steps you took to deploy your website during Phase 4: Final Testing, Debugging & Deployment, including any challenges encountered.
+For this project, GitHub pages was the chosen deployment method. A simple and straight forward service provided by github which uses a repo branch as a source for the page to pull from.
 
-## AI Tools Usage
+<p align="center">
+<img src="assets/readMe Images/github-pages.png" alt="Github Pages Deployments image">
+</p>
+<br>
 
-### Reflection
-Describe the role AI tools played in the deployment process, including any benefits or challenges.  
-**Guidance:** Reflect on how AI tools assisted with the deployment process, particularly how they streamlined any tasks or presented challenges.
 
 ## Reflection on Development Process
 
