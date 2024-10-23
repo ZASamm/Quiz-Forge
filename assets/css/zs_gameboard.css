@@ -1,0 +1,18 @@
+/* .zs_hidden {
+    display: none;
+} */
+
+.category {
+    color: #6fffe9;
+}
+
+.questionSection {
+    color: #6fffe9;
+}
+
+
+
+label, option, textarea, input, select, ::placeholder {
+    font-family: "Ubuntu Mono", monospace;
+}
+

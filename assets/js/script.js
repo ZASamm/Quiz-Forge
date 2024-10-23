@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
         if(event.key === 'ArrowRight'){
             let squares = getSquares();
             event.preventDefault();
-            //setCorrectSquare(positon, squares);
+            setCorrectSquare(positon, squares);
             positon = (positon + 1)%squares.length;
             movePlayer(positon, squares);
             
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function(){
         if(event.key === 'ArrowLeft'){
             let squares = getSquares();
             event.preventDefault();
-            //setIncorrectSquare(positon, squares);
+            setIncorrectSquare(positon, squares);
             if(positon === 0){
                 positon = squares.length -1;
             } else {
@@ -52,7 +52,7 @@ function movePlayer(index, squares){
  * clears the board 
  */
 function clearBoard(squares){
-    for(let i=0; i<squares.lenght; i++){
+    for(let i=0; i<squares.length; i++){
         clearSquare(i, squares);
     }
 }

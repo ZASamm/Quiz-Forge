@@ -2,44 +2,44 @@
 #screen_bezel {
 
     pointer-events: none;
-    
+
 }
 
-/* INFO MODAL */
+/* MODAL */
 
 .modal {
     display: none;
     position: fixed;
     z-index: 1000;
-   
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+
+
 .modal-content {
-    background-color: #000;
+    background-color: var(--BGDark);
     margin: 5% auto;
     padding: 20px;
-    border: 1px solid cyan;
-    width: 80%;
-    max-width: 600px;
-    
+    border: 1px solid var(--CyanBright);
+    width: 90vw;
+    max-width: 1400px;
+    color: var(--CyanBright);
+
 }
 
 .close {
-    color: cyan;
-    /* width: 20px;
-    height: 20px; */
+    color: var(--CyanBright);
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     position: absolute;
-    top: 10px;          
-    right: 20px;        
-    font-size: 24px; 
-    
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+
 }
 
 .close:hover,
@@ -52,20 +52,53 @@
 .modal-content h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
+    color: var(--CyanBright);
 }
 
-.modal-content p,
-.modal-content ul {
-    font-size: 0.8em;
-    line-height: 1.6;
+/* Submission Modal */
+
+.add-question-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.add-question-form div {
     margin-bottom: 15px;
 }
 
-.modal-content a {
-    color: #ffd700;
-    text-decoration: none;
+.add-question-form label {
+    display: block;
+    margin-bottom: 5px;
+    
 }
 
-.modal-content a:hover {
-    text-decoration: underline;
+.add-question-form input,
+.add-question-form select,
+.add-question-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    color: black;
+    background-color: var(--Cyan); 
 }
+
+.add-question-form textarea {
+    height: 100px;
+}
+
+.floppy {
+    background-color: var(--BGDark);
+    border: none;
+    color: var(--CyanBright);
+    font-size: 2rem;
+}
+
+.floppy :hover {
+    
+    transform: scale(1.1.5);
+    transition: 0.1s ease-in-out
+}
+
+
+
