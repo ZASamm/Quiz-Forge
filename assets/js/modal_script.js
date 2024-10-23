@@ -83,20 +83,21 @@ function loadQuestion(squareIndex, modal) {
     let question = questions[squareIndex];
     let modalContent = document.querySelector(".modal-content");
     document.querySelector(".category").innerHTML = `Question ${Number(squareIndex) + 1}`;
-    
+
     let questionString = question.question;
     questionString = questionString.replaceAll("<", "&lt;");
     questionString = questionString.replaceAll(">", "&gt;");
     document.querySelector(".questionSection").innerHTML = `${questionString}`;
-    
+
     document.querySelector(".answerSection").innerHTML = "";
-    
+
     switch (question.type) {
         case 'multiple':
             // missing on click event handler, to be added later.
             let possibleAnswers = [];
             possibleAnswers = possibleAnswers.concat(question.incorrect_answers);
             possibleAnswers.push(question.correct_answer);
+            possibleAnswers = shuffle(possibleAnswers);
             let htmlString = '';
             for (let answer of possibleAnswers) {
                 answer = answer.replaceAll("<", "&lt;");
@@ -179,3 +180,27 @@ function generateQuestionSet(numberOfQuestions, sourceQuestions) {
         return listOfQuestions;
     }
 }
+
+/**
+ * This function shuffles an array.
+ * from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+ * @param { Array } unrandomised array input
+ * @returns { Array } randomised array
+ */
+function shuffle(array) {
+    let currentIndex = array.length;
+
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]
+        ];
+    };
+    return array;
+};
