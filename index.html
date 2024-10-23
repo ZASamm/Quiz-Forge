@@ -11,6 +11,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 
+  <!-- Font awesome -->
+
+  <script src="https://kit.fontawesome.com/ec28ce8875.js" crossorigin="anonymous"></script>
+
   <!-- Bootstrap CSS  -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
@@ -65,24 +69,26 @@
           <div class="square zs_hidden" id="sq9"></div>
         </div>
       </div>
+      <div id="gameMenu" class="d-flex justify-content-around align-items-center mx-4">
+              <img class="ml-4" id="Logo" src="assets/images/Logo.png" alt="Quiz Forge Logo Image" />
+              <button type="button" id="startBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-play"></i></button>
+              <button type="button" id="questionsBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-upload"></i></button>
+              <button type="button" id="about" class="btn btn-menu btn-lg">About</button>
+              <button type="button" class="btn btn-menu btn-lg">Display Custom Questions List</button>
+            </div>
     </div>
 
     <!-- Game Menu NJ -->
-    <footer>
-      <div id="gameMenu" class="container-fluid g-0">
+    <!-- <footer> -->
+      <!-- <div id="gameMenu" class="container-fluid g-0">
         <div class="row">
           <div class="col d-flex justify-content-center my-2">
-            <div>
-              <img id="Logo" src="assets/images/Logo.png" alt="Quiz Forge Logo Image" />
-              <button type="button" id="startBtn" class="btn btn-menu">Start Game</button>
-              <button type="button" id="questionsBtn" class="btn btn-menu">Forge Your Quiz</button>
-              <button type="button" id="about" class="btn btn-menu">About</button>
-            </div>
+            <
           </div>
         </div>
       </div>
     </footer>
-  </div>
+  </div> -->
 
 
 
@@ -100,19 +106,103 @@
     </div>
   </div>
 
+  <!-- SUBMISSION QUESTIONS MODAL - GUY -->
+  <div id="submit-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+      <h2>Forge Your Quiz</h2>
+      <p>Add your own questions here. Choose questino type and fill in the form to add your own questions to the browser session.</p>
+
+      <!-- QUESTION FORM -->
+      <section class="questionsForm">
+        <form id="addQuestionForm" class="add-question-form">
+          <div>
+            <label for="type" placeholder="Select Question Type">Question Type:</label>
+            <select id="type" required>
+              <option value="boolean">True/False</option>
+              <option value="multiple">Multiple Choice</option>
+              <option value="text">Text Input</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty" required>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="category">Category:</label>
+            <input type="text" id="category" value="Web Development: CSS" required>
+          </div>
+
+          <div>
+            <label for="question">Question:</label>
+            <textarea id="question" required></textarea>
+          </div>
+
+          <div id="answerSection">
+            <label id="correct_answer_label" for="correct_answer">Correct Answer:</label>
+            <input type="text" id="correct_answer" required>
+
+            <!-- should add true/false radio buttons here -->
+
+
+
+            <!-- For multiple choice questions -->
+            <div id="incorrectAnswersSection" style="display: none;">
+              <label >Incorrect Answers:</label>
+              <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 1">
+              <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 2">
+              <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 3">
+            </div>
+
+            <!-- For text questions -->
+            <div id="alternateAnswersSection" style="display: none;">
+              <label>Alternative Correct Answers:</label>
+              <input type="text" class="alternate_answer" placeholder="Alternative Answer 1">
+              <input type="text" class="alternate_answer" placeholder="Alternative Answer 2">
+            </div>
+          </div>
+
+          <button class="floppy" type="submit"><i class="fa-solid fa-floppy-disk"></i></button>
+        </form>
+
+      </section>
+    </div>
+  </div>
+
+    <!-- DISPLAY CUSTOM QUESTIONS LIST MODAL-->
+    <div id="display-modal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Stored Questions</h2>
+          <div id="questionsContainer"></div>
+      </div>
+  </div>
+
+  
+
 
   <!-- Scripts -->
 
   <script src="assets/js/script.js"></script>
   <script src="assets/js/modal_script.js"></script>
+  <script src="assets/js/submission_modal_script.js"></script>
+
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
-  </script>
+    </script>
 
 </body>
 
