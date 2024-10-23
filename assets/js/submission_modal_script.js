@@ -73,15 +73,15 @@ function handleQuestionForm() {
     });
 
 
-    // THIS IS AI ASSISTED CODE - HEAVILY COMMENTED SO I CAN LEARN HOW TO DO THIS WITHOUT ASSISTANCE-----------------------------------
+    // THIS CODE WITHIN THIS BLOCK IS AI ASSISTED - I UNDERSTAND ALMOST ALL OF IT :) -GUY  ------------------------------
 
 
     // PSEUDO CODE FOR FORM SUBMISSION
     // on submit prevent default refresh. 
     // Then create a new question object with basic properties.
-    // handle specific question type requirements - if multiple choice, collect all incorrect answers. If text, collect all possible correct answers.
-    // try to get existing questions from local storage, if none exist use an empty array.
-    // add the new question to our array.
+    // Handle specific question type requirements - if multiple choice, collect all incorrect answers. If text, collect all possible correct answers.
+    // Try to get existing questions from local storage, if none exist use an empty array.
+    // Add the new question (newQuestion) to our array (customQuesions)
     // save the updated array back to local storage.
 
     // Handle form submission
@@ -142,7 +142,7 @@ function handleQuestionForm() {
     });
 
 }
-// -----------------------------END OF AI CODE--------------------------------
+// -----------------------------END OF AI ASSISTED CODE--------------------------------
 
 
 
@@ -157,34 +157,28 @@ function getCustomQuestions() {
 // DISPLAY QUESTIONS MODAL -- Just for testing local cache retrieval
 
 
+
 function handleDisplayModal() {
-    console.log('handleDisplayModal function called');
     const displayModal = document.getElementById("display-modal");
     const displayBtn = document.getElementById("display-questions-btn");
-    const closeDisplay = document.getElementsByClassName("close")[1];
-
-    console.log('displayModal:', displayModal);
-    console.log('displayBtn:', displayBtn);
-    console.log('closeDisplay:', closeDisplay);
+    const close = document.getElementsByClassName("close")[2];
 
     displayBtn.addEventListener('click', function () {
-        console.log('Display button clicked');
         displayModal.style.display = "block";
-        displayQuestions();
     });
 
-    closeDisplay.addEventListener('click', function () {
-        console.log('Close display button clicked');
+    close.addEventListener('click', function () {
         displayModal.style.display = "none";
     });
 
-    window.addEventListener('click', function (event) {
-        if (event.target == displayModal) {
-            console.log('Clicked outside display modal');
+    window.addEventListener('click', function (e) {
+        if (e.target == displayModal) {
             displayModal.style.display = "none";
         }
     });
 }
+
+
 
 
 
