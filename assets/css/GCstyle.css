@@ -5,6 +5,10 @@
 
 }
 
+
+.GC-hidden {
+    display: none;
+}
 /* MODAL */
 
 .modal {
@@ -107,4 +111,8 @@
 }
 
 
+/* AUDIO */
 
+.audio-on {
+    color: orange !important;
+}

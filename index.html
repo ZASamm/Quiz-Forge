@@ -72,13 +72,15 @@
 
       <!-- GAME MENU -->
 
-      <div id="gameMenu" class="d-flex justify-content-around align-items-center mx-4">
+      <div id="gameMenu" class="d-flex flex-wrap justify-content-around align-items-center mx-4">
         <img class="ml-4" id="Logo" src="assets/images/Logo.png" alt="Quiz Forge Logo Image" />
         <button type="button" id="startBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-play"></i></button>
         <button type="button" id="questionsBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-upload"></i></button>
-        <button type="button" id="about" class="btn btn-menu btn-lg"><i class="fa fa-info-circle"></i></button>
         <button type="button" id="display-questions-btn" class="btn btn-menu btn-lg"><i class="fa-solid fa-list"></i><i
-            class="fa-solid fa-question ml-3"></i></button>
+          class="fa-solid fa-question ml-3"></i></button>
+          <button type="button" id="soundBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-volume-off"></i></button>
+        <button type="button" id="about" class="btn btn-menu btn-lg"><i class="fa fa-info-circle"></i></button>
+        
 
         <!-- Theme Toggles -->
         <div id="theme-toggle">
@@ -203,6 +205,7 @@
           </div>
 
           <button class="floppy" type="submit"><i class="fa-solid fa-floppy-disk"></i></button>
+          <p class="GC-hidden mt-2" id="qSaved">Question Saved</p>
         </form>
 
       </section>
@@ -302,6 +305,7 @@
   <audio id="beep-sound" src="./assets/audio/beep3.wav"></audio>
   <audio id="close-beep-sound" src="./assets/audio/close-beep.wav"></audio>
   <audio id="disk-sound" src="./assets/audio/disk.wav"></audio>
+  <audio id="switch-sound" src="./assets/audio/switch.wav"></audio>
 
 
 
@@ -312,6 +316,7 @@
   <script src="assets/js/modal_script.js"></script>
   <script src="assets/js/submission_modal_script.js"></script>
   <script src="assets/js/themes.js"></script>
+  <script src="assets/js/audio.js"></script>
 
 
   <!-- Bootstrap JavaScript Libraries -->

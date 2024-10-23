@@ -57,6 +57,7 @@ function handleQuestionForm() {
     const incorrectAnswersSection = document.getElementById('incorrectAnswersSection');
     const alternateAnswersSection = document.getElementById('alternateAnswersSection');
     const saveSound = document.getElementById("disk-sound")
+    const qSavedNotice = document.getElementById("qSaved")
 
     typeSelect.addEventListener('change', function () { // "change" here is the event for when the user changes the question type
 
@@ -98,7 +99,7 @@ function handleQuestionForm() {
     // Handle form submission
     // on submit prevent default refresh. 
     form.addEventListener('submit', (e) => {
-        saveSound.play()
+
         e.preventDefault();
 
         // Create a new question object with basic properties  This makes it easier to handle the data when it's retrieved from local storage - 
@@ -144,8 +145,15 @@ function handleQuestionForm() {
 
 
             console.log('Question saved to localStorage:', newQuestion);
+            qSavedNotice.classList.remove("GC-hidden")
+            saveSound.play() // play save sound
+            setTimeout(() => {
+                qSavedNotice.classList.add("GC-hidden");
+            }, 1500);
+
+
             form.reset();
-            
+
             displayQuestions(); // update question display - this fixes the page needing refresh
         } catch (error) {
 
@@ -203,7 +211,7 @@ function handleDisplayModal() {
 function displayQuestions() {
     const questionsContainer = document.getElementById("questionsContainer");
     const questions = getCustomQuestions();
-    
+
 
     if (questions.length === 0) {
         questionsContainer.innerHTML = "<p>No questions added yet.</p>";
