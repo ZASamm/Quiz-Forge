@@ -350,8 +350,7 @@ Overall the Quiz Forge project went very well, there were ups and downs as to be
 The development worked very well together with little to no issues. Stand ups and Downs took place everyday where progress was summarised and a game plan for the next day was formed. Throughout various discussions the entire group was involved in communicating their view, problem, concern or solution.
 
 ## Code Attribution
-Properly attribute any external code sources used in the project (excluding GitHub Copilot-generated code).  
-**Guidance:** Document any external code sources used throughout the entire project, especially during Phase 2 and Phase 3. Exclude GitHub Copilot-generated code from attribution.
+Shuffle function is from this [Stackoverflow Javascript Shuffle](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 
 ## Future Improvements
 With regards to future improvements, generally speaking additional functionality and customisation would be the main areas of focus. For example, extending the quiz's question bank, featuring different topics, additional more challenging questions in the form of puzzles. By utilising JSON as the question storage format, with additional development the user would be given the ability to configure the quiz system to their liking via uploading a custom JSON file to change the content of the quiz.
