@@ -10,3 +10,9 @@
     color: #6fffe9;
 }
 
+
+
+label, option, textarea, input, select, ::placeholder {
+    font-family: "Ubuntu Mono", monospace;
+}
+

@@ -1,0 +1,272 @@
+[{
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Web Development: JavaScript",
+        "question": "What keyword is used to declare a variable that can't be reassigned?",
+        "correct_answer": "const",
+        "incorrect_answers": [
+            "var",
+            "let",
+            "fixed"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Web Development: JavaScript",
+        "question": "In JavaScript, == and === operators are identical.",
+        "correct_answer": "False"
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Web Development: JavaScript",
+        "question": "Which method is used to add an element to the end of an array?",
+        "correct_answer": "push()",
+        "incorrect_answers": [
+            "append()",
+            "add()",
+            "insert()"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Web Development: JavaScript",
+        "question": "JavaScript is a statically typed language.",
+        "correct_answer": "False"
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Web Development: JavaScript",
+        "question": "What will be the output of console.log(typeof [])?",
+        "correct_answer": "object",
+        "incorrect_answers": [
+            "array",
+            "list",
+            "undefined"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Web Development: JavaScript",
+        "question": "The let keyword declares a block-scoped variable.",
+        "correct_answer": "True"
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Web Development: JavaScript",
+        "question": "Which method is used to remove the last element from an array?",
+        "correct_answer": "pop()",
+        "incorrect_answers": [
+            "remove()",
+            "delete()",
+            "slice()"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Web Development: JavaScript",
+        "question": "Arrow functions in JavaScript always need curly braces {}.",
+        "correct_answer": "False"
+    },
+    {
+        "type": "text",
+        "difficulty": "hard",
+        "category": "Web Development: JavaScript",
+        "question": "Complete the code to create a function:\n_______ greet(name) {\n  return `Hello, ${name\n      }!`;\n    }",
+        "correct_answers": ["function"]
+    },
+    {
+        "type": "text",
+        "difficulty": "hard",
+        "category": "Web Development: JavaScript",
+        "question": "Complete the code to create a Promise object:\nconst myPromise = new ________;",
+        "correct_answers": ["Promise()"]
+    },
+
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Web Development: HTML",
+        "question": "What does HTML stand for?",
+        "correct_answer": "Hyper Text Markup Language",
+        "incorrect_answers": [
+            "High-Level Text Manipulation Language",
+            "Hyperlink and Text Markup Language",
+            "Home Tool Markup Language"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "easy",
+        "category": "Web Development: HTML",
+        "question": "The <head> element is where you put visible page content.",
+        "correct_answer": "False"
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Web Development: HTML",
+        "question": "Which tag is used to create an unordered list?",
+        "correct_answer": "<ul>",
+        "incorrect_answers": [
+            "<ol>",
+            "<li>",
+            "<list>"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Web Development: HTML",
+        "question": "The alt attribute in an <img> tag is optional.",
+        "correct_answer": "False"
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Web Development: HTML",
+        "question": "Which HTML element is used to define the title of a document?",
+        "correct_answer": "<title>",
+        "incorrect_answers": [
+            "<head>",
+            "<header>",
+            "<top>"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "easy",
+        "category": "Web Development: HTML",
+        "question": "HTML comments start with <!-- and end with -->.",
+        "correct_answer": "True"
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Web Development: HTML",
+        "question": "Which attribute is used to specify that an input field must be filled out?",
+        "correct_answer": "required",
+        "incorrect_answers": [
+            "validate",
+            "placeholder",
+            "important"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Web Development: HTML",
+        "question": "The <article> element specifies independent, self-contained content.",
+        "correct_answer": "True"
+    },
+    {
+        "type": "text",
+        "difficulty": "hard",
+        "category": "Web Development: HTML",
+        "question": "Complete the code to create a dropdown list:\nhtml<_____ name=\"cars\">\n  <option value=\"volvo\">Volvo</option>\n  <option value=\"saab\">Saab</option>\n</select>",
+        "correct_answers": ["select", "Select", "SELECT"]
+    },
+    {
+        "type": "text",
+        "difficulty": "hard",
+        "category": "Web Development: HTML",
+        "question": "Complete the code to create a hyperlink:\n<a _____ = \"https://www.example.com\">Click here</a>",
+        "correct_answers": ["href", "Href", "HREF"]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Web Development: CSS",
+        "question": "What does CSS stand for?",
+        "correct_answer": "Cascading Style Sheets",
+        "incorrect_answers": [
+            "Computer Style Sheets",
+            "Creative Style Sheets",
+            "Colorful Style Sheets"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Web Development: CSS",
+        "question": "In CSS, the # symbol is used to select elements by their class.",
+        "correct_answer": "False"
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Web Development: CSS",
+        "question": "Which property is used to change the font of an element?",
+        "correct_answer": "font-family",
+        "incorrect_answers": [
+            "font-style",
+            "text-font",
+            "text-style"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Web Development: CSS",
+        "question": "The z-index property only works on elements with a position value of static.",
+        "correct_answer": "False"
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Web Development: CSS",
+        "question": "Which CSS property is used to control the space between elements?",
+        "correct_answer": "margin",
+        "incorrect_answers": [
+            "spacing",
+            "padding",
+            "border"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Web Development: CSS",
+        "question": "CSS Grid and Flexbox are the same thing.",
+        "correct_answer": "False"
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Web Development: CSS",
+        "question": "Which unit is not relative to the viewport size?",
+        "correct_answer": "px",
+        "incorrect_answers": [
+            "vh",
+            "vw",
+            "vmin"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Web Development: CSS",
+        "question": "The box-sizing: border-box property includes padding and border in the element's total width and height.",
+        "correct_answer": "True"
+    },
+    {
+        "type": "text",
+        "difficulty": "hard",
+        "category": "Web Development: CSS",
+        "question": "Complete the CSS rule to set the text color to red:\ncss {\n  _____ : red;\n}",
+        "correct_answers": ["color", "Color", "COLOR"]
+    },
+    {
+        "type": "text",
+        "difficulty": "hard",
+        "category": "Web Development: CSS",
+        "question": "Complete the CSS rule to create a flexible container:\n.container {\n  display: _____;\n}",
+        "correct_answers": ["flex", "Flex", "FLEX"]
+    }
+]
