@@ -5,6 +5,12 @@
 ### Purpose
 Quiz forge is designed to be a revision tool in the form of an online quiz. The primary focus is programming questions. However other topics have been considered.
 
+<p align="center">
+<img src="assets/readMe Images/" alt="Image of final MVP product">
+</p>
+<br>
+
+
 ### Target Audience
 There is no particular audience targeted for this application, however with Quiz forge being a quiz application with the focus on revision and learning, stating the target audience would be students or those looking learn.
 
@@ -63,9 +69,18 @@ There is no particular audience targeted for this application, however with Quiz
 
 ## Design Decisions
 
+### Project Board
+
+To manage the project and keep track of tasks including, must haves, should haves, could haves
+
+<p align="center">
+<img src="assets/readMe Images/project-board.png" alt="Image of the project KanBan Board">
+</p>
+<br>
+
 ### Wireframes
 
-Within the initial planning stage of the project, wireframes were created to provide initial layouts and to 
+Within the initial planning stage of the project, wireframes were created to provide initial layouts and to ensure all members of the team were envisioning the same design and starting point for the web application.
 
 <br>
 <p align="center">
@@ -115,8 +130,15 @@ Accessibility considerations have been considered throughout the projects creati
 
 #### Fonts
 
+Google fonts were used within the project to enable additional customisation to the application as well adding to the general theme and feel of the application.
+
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of font used for the project">
+<img src="assets/readMe Images/Ubuntu Font.png" alt="Image of Ubuntu font used for the project">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/source code font.png" alt="Image of Source Code font used for the project">
 </p>
 <br>
 
@@ -138,11 +160,31 @@ Accessibility considerations have been considered throughout the projects creati
 <br>
 
 ### Advanced Features (Should-Haves)
-- **Feature 1:** Description of the implemented feature.
-- **Feature 2:** Description of the implemented feature.
+- **Questions Types:** Quiz questions provided in various types, e.g. Multiple Choice, True/False, Type Your Own Answer. By having different question types this gives an overall better user experience for the student/learner. 
 
-(Include all should-have features)  
-**Guidance:** Include any advanced features you implemented during Phase 3: Should User Stories Implementation & Any Advanced Features. Explain how these features enhance user experience and their alignment with the acceptance criteria.
+<p align="center">
+<img src="assets/readMe Images/" alt="Image of Multiple Choice question">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/" alt="Image of True or False question">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/" alt="Image of Type your own answer question">
+</p>
+<br>
+
+- **Custom Json Questions:** Additional customisation of the quiz can be done via the user submitting a custom JSON file
+
+<p align="center">
+<img src="assets/readMe Images/" alt="Image of JSON Upload Modal">
+</p>
+<br>
+
+
 
 ### Optional Features (Could-Haves)
 - **Feature 1:** Description of the implemented feature (if any).
@@ -161,12 +203,31 @@ Mention any issues found and how they were resolved.
 
 ### Known Bugs
 
+- **Bug:**
 Quiz question icons, don't scale properly on higher resolution screens, the question icons are really small on the screen.
+- **Fix:**
+Issue resolved, bug was created due to different zoom levels on different developers screen sizes.
+
+- **Bug:**
+Random question list generator goes into infinite loop due to use of while.
+- **Fix:**
+Pending
+
 
 ### Validation
 Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
 Include the results of the validation process.  
 **Guidance:** Document your use of W3C and Jigsaw validators to ensure your HTML and CSS meet web standards. Include any errors or warnings encountered and how they were resolved.
+
+<p align="center">
+<img src="assets/readMe Images/" alt="HTML Validator">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/" alt="CSS Validator">
+</p>
+<br>
 
 
 ## Deployment
