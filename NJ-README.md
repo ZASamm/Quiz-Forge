@@ -5,6 +5,12 @@
 ### Purpose
 Quiz forge is designed to be a revision tool in the form of an online quiz. The primary focus is programming questions. However other topics have been considered.
 
+<p align="center">
+<img src="assets/readMe Images/final-product.png" alt="Image of final MVP product">
+</p>
+<br>
+
+
 ### Target Audience
 There is no particular audience targeted for this application, however with Quiz forge being a quiz application with the focus on revision and learning, stating the target audience would be students or those looking learn.
 
@@ -63,9 +69,27 @@ There is no particular audience targeted for this application, however with Quiz
 
 ## Design Decisions
 
+### Project Board
+
+To manage the project and keep track of the project. Agile methodologies were adopted throughout the project by utilising User Stories, a KanBan board and holding stand up / Stand downs. [Project Board](https://github.com/users/GuyMitchy/projects/1/views/1)
+
+<p align="center">
+<img src="assets/readMe Images/project-board.png" alt="Image of the project KanBan Board">
+</p>
+<br>
+
+### Mood Board
+
+A mood board was created as a method of brainstorming ideas amongst the team, whilst keeping a record of the thought process. [Mood Board](https://miro.com/app/board/uXjVLc0PLq0=/)
+
+<p align="center">
+<img src="assets/readMe Images/mood-Board.png" alt="Image of the teams mood board">
+</p>
+<br>
+
 ### Wireframes
 
-Within the initial planning stage of the project, wireframes were created to provide initial layouts and to 
+Within the initial planning stage of the project, wireframes were created to provide initial layouts and to ensure all members of the team were envisioning the same design and starting point for the web application.
 
 <br>
 <p align="center">
@@ -101,12 +125,16 @@ Accessibility considerations have been considered throughout the projects creati
 
 #### Colour Scheme
 
+A dark background with aqua colour scheme was chosen to keep with the retro 90's computer terminal theme.
+
 <p align="center">
 <img src="assets/readMe Images/colour-scheme.png" alt="Image of the colour scheme being used">
 </p>
 <br>
 
 #### Colour Contrast Checks
+
+Colour contrast has been consider and the chosen colour scheme has been tested via an online colour contrast checker. [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/)
 
 <p align="center">
 <img src="assets/readMe Images/colour-contrast-check.png" alt="Image of the colour scheme being used">
@@ -115,8 +143,16 @@ Accessibility considerations have been considered throughout the projects creati
 
 #### Fonts
 
+Google fonts were used within the project to enable additional customisation to the application as well adding to the general theme and feel of the application.
+[Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro?query=source+mono), [Ubuntu Mono](https://fonts.google.com/specimen/Ubuntu+Mono?query=ubuntu+mono)
+
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of font used for the project">
+<img src="assets/readMe Images/Ubuntu Font.png" alt="Image of Ubuntu font used for the project">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/source code font.png" alt="Image of Source Code font used for the project">
 </p>
 <br>
 
@@ -138,49 +174,145 @@ Accessibility considerations have been considered throughout the projects creati
 <br>
 
 ### Advanced Features (Should-Haves)
-- **Feature 1:** Description of the implemented feature.
-- **Feature 2:** Description of the implemented feature.
+- **Questions Types:** Quiz questions provided in various types, e.g. Multiple Choice, True/False, Type Your Own Answer. By having different question types this gives an overall better user experience for the student/learner. 
 
-(Include all should-have features)  
-**Guidance:** Include any advanced features you implemented during Phase 3: Should User Stories Implementation & Any Advanced Features. Explain how these features enhance user experience and their alignment with the acceptance criteria.
+<p align="center">
+<img src="assets/readMe Images/" alt="Image of Multiple Choice question">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/" alt="Image of True or False question">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/" alt="Image of Type your own answer question">
+</p>
+<br>
+
+- **Expandable Question Storage :** A feature to allow the question bank to be easily expanded upon if required. This was done via a JSON format
+
+<p align="center">
+<img src="assets/readMe Images/json-question-storage.png" alt="Image of JSON format used for storing questions">
+</p>
+<br>
+
+- **Scoring And Completion:** A feature to allow a visual way of keeping score for the player.
+
+<p align="center">
+<img src="assets/readMe Images/game-score.png" alt="Image of the games scoring setup">
+</p>
+<br>
+
+- **Randomised Questions:** Randomising the presented quiz questions from the initial bank of 30 quiz question
+
+<p align="center">
+<img src="assets/readMe Images/randomised-questions.png" alt="Image of the randomised questions">
+</p>
+<br>
+
+- **Varied Question Content:** Quiz questions should have varied content, taking into consideration different topics as well as adding images as question answers as well as more visual content.
+
+<p align="center">
+<img src="assets/readMe Images/varied-questions.png" alt="Varied question content image">
+</p>
+<br>
+
+
 
 ### Optional Features (Could-Haves)
-- **Feature 1:** Description of the implemented feature (if any).
-- **Feature 2:** Description of the implemented feature (if any).
 
-(Include any could-have features that were implemented or considered)  
-**Guidance:** If any could-have features were implemented, describe them here. This is an opportunity to showcase extra work done beyond the initial scope. But remember - keep it simple! Focus on the Must stories first. Could user story features are commonly earmarked for future project iterations.
+- **Custom Json Questions:** Additional customisation of the quiz can be done via the user submitting a custom JSON file
+
+<p align="center">
+<img src="assets/readMe Images/json-upload-modal.png" alt="Image of JSON Upload Modal">
+</p>
+<br>
+
+- **Timer Toggle:** Addition of a timer to increase the difficulty of the quiz and force the user to think quickly.
+
+<p align="center">
+<img src="assets/readMe Images/timer.png" alt="Game Board Timer Image">
+</p>
+<br>
+
+- **Puzzle Integration:** The addition of more puzzles, rather than simple answer the question style questions
+
+<p align="center">
+<img src="assets/readMe Images/puzzles.png" alt="Game puzzles Image">
+</p>
+<br>
+
+- **Visual Theme Toggle:** Addition of themes that can be toggled between each other. Proposed colours are aqua by default, orange, green and a light or white. These chosen colours are based off traditional terminal themes.
+
+<p align="center">
+<img src="assets/readMe Images/themes.png" alt="Game themes selection Image">
+</p>
+<br>
+
+- **Audio integration:** Adding audio to the project will enhance the user experience.
+
+<p align="center">
+<img src="assets/readMe Images/audio.png" alt="Game audio Image">
+</p>
+<br>
+
+- **Multiple User Question Sets:** Having the ability to create multiple question sets so that multiple users can test there knowledge 
+
+<p align="center">
+<img src="assets/readMe Images/question-sets.png" alt="Multiple Question Image">
+</p>
+<br>
 
 
 ## Testing and Validation
 
 ### Testing Results
-Summarize the results of testing across different devices and screen sizes.  
-Mention any issues found and how they were resolved.  
-**Guidance:** Summarize the results of your testing across various devices using tools like Chrome DevTools, as outlined in Phase 2. Mention any issues found and how they were resolved.
+Testing the application has been an ongoing process throughout the development of the website. With a focus on responsiveness across all standard screen sizes, various edits were made throughout the development process to ensure the application looks and performs well on mobile, tablet and desktop. The team agreed to deploy early to allow to additional live testing encase there were any inconsistencies between the development environment and the live application.
 
 ### Known Bugs
 
+- **Bug:**
 Quiz question icons, don't scale properly on higher resolution screens, the question icons are really small on the screen.
+- ***Fix:***
+Issue resolved, bug was created due to different zoom levels on different developers screen sizes.
+
+- **Bug:**
+Random question list generator goes into infinite loop due to use of while.
+- ***Fix:***
+Pending
+
 
 ### Validation
-Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
-Include the results of the validation process.  
-**Guidance:** Document your use of W3C and Jigsaw validators to ensure your HTML and CSS meet web standards. Include any errors or warnings encountered and how they were resolved.
+Validators were used to help address any issues within the projects HTML, CSS and Javascript files. [HTML Validator](https://validator.w3.org/), [CSS Validator](https://jigsaw.w3.org/css-validator/), [JavaScript Linter]()
+
+<p align="center">
+<img src="assets/readMe Images/html-validator.png" alt="HTML Validator Checks">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/css-validator.png" alt="CSS Validator Checks">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/js-linter.png" alt="JavaScript Linter Checks">
+</p>
+<br>
 
 
 ## Deployment
 
 ### Deployment Process
-Briefly describe the deployment process to GitHub Pages or another cloud platform.  
-Mention any specific challenges encountered during deployment.  
-**Guidance:** Describe the steps you took to deploy your website during Phase 4: Final Testing, Debugging & Deployment, including any challenges encountered.
+For this project, GitHub pages was the chosen deployment method. A simple and straight forward service provided by github which uses a repo branch as a source for the page to pull from.
 
-## AI Tools Usage
+<p align="center">
+<img src="assets/readMe Images/github-pages.png" alt="Github Pages Deployments image">
+</p>
+<br>
 
-### Reflection
-Describe the role AI tools played in the deployment process, including any benefits or challenges.  
-**Guidance:** Reflect on how AI tools assisted with the deployment process, particularly how they streamlined any tasks or presented challenges.
 
 ## Reflection on Development Process
 
