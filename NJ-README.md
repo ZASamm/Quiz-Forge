@@ -273,17 +273,22 @@ Issue resolved, bug was created due to different zoom levels on different develo
 - **Bug:**
 Random question list generator goes into infinite loop due to use of while.
 - ***Fix:***
-Pending
+prevent while loop from starting when number of questions is larger than the list of possible questions.
 
 - **Bug:**
 Footer expands past boundary of game board, creating white space and scroll on mobile phones
 - ***Fix:***
-Add burger icon for mobile devices
+Pending (Add burger icon for mobile devices?)
 
 - **Bug:**
 Text in json files where code has been used as an answer, the answer gets interpreted as code.
 - ***Fix:***
-Pending
+html characters in string not displaying properly was: use string.replaceAll to replace < and > characters with correct HTML escape characters - &lt; and &gt; respectively.
+
+- **Bug:**
+Close button on display questions modal not working
+- ***Fix:***
+Corrected indexing to fix this issue
 
 ### Validation
 Validators were used to help address any issues within the projects HTML, CSS and Javascript files. [HTML Validator](https://validator.w3.org/), [CSS Validator](https://jigsaw.w3.org/css-validator/), [JavaScript Linter]()
