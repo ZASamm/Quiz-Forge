@@ -251,10 +251,17 @@ Google fonts were used within the project to enable additional customisation to 
 </p>
 <br>
 
-- **Audio integration:** Addition of themes that can be toggled between each other. Proposed colours 
+- **Audio integration:** Adding audio to the project will enhance the user experience.
 
 <p align="center">
 <img src="assets/readMe Images/audio.png" alt="Game audio Image">
+</p>
+<br>
+
+- **Multiple User Question Sets:** Having the ability to create multiple question sets so that multiple users can test there knowledge 
+
+<p align="center">
+<img src="assets/readMe Images/question-sets.png" alt="Multiple Question Image">
 </p>
 <br>
 
