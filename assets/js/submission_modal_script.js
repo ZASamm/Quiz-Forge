@@ -81,7 +81,7 @@ function handleQuestionForm() {
 
     // PSEUDO CODE FOR FORM SUBMISSION
     // on submit prevent default refresh. 
-    // Then create a new question object with basic properties.
+    // Then create a new question object with basic properties so we can handle the local storage more easily.
     // Handle specific question type requirements - if multiple choice, collect all incorrect answers. If text, collect all possible correct answers.
     // Try to get existing questions from local storage, if none exist use an empty array.
     // Add the new question (newQuestion) to our array (customQuesions)
@@ -124,19 +124,19 @@ function handleQuestionForm() {
             // If none exist, use an empty array ('[]')
             let customQuestions = JSON.parse(localStorage.getItem('customQuestions') || '[]');
 
-            // Add the new question to our array
+            // Add the new question to the array
             customQuestions.push(newQuestion);
 
             // Save the updated array back to localStorage
-            // JSON.stringify converts our array to a string (required for localStorage)
+            // JSON.stringify converts the array to a string (required for localStorage)
             localStorage.setItem('customQuestions', JSON.stringify(customQuestions));
 
-            // Log success and give user feedback
+
             console.log('Question saved to localStorage:', newQuestion);
-            form.reset(); // Clear the form
+            form.reset();
             alert('Question saved successfully!');
         } catch (error) {
-            // If anything goes wrong, show error messages
+
             console.error('Error saving question:', error);
             alert('Error saving question. Please check the console for details.');
         }
@@ -155,7 +155,7 @@ function getCustomQuestions() {
 
 // ----------------------------------------------------------------------------------------------------------
 
-// DISPLAY QUESTIONS MODAL -- Just for testing local cache retrieval
+// DISPLAY QUESTIONS MODAL -- Just for testing local cache retrieval (Now a feature)
 
 
 
@@ -211,27 +211,27 @@ function displayQuestions() {
 }
 
 
-// function handleAboutModal() {
-//     const aboutModal = document.getElementById("aModal");
-//     const aboutbtn = document.getElementById("about");
-//     const close = document.getElementsByClassName("close")[3];
-//     const scanLines = document.getElementById("screen_scanlines")
+function handleAboutModal() {
+    const aboutModal = document.getElementById("aModal");
+    const aboutbtn = document.getElementById("about");
+    const close = document.getElementsByClassName("close")[3];
+    const scanLines = document.getElementById("screen_scanlines")
 
-//     aboutbtn.addEventListener('click', function () {
-//         aboutModal.style.display = "block";
-  //       scanLines.classList.add("translucent")
-//
-//     });
+    aboutbtn.addEventListener('click', function () {
+        aboutModal.style.display = "block";
+        scanLines.classList.add("translucent")
 
-//     close.addEventListener('click', function () {
-//         aboutModal.style.display = "none";
-//         scanLines.classList.remove("translucent")
-//     });
+    });
 
-//     window.addEventListener('click', function (e) {
-//         if (e.target == aboutModal) {
-//             aboutModal.style.display = "none";
-//          scanLines.classList.remove("translucent")
-//         }
-//     });
-// }
+    close.addEventListener('click', function () {
+        aboutModal.style.display = "none";
+        scanLines.classList.remove("translucent")
+    });
+
+    window.addEventListener('click', function (e) {
+        if (e.target == aboutModal) {
+            aboutModal.style.display = "none";
+            scanLines.classList.remove("translucent")
+        }
+    });
+}

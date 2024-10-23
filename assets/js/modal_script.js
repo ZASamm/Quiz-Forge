@@ -31,6 +31,7 @@ async function handleModal() {
 
             qModal.style.display = "block";
             scanLines.classList.add("translucent")
+            console.log(scanLines.classList)
 
 
             // const squareID = this.id;   - Could set modal content like this
@@ -63,6 +64,7 @@ async function handleModal() {
 // Close modal if clicking anywhere outsde of modal 
 
 window.onclick = function (event) {
+    scanLines = document.getElementById("screen_scanlines")
     if (event.target == qModal) {
         qModal.style.display = "none";
         scanLines.classList.remove("translucent")
