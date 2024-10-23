@@ -91,6 +91,7 @@ function loadQuestion(squareIndex, modal) {
             let possibleAnswers = [];
             possibleAnswers = possibleAnswers.concat(question.incorrect_answers);
             possibleAnswers.push(question.correct_answer);
+            possibleAnswers = shuffle(possibleAnswers);
             let htmlString = '';
             for (let answer of possibleAnswers) {
                 answer = answer.replaceAll("<", "&lt;");
@@ -194,6 +195,6 @@ function shuffle(array) {
         [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]
         ];
-    }
+    };
     return array;
-}
+};
