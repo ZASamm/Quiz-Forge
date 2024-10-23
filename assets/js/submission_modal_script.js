@@ -3,6 +3,8 @@ console.log("SUBMISSION Modal script loaded");
 document.addEventListener('DOMContentLoaded', () => {
     handleSubmitModal();
     handleQuestionForm();
+    handleDisplayModal();
+    displayQuestions();
 
 
 
@@ -141,4 +143,75 @@ function handleQuestionForm() {
 
 }
 // -----------------------------END OF AI CODE--------------------------------
+
+
+
+// THIS IS HOW TO GET CUSTOM QUESTIONS FROM LOCAL STORAGE -----------------------------------------------------
+function getCustomQuestions() {
+    const questions = localStorage.getItem('customQuestions');
+    return questions ? JSON.parse(questions) : [];  // Return parsed questions or empty array if none exist
+}
+
+// ----------------------------------------------------------------------------------------------------------
+
+// DISPLAY QUESTIONS MODAL -- Just for testing local cache retrieval
+
+
+function handleDisplayModal() {
+    console.log('handleDisplayModal function called');
+    const displayModal = document.getElementById("display-modal");
+    const displayBtn = document.getElementById("displayQuestionsBtn");
+    const closeDisplay = document.getElementsByClassName("close")[1];
+
+    console.log('displayModal:', displayModal);
+    console.log('displayBtn:', displayBtn);
+    console.log('closeDisplay:', closeDisplay);
+
+    displayBtn.addEventListener('click', function () {
+        console.log('Display button clicked');
+        displayModal.style.display = "block";
+        displayQuestions();
+    });
+
+    closeDisplay.addEventListener('click', function () {
+        console.log('Close display button clicked');
+        displayModal.style.display = "none";
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target == displayModal) {
+            console.log('Clicked outside display modal');
+            displayModal.style.display = "none";
+        }
+    });
+}
+
+
+
+function displayQuestions() {
+    const questionsContainer = document.getElementById("questionsContainer");
+    const questions = getCustomQuestions();
+
+    if (questions.length === 0) {
+        questionsContainer.innerHTML = "<p>No questions added yet.</p>";
+        return;
+    }
+
+    let questionsHTML = "";
+    questions.forEach((question, index) => {
+        questionsHTML += `
+            <div class="question">
+                <h3>Question ${index + 1}</h3>
+                <p><strong>Type:</strong> ${question.type}</p>
+                <p><strong>Difficulty:</strong> ${question.difficulty}</p>
+                <p><strong>Category:</strong> ${question.category}</p>
+                <p><strong>Question:</strong> ${question.question}</p>
+                <p><strong>Correct Answer:</strong> ${question.correct_answer || question.correct_answers.join(", ")}</p>
+                ${question.incorrect_answers ? `<p><strong>Incorrect Answers:</strong> ${question.incorrect_answers.join(", ")}</p>` : ""}
+            </div>
+        `;
+    });
+
+    questionsContainer.innerHTML = questionsHTML;
+}
 
