@@ -2,6 +2,7 @@
 // The different questions can be handled by a function called inside the modal.
 // The modal function needs to receive the squareID to know which square is pressed
 
+let questions = [];
 
 async function handleModal() {
 
@@ -11,13 +12,9 @@ async function handleModal() {
         'assets/questions/programming/css-questions-json.json'
     ];
     let possibleQuestions = await loadQuestionsFromFile(filePaths);
-    console.log(possibleQuestions);
-    console.log(possibleQuestions.length);
-    // console.log(possibleQuestions[0]);
-    // console.log(typeof(possibleQuestions));
 
-    let questions = generateQuestionSet(9, possibleQuestions);
-    console.log(questions);
+    questions = generateQuestionSet(9, possibleQuestions);
+
 
     const qModal = document.getElementById("qModal");
     const squares = document.querySelectorAll(".square");
@@ -62,18 +59,45 @@ function generateQuestionList() {
     return questionList;
 }
 
+
 function loadQuestion(squareIndex, modal) {
     //alert(`Question ${square} Clicked`);
+    let question = questions[squareIndex];
     let modalContent = document.querySelector(".modal-content");
     document.querySelector(".category").innerHTML = `Question ${Number(squareIndex) + 1}`;
-    document.querySelector(".questionSection").innerHTML = `What is Lorum Ipsum?`;
-    document.querySelector(".answerSection").innerHTML = `
-    <button class="answer-button">Answer 1</button>
-    <button class="answer-button">Answer 2</button>
-    <button class="answer-button">Answer 3</button>
-    <button class="answer-button">Answer 4</button>
-    `;
+    document.querySelector(".questionSection").innerHTML = `${question.question}`;
+    document.querySelector(".answerSection").innerHTML = "";    
+    switch (question.type) {
+        case 'multiple':
+            // missing on click event handler, to be added later.
+            let possibleAnswers = [];
+            possibleAnswers = possibleAnswers.concat(question.incorrect_answers);
+            possibleAnswers.push(question.correct_answer);
+            let htmlString = '';
+            for (let answer of possibleAnswers) {
+                htmlString = htmlString + `<button class="answer-button">${answer}</button>`
+            };
+            document.querySelector(".answerSection").innerHTML = htmlString;
+            break;
+        case 'boolean':
+            // missing on click event handler, to be added later.
+            document.querySelector(".answerSection").innerHTML = `
+            <button class="boolean-button">True</button>
+            <button class="boolean-button">False</button>
+            `;
+            break;
+        case 'text':
+            // missing on click event handler, to be added later.
+            document.querySelector(".answerSection").innerHTML = `
+            <input type="text">
+            <button class="text-submit-button">Answer</button>
+            `;
+            break;
+        default:
+            alert(`${question.type} is an unsupported or invalid question type`);
+    }
 }
+
 
 /**
  * Function gets an array of questions from the given JSON files.
