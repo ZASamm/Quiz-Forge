@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleQuestionForm();
     handleDisplayModal();
     displayQuestions();
-    // handleAboutModal();
+    handleAboutModal();
 
 });
 
@@ -214,12 +214,14 @@ function displayQuestions() {
 function handleAboutModal() {
     const aboutModal = document.getElementById("aModal");
     const aboutbtn = document.getElementById("about");
+    
     const close = document.getElementsByClassName("close")[3];
     const scanLines = document.getElementById("screen_scanlines")
 
-    aboutbtn.addEventListener('click', function () {
+    aboutbtn.addEventListener('click', function (e) {
         aboutModal.style.display = "block";
         scanLines.classList.add("translucent")
+        console.log(e)
 
     });
 
