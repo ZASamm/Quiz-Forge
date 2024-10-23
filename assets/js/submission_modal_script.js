@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleQuestionForm();
     handleDisplayModal();
     displayQuestions();
+    handleAboutModal();
 
 
 
@@ -178,10 +179,6 @@ function handleDisplayModal() {
     });
 }
 
-
-
-
-
 function displayQuestions() {
     const questionsContainer = document.getElementById("questionsContainer");
     const questions = getCustomQuestions();
@@ -209,3 +206,23 @@ function displayQuestions() {
     questionsContainer.innerHTML = questionsHTML;
 }
 
+
+function handleAboutModal() {
+    const aboutModal = document.getElementById("aModal");
+    const aboutbtn = document.getElementById("about");
+    const close = document.getElementsByClassName("close")[3];
+
+    aboutbtn.addEventListener('click', function () {
+        aboutModal.style.display = "block";
+    });
+
+    close.addEventListener('click', function () {
+        aboutModal.style.display = "none";
+    });
+
+    window.addEventListener('click', function (e) {
+        if (e.target == aboutModal) {
+            aboutModal.style.display = "none";
+        }
+    });
+}
