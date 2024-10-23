@@ -3,7 +3,7 @@
 ## Overview
 
 ### Purpose
-Quiz forge is designed to be a revision tool in the form of an online quiz. The primary focus is programming questions. However other topics have been considered.
+Quiz forge is designed to be a revision tool in the form of an online quiz. The primary focus is programming questions. However other topics have been considered. [Live Project](https://guymitchy.github.io/hackathon/) available here.
 
 <p align="center">
 <img src="assets/readMe Images/final-product.png" alt="Image of final MVP product">
@@ -71,7 +71,7 @@ There is no particular audience targeted for this application, however with Quiz
 
 ### Project Board
 
-To manage the project and keep track of the project. Agile methodologies were adopted throughout the project by utilising User Stories, a KanBan board and holding stand up / Stand downs. [Project Board](https://github.com/users/GuyMitchy/projects/1/views/1)
+To manage the [Project](https://github.com/users/GuyMitchy/projects/1/views/1) and keep track of the required tasks. Agile methodologies were adopted throughout the project by utilising User Stories, a KanBan board and holding stand up / Stand downs.
 
 <p align="center">
 <img src="assets/readMe Images/project-board.png" alt="Image of the project KanBan Board">
@@ -80,8 +80,8 @@ To manage the project and keep track of the project. Agile methodologies were ad
 
 ### Mood Board
 
-A mood board was created as a method of brainstorming ideas amongst the team, whilst keeping a record of the thought process. 
-[Mood Board](https://miro.com/app/board/uXjVLc0PLq0=/)
+The team decided to consolidate initial design ideas via a [Mood Board](https://miro.com/app/board/uXjVLc0PLq0=/) was created as a method of brainstorming ideas amongst the team, whilst keeping a record of the thought process. 
+
 
 <p align="center">
 <img src="assets/readMe Images/mood-Board.png" alt="Image of the teams mood board">
@@ -135,8 +135,8 @@ A dark background with aqua colour scheme was chosen to keep with the retro 90's
 
 #### Colour Contrast Checks
 
-Colour contrast has been consider and the chosen colour scheme has been tested via an online colour contrast checker. 
-[Colour Contrast Checker](https://webaim.org/resources/contrastchecker/)
+Colour contrast has been consider and the chosen colour scheme has been tested via an online [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/). 
+
 
 <p align="center">
 <img src="assets/readMe Images/colour-contrast-check.png" alt="Image of the colour scheme being used">
@@ -225,7 +225,7 @@ Google fonts were used within the project to enable additional customisation to 
 
 ### Optional Features (Could-Haves)
 
-- **Custom Json Questions:** Additional customisation of the quiz can be done via the user submitting a custom JSON file
+- **Custom Json Questions:** Additional customisation of the quiz can be done via the user submitting a custom JSON file to allow the user choose their own questions and or revision topic
 
 <p align="center">
 <img src="assets/readMe Images/json-upload-modal.png" alt="Image of JSON Upload Modal">
@@ -324,6 +324,22 @@ For this project, GitHub pages was the chosen deployment method. A simple and st
 </p>
 <br>
 
+## Development Team
+
+- **Guy Clements:**
+[GitHub](https://github.com/GuyMitchy)
+
+- **Zara Samm:**
+[GitHub](https://github.com/ZASamm)
+
+- **Nathan Jones:**
+[GitHub](https://github.com/NSJ021)
+
+- **Richard Hallam:**
+[GitHub](https://github.com/Richard-Hallam)
+
+- **James Vanstone:**
+[GitHub](https://github.com/JamesVanstone)
 
 ## Reflection on Development Process
 
@@ -334,14 +350,13 @@ One of the key successes was creating the retro 90's style computer terminal for
 After deciding on using a JSON format for the storage of quiz questions, Utilising this format as well as linking and looping through the questions in Javascript proved problematic with Javascript's Arrays.
 
 ### Final Thoughts
-Provide any additional insights gained during the project and thoughts on the overall process.  
-**Guidance:** Begin drafting reflections during Phase 1 and update throughout the project. Finalize this section after Phase 4. Highlight successes and challenges, particularly regarding the use of AI tools, and provide overall insights into the project.
+Overall the Quiz Forge project went very well, there were ups and downs as to be expected, Javascript was both kind and hard to tame at the same time. Ensuring the application looks great and responded smoothly and correctly was an ongoing yet enjoyable battle.
+
+The development worked very well together with little to no issues. Stand ups and Downs took place everyday where progress was summarised and a game plan for the next day was formed. Throughout various discussions the entire group was involved in communicating their view, problem, concern or solution.
 
 ## Code Attribution
 Properly attribute any external code sources used in the project (excluding GitHub Copilot-generated code).  
 **Guidance:** Document any external code sources used throughout the entire project, especially during Phase 2 and Phase 3. Exclude GitHub Copilot-generated code from attribution.
 
 ## Future Improvements
-Briefly discuss potential future improvements or features that could be added to the project.  
-**Guidance:** Reflect on potential enhancements that could be made to the project after Phase 4: Final Testing, Debugging & Deployment. These could be Could user story features you didn’t have time to implement or improvements based on testing feedback.
-
+With regards to future improvements, generally speaking additional functionality and customisation would be the main areas of focus. For example, extending the quiz's question bank, featuring different topics, additional more challenging questions in the form of puzzles. By utilising JSON as the question storage format, with additional development the user would be given the ability to configure the quiz system to their liking via uploading a custom JSON file to change the content of the quiz.
