@@ -30,6 +30,29 @@ p {
   --offwhite: #fafafafa;
 }
 
+[data-theme="orange"] {
+  --BG: #4A3113;
+  --BGDark: #1E1506;
+  --Cyan: #FFA500;
+  --CyanBright: #FFC966;
+  --offwhite: #FAEBD7;
+}
+
+[data-theme="green"] {
+  --BG: #2E4A13;
+  --BGDark: #1C2E06;
+  --Cyan: #32CD32; 
+  --CyanBright: #98FB98;
+  --offwhite: #F0FFF0; 
+}
+
+[data-theme="light"] {
+  --BG: #F0F0F0;
+  --BGDark: #D0D0D0;
+  --Cyan: #000000;
+  --CyanBright: #333333;
+  --offwhite: #FFFFFF;
+}
 
 .row {
   padding: 0px;
