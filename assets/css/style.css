@@ -28,6 +28,7 @@ p {
   --Medium: #40E0d0;
   --Bright: #6fffe9;
   --offwhite: #fafafafa;
+  --filter: none;
 }
 
 [data-theme="orange"] {
@@ -36,6 +37,7 @@ p {
   --Medium: #FFA500;
   --Bright: #FFC966;
   --offwhite: #FAEBD7;
+  --filter: sepia(1) saturate(4) brightness(1.1) hue-rotate(20deg);
 }
 
 [data-theme="green"] {
@@ -43,7 +45,8 @@ p {
   --BGDark: #1C2E06;
   --Medium: #32CD32; 
   --Bright: #98FB98;
-  --offwhite: #F0FFF0; 
+  --offwhite: #F0FFF0;
+  --filter: sepia(1) saturate(5) brightness(1.2) hue-rotate(75deg); 
 }
 
 [data-theme="light"] {
@@ -52,6 +55,7 @@ p {
   --Medium: #000000;
   --Bright: #333333;
   --offwhite: #FFFFFF;
+  --filter: invert(0.9) brightness(0.5) contrast(1.2);
 }
 
 .row {
@@ -151,6 +155,7 @@ p {
   -moz-transition: all 0.05s ease-in-out;
   -webkit-transition: all 0.05s ease-in-out;
   -o-transition: all 0.05s ease-in-out;
+  filter: var(--filter);
 }
 
 .player-square {
