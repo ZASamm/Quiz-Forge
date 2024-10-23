@@ -3,7 +3,7 @@
 ## Overview
 
 ### Purpose
-Quiz forge is designed to be a revision tool in the form of an online quiz. The primary focus is programming questions. However other topics have been considered.
+Quiz forge is designed to be a revision tool in the form of an online quiz. The primary focus is programming questions. However other topics have been considered. [Live Project](https://guymitchy.github.io/hackathon/) available here.
 
 <p align="center">
 <img src="assets/readMe Images/final-product.png" alt="Image of final MVP product">
@@ -42,10 +42,10 @@ There is no particular audience targeted for this application, however with Quiz
 - **Scoring and Completion:** As a competitive player, I want to see my score and a win/lose screen at the end of the game, so that I know how well I performed.
   **Acceptance Criteria:** The score is displayed at the end of the game, Win/lose condition is communicated, The option to play again is provided
 
-  - **Randomised Question Devliery:** As a returning player, I want questions to be randomized each time I play, so that the game feels fresh on repeated playthrough.
+- **Randomised Question Devliery:** As a returning player, I want questions to be randomized each time I play, so that the game feels fresh on repeated playthrough.
   **Acceptance Criteria:** Questions appear in a different order in each game, If possible, a different set of questions is selected for each game
 
-  - **Varied Question Content:** As a player, I want to encounter a variety of programming questions, So that i can test my knowledge on different areas.
+- **Varied Question Content:** As a player, I want to encounter a variety of programming questions, So that i can test my knowledge on different areas.
   **Acceptance Criteria:** Questions cover various programming topics. There are enough questions to avoid frequent repetition
 
 ### Could-Have User Stories
@@ -64,14 +64,14 @@ There is no particular audience targeted for this application, however with Quiz
 - **Storyline:** As a player that enjoys story elements, I want to experience an overarching story, so that the game feels more immersive.
   **Acceptance Criteria:** Brief story snippets are presented between stages or questions, Story elements are relevant to the programming theme
 
-  - **Audio Integration:** As a player who values audio feedback, I want to have sounds attached to actions performed within the game, to make the experience more rounded and immersive
+- **Audio Integration:** As a player who values audio feedback, I want to have sounds attached to actions performed within the game, to make the experience more rounded and immersive
   **Acceptance Criteria:** At least two themes are available (e.g., light and dark mode), Theme can be changed from the main menu or settings
 
 ## Design Decisions
 
 ### Project Board
 
-To manage the project and keep track of the project. Agile methodologies were adopted throughout the project by utilising User Stories, a KanBan board and holding stand up / Stand downs. [Project Board](https://github.com/users/GuyMitchy/projects/1/views/1)
+To manage the [Project](https://github.com/users/GuyMitchy/projects/1/views/1) and keep track of the required tasks. Agile methodologies were adopted throughout the project by utilising User Stories, a KanBan board and holding stand up / Stand downs.
 
 <p align="center">
 <img src="assets/readMe Images/project-board.png" alt="Image of the project KanBan Board">
@@ -80,7 +80,8 @@ To manage the project and keep track of the project. Agile methodologies were ad
 
 ### Mood Board
 
-A mood board was created as a method of brainstorming ideas amongst the team, whilst keeping a record of the thought process. [Mood Board](https://miro.com/app/board/uXjVLc0PLq0=/)
+The team decided to consolidate initial design ideas via a [Mood Board](https://miro.com/app/board/uXjVLc0PLq0=/) was created as a method of brainstorming ideas amongst the team, whilst keeping a record of the thought process. 
+
 
 <p align="center">
 <img src="assets/readMe Images/mood-Board.png" alt="Image of the teams mood board">
@@ -134,7 +135,8 @@ A dark background with aqua colour scheme was chosen to keep with the retro 90's
 
 #### Colour Contrast Checks
 
-Colour contrast has been consider and the chosen colour scheme has been tested via an online colour contrast checker. [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/)
+Colour contrast has been consider and the chosen colour scheme has been tested via an online [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/). 
+
 
 <p align="center">
 <img src="assets/readMe Images/colour-contrast-check.png" alt="Image of the colour scheme being used">
@@ -162,14 +164,14 @@ Google fonts were used within the project to enable additional customisation to 
 - **Game Board:** A digital game board to show the users progression, different indicators to show if players are correct, wrong, and which icon is active.
 
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of Game Board">
+<img src="assets/readMe Images/game-board.png" alt="Image of Game Board">
 </p>
 <br>
 
 - **Quiz Questions:** Quiz questions to help the user revise and test their knowledge on programming. Programming is the default topic. The quiz questions are presented to the user by a modal popup.
 
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of Quiz Questions">
+<img src="assets/readMe Images/question-modal.png" alt="Image of Quiz Questions">
 </p>
 <br>
 
@@ -177,17 +179,17 @@ Google fonts were used within the project to enable additional customisation to 
 - **Questions Types:** Quiz questions provided in various types, e.g. Multiple Choice, True/False, Type Your Own Answer. By having different question types this gives an overall better user experience for the student/learner. 
 
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of Multiple Choice question">
+<img src="assets/readMe Images/multi-choice.png" alt="Image of Multiple Choice question">
 </p>
 <br>
 
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of True or False question">
+<img src="assets/readMe Images/true-false.png" alt="Image of True or False question">
 </p>
 <br>
 
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of Type your own answer question">
+<img src="assets/readMe Images/type-own-answer.png" alt="Image of Type your own answer question">
 </p>
 <br>
 
@@ -207,26 +209,16 @@ Google fonts were used within the project to enable additional customisation to 
 
 - **Randomised Questions:** Randomising the presented quiz questions from the initial bank of 30 quiz question
 
-<p align="center">
-<img src="assets/readMe Images/randomised-questions.png" alt="Image of the randomised questions">
-</p>
-<br>
 
 - **Varied Question Content:** Quiz questions should have varied content, taking into consideration different topics as well as adding images as question answers as well as more visual content.
-
-<p align="center">
-<img src="assets/readMe Images/varied-questions.png" alt="Varied question content image">
-</p>
-<br>
-
 
 
 ### Optional Features (Could-Haves)
 
-- **Custom Json Questions:** Additional customisation of the quiz can be done via the user submitting a custom JSON file
+- **Custom Json Questions:** Additional customisation of the quiz can be done via the user submitting a custom JSON file to allow the user choose their own questions and or revision topic
 
 <p align="center">
-<img src="assets/readMe Images/json-upload-modal.png" alt="Image of JSON Upload Modal">
+<img src="assets/readMe Images/json-upload-questions.png" alt="Image of JSON Upload Modal">
 </p>
 <br>
 
@@ -261,7 +253,7 @@ Google fonts were used within the project to enable additional customisation to 
 - **Multiple User Question Sets:** Having the ability to create multiple question sets so that multiple users can test there knowledge 
 
 <p align="center">
-<img src="assets/readMe Images/question-sets.png" alt="Multiple Question Image">
+<img src="assets/readMe Images/question-sets.png" alt="Multiple Question Sets Image">
 </p>
 <br>
 
@@ -281,8 +273,22 @@ Issue resolved, bug was created due to different zoom levels on different develo
 - **Bug:**
 Random question list generator goes into infinite loop due to use of while.
 - ***Fix:***
-Pending
+prevent while loop from starting when number of questions is larger than the list of possible questions.
 
+- **Bug:**
+Footer expands past boundary of game board, creating white space and scroll on mobile phones
+- ***Fix:***
+Pending (Add burger icon for mobile devices?)
+
+- **Bug:**
+Text in json files where code has been used as an answer, the answer gets interpreted as code.
+- ***Fix:***
+html characters in string not displaying properly was: use string.replaceAll to replace < and > characters with correct HTML escape characters - &lt; and &gt; respectively.
+
+- **Bug:**
+Close button on display questions modal not working
+- ***Fix:***
+Corrected indexing to fix this issue
 
 ### Validation
 Validators were used to help address any issues within the projects HTML, CSS and Javascript files. [HTML Validator](https://validator.w3.org/), [CSS Validator](https://jigsaw.w3.org/css-validator/), [JavaScript Linter]()
@@ -313,24 +319,39 @@ For this project, GitHub pages was the chosen deployment method. A simple and st
 </p>
 <br>
 
+## Development Team
+
+- **Guy Clements:**
+[GitHub](https://github.com/GuyMitchy)
+
+- **Zara Samm:**
+[GitHub](https://github.com/ZASamm)
+
+- **Nathan Jones:**
+[GitHub](https://github.com/NSJ021)
+
+- **Richard Hallam:**
+[GitHub](https://github.com/Richard-Hallam)
+
+- **James Vanstone:**
+[GitHub](https://github.com/JamesVanstone)
 
 ## Reflection on Development Process
 
 ### Successes
-Effective use of AI tools, including GitHub Copilot and DALL-E, and how they contributed to the development process.
+One of the key successes was creating the retro 90's style computer terminal for the Quiz's game board. The entire team contributed to the structure, layout and theme to achieve this.
 
 ### Challenges
-Describe any challenges faced when integrating AI-generated content and how they were addressed.
+After deciding on using a JSON format for the storage of quiz questions, Utilising this format as well as linking and looping through the questions in Javascript proved problematic with Javascript's Arrays.
 
 ### Final Thoughts
-Provide any additional insights gained during the project and thoughts on the overall process.  
-**Guidance:** Begin drafting reflections during Phase 1 and update throughout the project. Finalize this section after Phase 4. Highlight successes and challenges, particularly regarding the use of AI tools, and provide overall insights into the project.
+Overall the Quiz Forge project went very well, there were ups and downs as to be expected, Javascript was both kind and hard to tame at the same time. Ensuring the application looks great and responded smoothly and correctly was an ongoing yet enjoyable battle.
+
+The development worked very well together with little to no issues. Stand ups and Downs took place everyday where progress was summarised and a game plan for the next day was formed. Throughout various discussions the entire group was involved in communicating their view, problem, concern or solution.
 
 ## Code Attribution
 Properly attribute any external code sources used in the project (excluding GitHub Copilot-generated code).  
 **Guidance:** Document any external code sources used throughout the entire project, especially during Phase 2 and Phase 3. Exclude GitHub Copilot-generated code from attribution.
 
 ## Future Improvements
-Briefly discuss potential future improvements or features that could be added to the project.  
-**Guidance:** Reflect on potential enhancements that could be made to the project after Phase 4: Final Testing, Debugging & Deployment. These could be Could user story features you didn’t have time to implement or improvements based on testing feedback.
-
+With regards to future improvements, generally speaking additional functionality and customisation would be the main areas of focus. For example, extending the quiz's question bank, featuring different topics, additional more challenging questions in the form of puzzles. By utilising JSON as the question storage format, with additional development the user would be given the ability to configure the quiz system to their liking via uploading a custom JSON file to change the content of the quiz.
