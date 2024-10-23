@@ -171,7 +171,7 @@ Google fonts were used within the project to enable additional customisation to 
 - **Quiz Questions:** Quiz questions to help the user revise and test their knowledge on programming. Programming is the default topic. The quiz questions are presented to the user by a modal popup.
 
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of Quiz Questions">
+<img src="assets/readMe Images/question-modal.png" alt="Image of Quiz Questions">
 </p>
 <br>
 
@@ -179,17 +179,17 @@ Google fonts were used within the project to enable additional customisation to 
 - **Questions Types:** Quiz questions provided in various types, e.g. Multiple Choice, True/False, Type Your Own Answer. By having different question types this gives an overall better user experience for the student/learner. 
 
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of Multiple Choice question">
+<img src="assets/readMe Images/multi-choice.png" alt="Image of Multiple Choice question">
 </p>
 <br>
 
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of True or False question">
+<img src="assets/readMe Images/true-false.png" alt="Image of True or False question">
 </p>
 <br>
 
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of Type your own answer question">
+<img src="assets/readMe Images/type-own-answer.png" alt="Image of Type your own answer question">
 </p>
 <br>
 
@@ -209,18 +209,8 @@ Google fonts were used within the project to enable additional customisation to 
 
 - **Randomised Questions:** Randomising the presented quiz questions from the initial bank of 30 quiz question
 
-<p align="center">
-<img src="assets/readMe Images/randomised-questions.png" alt="Image of the randomised questions">
-</p>
-<br>
 
 - **Varied Question Content:** Quiz questions should have varied content, taking into consideration different topics as well as adding images as question answers as well as more visual content.
-
-<p align="center">
-<img src="assets/readMe Images/varied-questions.png" alt="Varied question content image">
-</p>
-<br>
-
 
 
 ### Optional Features (Could-Haves)
@@ -228,7 +218,7 @@ Google fonts were used within the project to enable additional customisation to 
 - **Custom Json Questions:** Additional customisation of the quiz can be done via the user submitting a custom JSON file to allow the user choose their own questions and or revision topic
 
 <p align="center">
-<img src="assets/readMe Images/json-upload-modal.png" alt="Image of JSON Upload Modal">
+<img src="assets/readMe Images/json-upload-questions.png" alt="Image of JSON Upload Modal">
 </p>
 <br>
 
