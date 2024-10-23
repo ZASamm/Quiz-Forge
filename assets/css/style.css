@@ -97,6 +97,12 @@ p {
 
 }
 
+/* Scanline opacity - Zara */
+
+#screen_scanlines {
+  opacity: 0.52;
+}
+
 .zs_folder_row {
   min-height: 75vh;
   min-width: 100%;
@@ -198,6 +204,42 @@ p {
 .answer-button {
   font-family: "Ubuntu Mono", monospace;
 }
+
+/* Social links */
+
+
+.social-links li a i {
+  font-size: 40px;
+  color: var(--CyanBright);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.social-links li a i:hover {
+  color: var(--BGDark);
+}
+
+.social-links {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-link {
+  color: var(--CyanBright);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: var(--BGDark);
+  background-color: var(--CyanBright);
+  border-radius: 20%;
+  transition: all 0.05s ease-in-out;
+  -moz-transition: all 0.05s ease-in-out;
+  -webkit-transition: all 0.05s ease-in-out;
+  -o-transition: all 0.05s ease-in-out;
+}
+
 
 /* Media query for phones */
 
