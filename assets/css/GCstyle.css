@@ -24,16 +24,16 @@
     background-color: var(--BGDark);
     margin: 5% auto;
     padding: 20px;
-    border: 1px solid var(--CyanBright);
+    border: 1px solid var(--Bright);
     width: 90vw;
     max-width: 1400px;
-    color: var(--CyanBright);
+    color: var(--Bright);
     
 
 }
 
 .close {
-    color: var(--CyanBright);
+    color: var(--Bright);
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -54,7 +54,7 @@
 .modal-content h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
-    color: var(--CyanBright);
+    color: var(--Bright);
 }
 
 .translucent {
@@ -86,7 +86,7 @@
     padding: 8px;
     margin-bottom: 10px;
     color: black;
-    background-color: var(--Cyan); 
+    background-color: var(--Medium); 
 }
 
 .add-question-form textarea {
@@ -96,7 +96,7 @@
 .floppy {
     background-color: var(--BGDark);
     border: none;
-    color: var(--CyanBright);
+    color: var(--Bright);
     font-size: 2rem;
 }
 

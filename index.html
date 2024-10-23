@@ -76,12 +76,38 @@
         <button type="button" id="about" class="btn btn-menu btn-lg"><i class="fa fa-info-circle"></i></button>
         <button type="button" id="display-questions-btn" class="btn btn-menu btn-lg"><i class="fa-solid fa-list"></i><i
             class="fa-solid fa-question ml-3"></i></button>
+            
+        <!-- Theme Toggles -->
+        <div id="theme-toggle">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="radio" name="theme" id="themeAqua" checked>
+            <label class="form-check-label" for="themeAqua">Aqua Theme</label>
+          </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="radio" name="theme" id="themeOrange">
+            <label class="form-check-label" for="themeOrange">Orange Theme</label>
+          </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="radio" name="theme" id="themeGreen">
+            <label class="form-check-label" for="themeGreen">Green Theme</label>
+          </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="radio" name="theme" id="themeLight">
+            <label class="form-check-label" for="themeLight">Light Theme</label>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Game Menu NJ -->
-    <!-- <footer> -->
-    <!-- <div id="gameMenu" class="container-fluid g-0">
+
+
+  <!-- Game Menu NJ -->
+  <!-- <footer> -->
+  <!-- <div id="gameMenu" class="container-fluid g-0">
         <div class="row">
           <div class="col d-flex justify-content-center my-2">
             <
@@ -93,92 +119,92 @@
 
 
 
-    <!-- MODALS -->
+  <!-- MODALS -->
 
 
 
-    <!-- QUESTION MODAL -  GUY -->
+  <!-- QUESTION MODAL -  GUY -->
 
 
-    <div id="qModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 class="category"></h2>
-        <p class="questionSection"></p>
-        <div class="answerSection"></div>
-      </div>
+  <div id="qModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="category"></h2>
+      <p class="questionSection"></p>
+      <div class="answerSection"></div>
     </div>
+  </div>
 
-    <!-- SUBMISSION QUESTIONS MODAL - GUY -->
-    <div id="submit-modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
+  <!-- SUBMISSION QUESTIONS MODAL - GUY -->
+  <div id="submit-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
 
-        <h2>Forge Your Quiz</h2>
-        <p>Add your own questions here. Choose your question type, fill in the form and save the data to add your own
-          questions to the browser session.</p>
+      <h2>Forge Your Quiz</h2>
+      <p>Add your own questions here. Choose your question type, fill in the form and save the data to add your own
+        questions to the browser session.</p>
 
-        <!-- QUESTION FORM -->
-        <section class="questionsForm">
-          <form id="addQuestionForm" class="add-question-form">
-            <div>
-              <label for="type" placeholder="Select Question Type">Question Type:</label>
-              <select id="type" required>
-                <option value="boolean">True/False</option>
-                <option value="multiple">Multiple Choice</option>
-                <option value="text">Text Input</option>
-              </select>
+      <!-- QUESTION FORM -->
+      <section class="questionsForm">
+        <form id="addQuestionForm" class="add-question-form">
+          <div>
+            <label for="type" placeholder="Select Question Type">Question Type:</label>
+            <select id="type" required>
+              <option value="boolean">True/False</option>
+              <option value="multiple">Multiple Choice</option>
+              <option value="text">Text Input</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty" required>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="category">Category:</label>
+            <input type="text" id="category" value="Web Development: CSS" required>
+          </div>
+
+          <div>
+            <label for="question">Question:</label>
+            <textarea id="question" required></textarea>
+          </div>
+
+          <div id="answerSection">
+            <label id="correct_answer_label" for="correct_answer">Correct Answer:</label>
+            <input type="text" id="correct_answer" required>
+
+            <!-- should add true/false radio buttons here -->
+
+
+
+            <!-- For multiple choice questions -->
+            <div id="incorrectAnswersSection" style="display: none;">
+              <label>Incorrect Answers:</label>
+              <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 1">
+              <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 2">
+              <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 3">
             </div>
 
-            <div>
-              <label for="difficulty">Difficulty:</label>
-              <select id="difficulty" required>
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-              </select>
+            <!-- For text questions -->
+            <div id="alternateAnswersSection" style="display: none;">
+              <label>Alternative Correct Answers:</label>
+              <input type="text" class="alternate_answer" placeholder="Alternative Answer 1">
+              <input type="text" class="alternate_answer" placeholder="Alternative Answer 2">
             </div>
+          </div>
 
-            <div>
-              <label for="category">Category:</label>
-              <input type="text" id="category" value="Web Development: CSS" required>
-            </div>
+          <button class="floppy" type="submit"><i class="fa-solid fa-floppy-disk"></i></button>
+        </form>
 
-            <div>
-              <label for="question">Question:</label>
-              <textarea id="question" required></textarea>
-            </div>
-
-            <div id="answerSection">
-              <label id="correct_answer_label" for="correct_answer">Correct Answer:</label>
-              <input type="text" id="correct_answer" required>
-
-              <!-- should add true/false radio buttons here -->
-
-
-
-              <!-- For multiple choice questions -->
-              <div id="incorrectAnswersSection" style="display: none;">
-                <label>Incorrect Answers:</label>
-                <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 1">
-                <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 2">
-                <input type="text" class="incorrect_answer" placeholder="Incorrect Answer 3">
-              </div>
-
-              <!-- For text questions -->
-              <div id="alternateAnswersSection" style="display: none;">
-                <label>Alternative Correct Answers:</label>
-                <input type="text" class="alternate_answer" placeholder="Alternative Answer 1">
-                <input type="text" class="alternate_answer" placeholder="Alternative Answer 2">
-              </div>
-            </div>
-
-            <button class="floppy" type="submit"><i class="fa-solid fa-floppy-disk"></i></button>
-          </form>
-
-        </section>
-      </div>
+      </section>
     </div>
+  </div>
 
     <!-- DISPLAY CUSTOM QUESTIONS LIST MODAL - GUY-->
     <div id="display-modal" class="modal">
@@ -274,6 +300,7 @@
   <script src="assets/js/script.js"></script>
   <script src="assets/js/modal_script.js"></script>
   <script src="assets/js/submission_modal_script.js"></script>
+  <script src="assets/js/themes.js"></script>
 
 
   <!-- Bootstrap JavaScript Libraries -->

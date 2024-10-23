@@ -3,11 +3,11 @@
 } */
 
 .category {
-    color: #6fffe9;
+    color: var(--Bright);
 }
 
 .questionSection {
-    color: #6fffe9;
+    color: var(--Bright);
 }
 
 
