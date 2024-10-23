@@ -42,10 +42,10 @@ There is no particular audience targeted for this application, however with Quiz
 - **Scoring and Completion:** As a competitive player, I want to see my score and a win/lose screen at the end of the game, so that I know how well I performed.
   **Acceptance Criteria:** The score is displayed at the end of the game, Win/lose condition is communicated, The option to play again is provided
 
-  - **Randomised Question Devliery:** As a returning player, I want questions to be randomized each time I play, so that the game feels fresh on repeated playthrough.
+- **Randomised Question Devliery:** As a returning player, I want questions to be randomized each time I play, so that the game feels fresh on repeated playthrough.
   **Acceptance Criteria:** Questions appear in a different order in each game, If possible, a different set of questions is selected for each game
 
-  - **Varied Question Content:** As a player, I want to encounter a variety of programming questions, So that i can test my knowledge on different areas.
+- **Varied Question Content:** As a player, I want to encounter a variety of programming questions, So that i can test my knowledge on different areas.
   **Acceptance Criteria:** Questions cover various programming topics. There are enough questions to avoid frequent repetition
 
 ### Could-Have User Stories
@@ -64,7 +64,7 @@ There is no particular audience targeted for this application, however with Quiz
 - **Storyline:** As a player that enjoys story elements, I want to experience an overarching story, so that the game feels more immersive.
   **Acceptance Criteria:** Brief story snippets are presented between stages or questions, Story elements are relevant to the programming theme
 
-  - **Audio Integration:** As a player who values audio feedback, I want to have sounds attached to actions performed within the game, to make the experience more rounded and immersive
+- **Audio Integration:** As a player who values audio feedback, I want to have sounds attached to actions performed within the game, to make the experience more rounded and immersive
   **Acceptance Criteria:** At least two themes are available (e.g., light and dark mode), Theme can be changed from the main menu or settings
 
 ## Design Decisions
@@ -80,7 +80,8 @@ To manage the project and keep track of the project. Agile methodologies were ad
 
 ### Mood Board
 
-A mood board was created as a method of brainstorming ideas amongst the team, whilst keeping a record of the thought process. [Mood Board](https://miro.com/app/board/uXjVLc0PLq0=/)
+A mood board was created as a method of brainstorming ideas amongst the team, whilst keeping a record of the thought process. 
+[Mood Board](https://miro.com/app/board/uXjVLc0PLq0=/)
 
 <p align="center">
 <img src="assets/readMe Images/mood-Board.png" alt="Image of the teams mood board">
@@ -134,7 +135,8 @@ A dark background with aqua colour scheme was chosen to keep with the retro 90's
 
 #### Colour Contrast Checks
 
-Colour contrast has been consider and the chosen colour scheme has been tested via an online colour contrast checker. [Colour Contrast Checker](https://webaim.org/resources/contrastchecker/)
+Colour contrast has been consider and the chosen colour scheme has been tested via an online colour contrast checker. 
+[Colour Contrast Checker](https://webaim.org/resources/contrastchecker/)
 
 <p align="center">
 <img src="assets/readMe Images/colour-contrast-check.png" alt="Image of the colour scheme being used">
@@ -162,7 +164,7 @@ Google fonts were used within the project to enable additional customisation to 
 - **Game Board:** A digital game board to show the users progression, different indicators to show if players are correct, wrong, and which icon is active.
 
 <p align="center">
-<img src="assets/readMe Images/" alt="Image of Game Board">
+<img src="assets/readMe Images/game-board.png" alt="Image of Game Board">
 </p>
 <br>
 
@@ -261,7 +263,7 @@ Google fonts were used within the project to enable additional customisation to 
 - **Multiple User Question Sets:** Having the ability to create multiple question sets so that multiple users can test there knowledge 
 
 <p align="center">
-<img src="assets/readMe Images/question-sets.png" alt="Multiple Question Image">
+<img src="assets/readMe Images/question-sets.png" alt="Multiple Question Sets Image">
 </p>
 <br>
 
@@ -283,6 +285,15 @@ Random question list generator goes into infinite loop due to use of while.
 - ***Fix:***
 Pending
 
+- **Bug:**
+Footer expands past boundary of game board, creating white space and scroll on mobile phones
+- ***Fix:***
+Add burger icon for mobile devices
+
+- **Bug:**
+Text in json files where code has been used as an answer, the answer gets interpreted as code.
+- ***Fix:***
+Pending
 
 ### Validation
 Validators were used to help address any issues within the projects HTML, CSS and Javascript files. [HTML Validator](https://validator.w3.org/), [CSS Validator](https://jigsaw.w3.org/css-validator/), [JavaScript Linter]()
@@ -317,10 +328,10 @@ For this project, GitHub pages was the chosen deployment method. A simple and st
 ## Reflection on Development Process
 
 ### Successes
-Effective use of AI tools, including GitHub Copilot and DALL-E, and how they contributed to the development process.
+One of the key successes was creating the retro 90's style computer terminal for the Quiz's game board. The entire team contributed to the structure, layout and theme to achieve this.
 
 ### Challenges
-Describe any challenges faced when integrating AI-generated content and how they were addressed.
+After deciding on using a JSON format for the storage of quiz questions, Utilising this format as well as linking and looping through the questions in Javascript proved problematic with Javascript's Arrays.
 
 ### Final Thoughts
 Provide any additional insights gained during the project and thoughts on the overall process.  
