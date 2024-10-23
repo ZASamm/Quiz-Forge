@@ -25,11 +25,34 @@ p {
 
   --BG: #133F4A;
   --BGDark: #06151E;
-  --Cyan: #40E0d0;
-  --CyanBright: #6fffe9;
+  --Medium: #40E0d0;
+  --Bright: #6fffe9;
   --offwhite: #fafafafa;
 }
 
+[data-theme="orange"] {
+  --BG: #4A3113;
+  --BGDark: #1E1506;
+  --Medium: #FFA500;
+  --Bright: #FFC966;
+  --offwhite: #FAEBD7;
+}
+
+[data-theme="green"] {
+  --BG: #2E4A13;
+  --BGDark: #1C2E06;
+  --Medium: #32CD32; 
+  --Bright: #98FB98;
+  --offwhite: #F0FFF0; 
+}
+
+[data-theme="light"] {
+  --BG: #F0F0F0;
+  --BGDark: #D0D0D0;
+  --Medium: #000000;
+  --Bright: #333333;
+  --offwhite: #FFFFFF;
+}
 
 .row {
   padding: 0px;
@@ -38,9 +61,9 @@ p {
 
 #gameTitle {
   background-color: var(--BGDark);
-  border-top: var(--Cyan) solid 5px;
-  border-right: var(--Cyan) solid 5px;
-  border-left: var(--Cyan) solid 5px;
+  border-top: var(--Medium) solid 5px;
+  border-right: var(--Medium) solid 5px;
+  border-left: var(--Medium) solid 5px;
 }
 
 #Logo {
@@ -58,7 +81,7 @@ p {
   height: auto;
   width: 100%;
 
-  border: var(--Cyan) solid 5px;
+  border: var(--Medium) solid 5px;
 
 
 }
@@ -95,18 +118,18 @@ p {
   /* border-bottom: var(--Cyan) solid 5px;
   border-left: var(--Cyan) solid 5px;
   border-right: var(--Cyan) solid 5px; */
-  color: var(--CyanBright);
+  color: var(--Bright);
   font-size: 1rem;
 
 }
 
 .btn {
-  color: var(--CyanBright)
+  color: var(--Bright)
 }
 
 .btn:hover {
   color: var(--BGDark);
-  background-color: var(--CyanBright)
+  background-color: var(--Bright)
 }
 
 .btn-group-lg>.btn,
