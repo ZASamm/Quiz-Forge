@@ -1,5 +1,24 @@
-@import url('GCstyle.css');
+/* Style sheet import */
+@import url(../css/zs_gameboard.css);
+@import url(../css/GCstyle.css);
 
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* General styling */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 500;
+}
+
+p {
+  font-family: "Ubuntu Mono", monospace;
+}
 
 :root {
 /* Colour Variables */
@@ -25,13 +44,15 @@
 }
 
 #Logo{
-  height: 20vh;
+  height: 6vh;
 }
+
+/* Game board */
 
 #gameBoard{
   position: relative;
   background-color:var(--BGDark);
-  min-height: 80vh;
+  min-height: 85vh;
   height: auto;
   width:100%;
 
@@ -48,43 +69,109 @@
   left: 0;
 }
 
+.zs_folder_row {
+  min-height: 80vh;
+}
+
+/* Footer */
+
 #gameMenu{
  
   background-color:var(--BGDark);
-  min-height: 130px;
+  min-height: 15vh;
+  height: auto;
   border-bottom: var(--Cyan) solid 5px;
   border-left: var(--Cyan) solid 5px;
   border-right: var(--Cyan) solid 5px;
   color: var(--CyanBright);
+
 }
 
+/* Folder icons */
 
 .square{
-  background-color: var(--CyanBright);
-  height:100px;
-  width: 100px;
+  background: url("../images/Closed Folder.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60%;
+  height: 10vw;
+  width: calc(10vw * 1.083);
   margin: 10px;
-  box-shadow: 120px 80px 40px 20px #0ff;
-
+  transition: all 0.05s ease-in-out;
+    -moz-transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.05s ease-in-out;
+    -o-transition: all 0.05s ease-in-out;
 }
 
 .player-square{
-  background-color: rgb(255, 0, 0);
-  height:100px;
-  width: 100px;
+  background: url("../images/Open Folder.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60%;
+  height: 10vw;
+  width: calc(10vw * 1.214);
   margin: 10px;
+  transition: all 0.05s ease-in-out;
+    -moz-transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.05s ease-in-out;
+    -o-transition: all 0.05s ease-in-out;
+  /* box-shadow: 0px 0px 20px 0px #0ff; */
 }
 
-.incorrect-square{
-  background-color:coral;
-  height:100px;
-  width: 100px;
+
+.correct-square {
+  background: url("../images/Correct Folder.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50%;
+  height: 10vw;
+  width: calc(10vw * 1.083);
   margin: 10px;
+  transition: all 0.05s ease-in-out;
+    -moz-transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.05s ease-in-out;
+    -o-transition: all 0.05s ease-in-out;
 }
 
-.correct-square{
-  background-color:rgb(85, 5, 177);
-  height:100px;
-  width: 100px;
+.incorrect-square {
+  background: url("../images/Incorrect Folder.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60%;
+  height: 10vw;
+  width: calc(10vw * 1.083);
   margin: 10px;
+  transition: all 0.05s ease-in-out;
+    -moz-transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.05s ease-in-out;
+    -o-transition: all 0.05s ease-in-out;
+}
+
+
+/* Buttons */
+
+.btn, .answer-button {
+  font-family: "Ubuntu Mono", monospace;
+}
+
+/* Media query for phones */
+
+@media (max-width: 768px) {
+ 
+  .square {
+    background-size: 95%;
+    
+  }
+
+}
+
+/* Media query for xs phones */
+
+@media (max-width: 575px) {
+ 
+
+  .zs_hidden {
+    display: none;
+}
+
 }
