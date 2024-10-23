@@ -5,10 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleQuestionForm();
     handleDisplayModal();
     displayQuestions();
-    handleAboutModal();
-
-
-
+    // handleAboutModal();
 
 });
 
@@ -19,18 +16,23 @@ function handleSubmitModal() {
     const submitModal = document.getElementById("submit-modal");
     const submitbtn = document.getElementById("questionsBtn");
     const close = document.getElementsByClassName("close")[1];
+    const scanLines = document.getElementById("screen_scanlines")
+    console.log(scanLines)
 
     submitbtn.addEventListener('click', function () {
         submitModal.style.display = "block";
+        scanLines.classList.add("translucent")
     });
 
     close.addEventListener('click', function () {
         submitModal.style.display = "none";
+        scanLines.classList.remove("translucent")
     });
 
     window.addEventListener('click', function (e) {
         if (e.target == submitModal) {
             submitModal.style.display = "none";
+            scanLines.classList.remove("translucent")
         }
     });
 }
@@ -48,27 +50,27 @@ function handleQuestionForm() {
     const incorrectAnswersSection = document.getElementById('incorrectAnswersSection');
     const alternateAnswersSection = document.getElementById('alternateAnswersSection');
 
-    typeSelect.addEventListener('change', function () {  // "change" here is the event for when the user changes the question type
+    typeSelect.addEventListener('change', function () { // "change" here is the event for when the user changes the question type
 
         // Use a switch statement to handle different question types
         // "this" refers to the element that triggered the event.
-        switch (this.value) {  
-            case 'multiple':  
-                incorrectAnswersSection.style.display = 'block';    
-                alternateAnswersSection.style.display = 'none';     
+        switch (this.value) {
+            case 'multiple':
+                incorrectAnswersSection.style.display = 'block';
+                alternateAnswersSection.style.display = 'none';
                 break;
 
-            case 'text':     
-                incorrectAnswersSection.style.display = 'none';    
-                alternateAnswersSection.style.display = 'block';    
+            case 'text':
+                incorrectAnswersSection.style.display = 'none';
+                alternateAnswersSection.style.display = 'block';
                 break;
 
-            case 'boolean':  
-                incorrectAnswersSection.style.display = 'none';    
+            case 'boolean':
+                incorrectAnswersSection.style.display = 'none';
                 alternateAnswersSection.style.display = 'none';
 
 
-                document.getElementById('trueOrFalse').style.display = 'block';  
+                document.getElementById('trueOrFalse').style.display = 'block';
                 break;
         }
     });
@@ -104,18 +106,17 @@ function handleQuestionForm() {
             // For multiple choice: collect all incorrect answers
             newQuestion.incorrect_answers = Array.from(document.getElementsByClassName('incorrect_answer')) // creates the incorrect answers array from the all of the incorrect answer input fields
                 // Get all incorrect answer inputs
-                .map(input => input.value)      // Extract just the values
-                .filter(value => value !== '');  // Remove any empty values
-        }
-        else if (newQuestion.type === 'text') {
+                .map(input => input.value) // Extract just the values
+                .filter(value => value !== ''); // Remove any empty values
+        } else if (newQuestion.type === 'text') {
             // For text questions: collect all possible correct answers
             newQuestion.correct_answers = [
-                newQuestion.correct_answer,  // Include the main correct answer
-                ...Array.from(document.getElementsByClassName('alternate_answer'))  // Get alternate answers (... is spread - so instead of storing array within array it stores as multiple one levl arrays)
-                    .map(input => input.value)      // Extract values
-                    .filter(value => value !== '')  // Remove empty values
+                newQuestion.correct_answer, // Include the main correct answer
+                ...Array.from(document.getElementsByClassName('alternate_answer')) // Get alternate answers (... is spread - so instead of storing array within array it stores as multiple one levl arrays)
+                .map(input => input.value) // Extract values
+                .filter(value => value !== '') // Remove empty values
             ];
-            delete newQuestion.correct_answer;  // Remove the single correct_answer property
+            delete newQuestion.correct_answer; // Remove the single correct_answer property
         }
 
         try {
@@ -132,10 +133,9 @@ function handleQuestionForm() {
 
             // Log success and give user feedback
             console.log('Question saved to localStorage:', newQuestion);
-            form.reset();  // Clear the form
+            form.reset(); // Clear the form
             alert('Question saved successfully!');
-        }
-        catch (error) {
+        } catch (error) {
             // If anything goes wrong, show error messages
             console.error('Error saving question:', error);
             alert('Error saving question. Please check the console for details.');
@@ -150,7 +150,7 @@ function handleQuestionForm() {
 // THIS IS HOW TO GET CUSTOM QUESTIONS FROM LOCAL STORAGE -----------------------------------------------------
 function getCustomQuestions() {
     const questions = localStorage.getItem('customQuestions');
-    return questions ? JSON.parse(questions) : [];  // Return parsed questions or empty array if none exist
+    return questions ? JSON.parse(questions) : []; // Return parsed questions or empty array if none exist
 }
 
 // ----------------------------------------------------------------------------------------------------------
@@ -163,18 +163,22 @@ function handleDisplayModal() {
     const displayModal = document.getElementById("display-modal");
     const displayBtn = document.getElementById("display-questions-btn");
     const close = document.getElementsByClassName("close")[2];
+    const scanLines = document.getElementById("screen_scanlines")
 
     displayBtn.addEventListener('click', function () {
         displayModal.style.display = "block";
+        scanLines.classList.add("translucent")
     });
 
     close.addEventListener('click', function () {
         displayModal.style.display = "none";
+        scanLines.classList.remove("translucent")
     });
 
     window.addEventListener('click', function (e) {
         if (e.target == displayModal) {
             displayModal.style.display = "none";
+            scanLines.classList.remove("translucent")
         }
     });
 }
@@ -207,22 +211,27 @@ function displayQuestions() {
 }
 
 
-function handleAboutModal() {
-    const aboutModal = document.getElementById("aModal");
-    const aboutbtn = document.getElementById("about");
-    const close = document.getElementsByClassName("close")[3];
+// function handleAboutModal() {
+//     const aboutModal = document.getElementById("aModal");
+//     const aboutbtn = document.getElementById("about");
+//     const close = document.getElementsByClassName("close")[3];
+//     const scanLines = document.getElementById("screen_scanlines")
 
-    aboutbtn.addEventListener('click', function () {
-        aboutModal.style.display = "block";
-    });
+//     aboutbtn.addEventListener('click', function () {
+//         aboutModal.style.display = "block";
+  //       scanLines.classList.add("translucent")
+//
+//     });
 
-    close.addEventListener('click', function () {
-        aboutModal.style.display = "none";
-    });
+//     close.addEventListener('click', function () {
+//         aboutModal.style.display = "none";
+//         scanLines.classList.remove("translucent")
+//     });
 
-    window.addEventListener('click', function (e) {
-        if (e.target == aboutModal) {
-            aboutModal.style.display = "none";
-        }
-    });
-}
+//     window.addEventListener('click', function (e) {
+//         if (e.target == aboutModal) {
+//             aboutModal.style.display = "none";
+//          scanLines.classList.remove("translucent")
+//         }
+//     });
+// }

@@ -57,6 +57,10 @@
     color: var(--CyanBright);
 }
 
+.translucent {
+    opacity: 0.2 !important;
+}
+
 /* Submission Modal */
 
 .add-question-form {

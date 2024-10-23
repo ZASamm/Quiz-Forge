@@ -19,6 +19,7 @@ async function handleModal() {
     const qModal = document.getElementById("qModal");
     const squares = document.querySelectorAll(".square");
     const close = document.getElementsByClassName("close")[0];
+    const scanLines = document.getElementById("screen_scanlines")
 
     // Add click event to each square
     for (let index = 0; index < squares.length; index++) {
@@ -29,6 +30,7 @@ async function handleModal() {
             loadQuestion(square.getAttribute("squareIndex"), qModal);
 
             qModal.style.display = "block";
+            scanLines.classList.add("translucent")
 
 
             // const squareID = this.id;   - Could set modal content like this
@@ -39,11 +41,13 @@ async function handleModal() {
     document.addEventListener("keydown", function (event) {
         if (qModal.style.display === "block" && event.key === "Escape") {
             qModal.style.display = "none";
+            scanLines.classList.remove("translucent")
         }
         if (event.key === "Enter") {
             let currentSquare = document.querySelector(".player-square");
             loadQuestion(currentSquare.getAttribute("squareIndex"), qModal);
             qModal.style.display = "block";
+            scanLines.classList.add("translucent")
             console.log(`Loading current square ${currentSquare}`);
         }
     });
@@ -51,6 +55,7 @@ async function handleModal() {
     // add click event to close qModal
     close.addEventListener("click", function () {
         qModal.style.display = "none";
+        scanLines.classList.remove("translucent")
     });
 
 }
@@ -60,6 +65,7 @@ async function handleModal() {
 window.onclick = function (event) {
     if (event.target == qModal) {
         qModal.style.display = "none";
+        scanLines.classList.remove("translucent")
     }
 };
 
