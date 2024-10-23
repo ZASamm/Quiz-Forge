@@ -44,13 +44,15 @@ p {
 }
 
 #Logo{
-  height: 8vh;
+  height: 6vh;
 }
+
+/* Game board */
 
 #gameBoard{
   position: relative;
   background-color:var(--BGDark);
-  min-height: 80vh;
+  min-height: 85vh;
   height: auto;
   width:100%;
 
@@ -67,14 +69,22 @@ p {
   left: 0;
 }
 
+.zs_folder_row {
+  min-height: 80vh;
+}
+
+/* Footer */
+
 #gameMenu{
  
   background-color:var(--BGDark);
-  min-height: 130px;
+  min-height: 15vh;
+  height: auto;
   border-bottom: var(--Cyan) solid 5px;
   border-left: var(--Cyan) solid 5px;
   border-right: var(--Cyan) solid 5px;
   color: var(--CyanBright);
+
 }
 
 /* Folder icons */
@@ -113,7 +123,7 @@ p {
   background: url("../images/Correct Folder.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 60%;
+  background-size: 50%;
   height: 10vw;
   width: calc(10vw * 1.083);
   margin: 10px;
@@ -144,33 +154,24 @@ p {
   font-family: "Ubuntu Mono", monospace;
 }
 
-/* Media query for larger screens above 1400px
+/* Media query for phones */
 
-@media (min-width: 1400px) {
-  .square{
-    height: 200px;
-    width: 200px;
-    margin: 10px;
+@media (max-width: 768px) {
+ 
+  .square {
+    background-size: 95%;
+    
   }
-  
-  .player-square{
-    height: 200px;
-    width: 200px;
-    margin: 10px;
-    box-shadow: 0px 0px 20px 0px #0ff;
-    border-radius: 50px;
-  }
-  
-  
-  .correct-square {
-    height: 200px;
-    width: 200px;
-    margin: 10px;
-  }
-  
-  .incorrect-square {
-    height: 200px;
-    width: 200px;
-    margin: 10px;
-  }
-} */
+
+}
+
+/* Media query for xs phones */
+
+@media (max-width: 575px) {
+ 
+
+  .zs_hidden {
+    display: none;
+}
+
+}

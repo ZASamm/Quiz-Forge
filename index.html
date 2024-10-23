@@ -20,13 +20,13 @@
 <body>
   <!-- Game Title NJ -->
   <div class="container-fluid d-flex flex-column g-0">
-    <div id="gameTitle" class="container-fluid text-center g-0">
+    <!-- <div id="gameTitle" class="container-fluid text-center g-0">
       <div class="row">
         <div class="col-12 d-flex justify-content-center">
           <img id="Logo" src="assets/images/Logo.png" alt="Quiz Forge Logo Image" />
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Game Board NJ -->
     <div id="gameBoard" class="container-fluid g-0">
@@ -34,7 +34,7 @@
         alt="Scanlines overally image to create old computer screen theme">
       <img id="screen_bezel" src="assets/images/bezel.png"
         alt="Computer screen bezel image to create the old computer screen theme">
-      <div class="row">
+      <div class="row zs_folder_row">
         <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center mt-5 mb-4">
           <div class="square" id="sq1"></div>
         </div>
@@ -62,7 +62,7 @@
           <div class="square" id="sq8"></div>
         </div>
         <div class="col-12 col-sm-4 d-flex justify-content-center align-items-center my-4">
-          <div class="square" id="sq9"></div>
+          <div class="square zs_hidden" id="sq9"></div>
         </div>
       </div>
     </div>
@@ -73,21 +73,16 @@
         <div class="row">
           <div class="col d-flex justify-content-center my-2">
             <div>
-              <h2>Forge Your Quiz</h2>
-              <button type="button" data-type="startBtn" id="startBtn" class="btn">Start Game</button>
-              <button type="button" data-type="submitBtn" id="questionsBtn" class="btn">Submit Questions</button>
+              <img id="Logo" src="assets/images/Logo.png" alt="Quiz Forge Logo Image" />
+              <button type="button" id="startBtn" class="btn btn-menu">Start Game</button>
+              <button type="button" id="questionsBtn" class="btn btn-menu">Forge Your Quiz</button>
+              <button type="button" id="about" class="btn btn-menu">About</button>
             </div>
           </div>
         </div>
       </div>
     </footer>
   </div>
-
-
-
-
-
-
 
 
 
