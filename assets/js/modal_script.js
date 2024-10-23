@@ -20,6 +20,8 @@ async function handleModal() {
     const squares = document.querySelectorAll(".square");
     const close = document.getElementsByClassName("close")[0];
     const scanLines = document.getElementById("screen_scanlines")
+    const clickSound = document.getElementById("click-sound")
+    const closeSound = document.getElementById("close-beep-sound")
 
     // Add click event to each square
     for (let index = 0; index < squares.length; index++) {
@@ -32,6 +34,7 @@ async function handleModal() {
             qModal.style.display = "block";
             scanLines.classList.add("translucent")
             console.log(scanLines.classList)
+            clickSound.play()
 
 
             // const squareID = this.id;   - Could set modal content like this
@@ -41,20 +44,24 @@ async function handleModal() {
 
     document.addEventListener("keydown", function (event) {
         if (qModal.style.display === "block" && event.key === "Escape") {
+            closeSound.play()
             qModal.style.display = "none";
             scanLines.classList.remove("translucent")
+            
         }
         if (event.key === "Enter") {
             let currentSquare = document.querySelector(".player-square");
             loadQuestion(currentSquare.getAttribute("squareIndex"), qModal);
             qModal.style.display = "block";
             scanLines.classList.add("translucent")
+            clickSound.play()
             console.log(`Loading current square ${currentSquare}`);
         }
     });
 
     // add click event to close qModal
     close.addEventListener("click", function () {
+        closeSound.play()
         qModal.style.display = "none";
         scanLines.classList.remove("translucent")
     });
@@ -66,6 +73,7 @@ async function handleModal() {
 window.onclick = function (event) {
     scanLines = document.getElementById("screen_scanlines")
     if (event.target == qModal) {
+        document.getElementById("close-beep-sound").play()
         qModal.style.display = "none";
         scanLines.classList.remove("translucent")
     }
