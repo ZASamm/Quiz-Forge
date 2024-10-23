@@ -160,7 +160,7 @@ function getCustomQuestions() {
 function handleDisplayModal() {
     console.log('handleDisplayModal function called');
     const displayModal = document.getElementById("display-modal");
-    const displayBtn = document.getElementById("displayQuestionsBtn");
+    const displayBtn = document.getElementById("display-questions-btn");
     const closeDisplay = document.getElementsByClassName("close")[1];
 
     console.log('displayModal:', displayModal);

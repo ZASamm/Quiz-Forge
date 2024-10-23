@@ -21,29 +21,29 @@ p {
 }
 
 :root {
-/* Colour Variables */
+  /* Colour Variables */
 
---BG : #133F4A;
---BGDark : #06151E;
---Cyan : #40E0d0;
---CyanBright: #6fffe9;
---offwhite : #fafafafa;
+  --BG: #133F4A;
+  --BGDark: #06151E;
+  --Cyan: #40E0d0;
+  --CyanBright: #6fffe9;
+  --offwhite: #fafafafa;
 }
 
 
-.row{
+.row {
   padding: 0px;
   margin: 0px;
 }
 
-#gameTitle{
-  background-color:var(--BGDark);
+#gameTitle {
+  background-color: var(--BGDark);
   border-top: var(--Cyan) solid 5px;
   border-right: var(--Cyan) solid 5px;
   border-left: var(--Cyan) solid 5px;
 }
 
-#Logo{
+#Logo {
   height: 10vh;
   margin-left: 30px;
   margin-right: 30px;
@@ -51,24 +51,27 @@ p {
 
 /* Game board */
 
-#gameBoard{
+#gameBoard {
   position: relative;
-  background-color:var(--BGDark);
+  background-color: var(--BGDark);
   min-height: 100vh;
   height: auto;
-  width:100%;
+  width: 100%;
 
   border: var(--Cyan) solid 5px;
 
 
 }
 
-#screen_scanlines, #screen_bezel {
+#screen_scanlines,
+#screen_bezel {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 100000;
+
 }
 
 .zs_folder_row {
@@ -77,9 +80,9 @@ p {
 
 /* Footer */
 
-#gameMenu{
- 
-  background-color:var(--BGDark);
+#gameMenu {
+
+  background-color: var(--BGDark);
   min-height: 15vh;
   height: auto;
   /* border-bottom: var(--Cyan) solid 5px;
@@ -92,22 +95,21 @@ p {
 
 .btn {
   color: var(--CyanBright)
-  
 }
 
 .btn:hover {
   color: var(--BGDark);
   background-color: var(--CyanBright)
-
 }
 
-.btn-group-lg>.btn, .btn-lg {
+.btn-group-lg>.btn,
+.btn-lg {
   font-size: 2rem;
 }
 
 /* Folder icons */
 
-.square{
+.square {
   background: url("../images/Closed Folder.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -116,12 +118,12 @@ p {
   width: calc(10vw * 1.083);
   margin: 10px;
   transition: all 0.05s ease-in-out;
-    -moz-transition: all 0.05s ease-in-out;
-    -webkit-transition: all 0.05s ease-in-out;
-    -o-transition: all 0.05s ease-in-out;
+  -moz-transition: all 0.05s ease-in-out;
+  -webkit-transition: all 0.05s ease-in-out;
+  -o-transition: all 0.05s ease-in-out;
 }
 
-.player-square{
+.player-square {
   background: url("../images/Open Folder.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -130,9 +132,9 @@ p {
   width: calc(10vw * 1.214);
   margin: 10px;
   transition: all 0.05s ease-in-out;
-    -moz-transition: all 0.05s ease-in-out;
-    -webkit-transition: all 0.05s ease-in-out;
-    -o-transition: all 0.05s ease-in-out;
+  -moz-transition: all 0.05s ease-in-out;
+  -webkit-transition: all 0.05s ease-in-out;
+  -o-transition: all 0.05s ease-in-out;
   /* box-shadow: 0px 0px 20px 0px #0ff; */
 }
 
@@ -146,9 +148,9 @@ p {
   width: calc(10vw * 1.083);
   margin: 10px;
   transition: all 0.05s ease-in-out;
-    -moz-transition: all 0.05s ease-in-out;
-    -webkit-transition: all 0.05s ease-in-out;
-    -o-transition: all 0.05s ease-in-out;
+  -moz-transition: all 0.05s ease-in-out;
+  -webkit-transition: all 0.05s ease-in-out;
+  -o-transition: all 0.05s ease-in-out;
 }
 
 .incorrect-square {
@@ -160,25 +162,26 @@ p {
   width: calc(10vw * 1.083);
   margin: 10px;
   transition: all 0.05s ease-in-out;
-    -moz-transition: all 0.05s ease-in-out;
-    -webkit-transition: all 0.05s ease-in-out;
-    -o-transition: all 0.05s ease-in-out;
+  -moz-transition: all 0.05s ease-in-out;
+  -webkit-transition: all 0.05s ease-in-out;
+  -o-transition: all 0.05s ease-in-out;
 }
 
 
 /* Buttons */
 
-.btn, .answer-button {
+.btn,
+.answer-button {
   font-family: "Ubuntu Mono", monospace;
 }
 
 /* Media query for phones */
 
 @media (max-width: 768px) {
- 
+
   .square {
     background-size: 95%;
-    
+
   }
 
 }
@@ -186,10 +189,10 @@ p {
 /* Media query for xs phones */
 
 @media (max-width: 575px) {
- 
+
 
   .zs_hidden {
     display: none;
-}
+  }
 
 }
