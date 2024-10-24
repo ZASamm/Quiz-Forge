@@ -247,6 +247,18 @@ Google fonts were used within the project to enable additional customisation to 
 <img src="assets/readMe Images/themes.png" alt="Game themes selection Image">
 </p>
 <br>
+<p align="center">
+<img src="assets/readMe Images/themes2.png" alt="Game themes selection Image">
+</p>
+<br>
+<p align="center">
+<img src="assets/readMe Images/themes3.png" alt="Game themes selection Image">
+</p>
+<br>
+<p align="center">
+<img src="assets/readMe Images/themes4.png" alt="Game themes selection Image">
+</p>
+<br>
 
 - **Audio integration:** Adding audio to the project will enhance the user experience.
 
