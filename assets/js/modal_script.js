@@ -94,9 +94,7 @@ function loadQuestion(squareIndex, modal) {
     let modalContent = document.querySelector(".modal-content");
     document.querySelector(".category").innerHTML = `Question ${Number(squareIndex) + 1}`;
 
-    let questionString = question.question;
-    questionString = questionString.replaceAll("<", "&lt;");
-    questionString = questionString.replaceAll(">", "&gt;");
+    let questionString = htmlCleanString(question.question);
     document.querySelector(".questionSection").innerHTML = `${questionString}`;
 
     document.querySelector(".answerSection").innerHTML = "";
@@ -110,8 +108,7 @@ function loadQuestion(squareIndex, modal) {
             possibleAnswers = shuffle(possibleAnswers);
             let htmlString = '';
             for (let answer of possibleAnswers) {
-                answer = answer.replaceAll("<", "&lt;");
-                answer = answer.replaceAll(">", "&gt;");
+                answer = htmlCleanString(answer);
                 htmlString = htmlString + `<button class="answer-button">${answer}</button>`
             };
             document.querySelector(".answerSection").innerHTML = htmlString;
@@ -214,3 +211,14 @@ function shuffle(array) {
     };
     return array;
 };
+
+/**
+ * Cleans a string of html so it can display in html.
+ * @param {string} Input String Unsanitized
+ * @returns Output String Santized
+ */
+function htmlCleanString(inputString) {
+    let outputString = inputString.replaceAll("<", "&lt;");
+    outputString = outputString.replaceAll(">", "&gt;");
+    return outputString;
+}
