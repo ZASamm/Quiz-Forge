@@ -77,10 +77,11 @@
         <button type="button" id="startBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-play"></i></button>
         <button type="button" id="questionsBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-upload"></i></button>
         <button type="button" id="display-questions-btn" class="btn btn-menu btn-lg"><i class="fa-solid fa-list"></i><i
-          class="fa-solid fa-question ml-3"></i></button>
-          <button type="button" id="soundBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-volume-off"></i></button>
+            class="fa-solid fa-question ml-3"></i></button>
+        <button type="button" id="soundBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-volume-off"></i></button>
         <button type="button" id="about" class="btn btn-menu btn-lg"><i class="fa fa-info-circle"></i></button>
-        
+        <button type="button" id="Gears" class="btn btn-menu btn-lg"><i class="fa fa-gears"></i></button>
+
 
         <!-- Theme Toggles -->
         <div id="theme-toggle">
@@ -308,8 +309,38 @@
   <audio id="switch-sound" src="./assets/audio/switch.wav"></audio>
   <audio id="delete-sound" src="./assets/audio/delete.wav"></audio>
 
+  <!-- Mobile Modal -->
+  <div id="mModal" class="modal">
+    <div class="modal-content display-flex justify-content-center">
+      <div class="close">&times;</div>
+      <button type="button" id="questionsBtn-mobile" class="btn btn-menu btn-lg"><i class="fa-solid fa-upload"></i></button>
+      <button type="button" id="display-questions-btn-mobile" class="btn btn-menu btn-lg"><i class="fa-solid fa-list"></i><i
+          class="fa-solid fa-question ml-3"></i></button>
+      <button type="button" id="soundBtn-mobile" class="btn btn-menu btn-lg"><i class="fa-solid fa-volume-off"></i></button>
+      <button type="button" id="about-mobile" class="btn btn-menu btn-lg"><i class="fa fa-info-circle"></i></button>
+      <div id="theme-toggle-mobile">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="radio" name="theme" id="themeAqua-mobile" checked>
+          <label class="form-check-label" for="themeAqua">Aqua Theme</label>
+        </div>
 
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="radio" name="theme" id="themeOrange-mobile">
+          <label class="form-check-label" for="themeOrange">Orange Theme</label>
+        </div>
 
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="radio" name="theme" id="themeGreen-mobile">
+          <label class="form-check-label" for="themeGreen">Green Theme</label>
+        </div>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="radio" name="theme" id="themeLight-mobile">
+          <label class="form-check-label" for="themeLight">Light Theme</label>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
 
@@ -323,11 +354,11 @@
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-    </script>
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
-    </script>
+  </script>
 
 </body>
 
