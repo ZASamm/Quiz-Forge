@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleAboutModal();
     deleteQuestion();
     handlePlayModal();
+    handleGearsModal();
 
 });
 
@@ -306,6 +307,7 @@ function deleteQuestion() {
 
 function handleAboutModal() {
     const aboutModal = document.getElementById("aModal");
+    console.log(aboutModal)
     const aboutbtn = document.getElementById("about");
     const close = document.getElementsByClassName("close")[3];
     const scanLines = document.getElementById("screen_scanlines")
@@ -313,6 +315,7 @@ function handleAboutModal() {
     const closeSound = document.getElementById("close-beep-sound")
 
     aboutbtn.addEventListener('click', function (e) {
+        console.log(e)
         if (soundOn) {
             clickSound.play()
         }
@@ -415,7 +418,7 @@ function handlePlayModal() {
 
 // Gears Modal
 
-function handleAboutModal() {
+function handleGearsModal() {
     const mobileModal = document.getElementById("mModal");
     const gearsbtn = document.getElementById("Gears");
     const close = document.getElementsByClassName("close")[3];
