@@ -50,7 +50,7 @@ async function handleModal() {
             }
             qModal.style.display = "none";
             scanLines.classList.remove("translucent")
-
+            
         }
         if (event.key === "Enter") {
             let currentSquare = document.querySelector(".player-square");
@@ -101,7 +101,9 @@ function loadQuestion(squareIndex, modal) {
     let modalContent = document.querySelector(".modal-content");
     document.querySelector(".category").innerHTML = `Question ${Number(squareIndex) + 1}`;
 
-    let questionString = htmlCleanString(question.question);
+    let questionString = question.question;
+    questionString = questionString.replaceAll("<", "&lt;");
+    questionString = questionString.replaceAll(">", "&gt;");
     document.querySelector(".questionSection").innerHTML = `${questionString}`;
 
     document.querySelector(".answerSection").innerHTML = "";
@@ -115,21 +117,11 @@ function loadQuestion(squareIndex, modal) {
             possibleAnswers = shuffle(possibleAnswers);
             let htmlString = '';
             for (let answer of possibleAnswers) {
-                answer = htmlCleanString(answer);
+                answer = answer.replaceAll("<", "&lt;");
+                answer = answer.replaceAll(">", "&gt;");
                 htmlString = htmlString + `<button class="answer-button">${answer}</button>`
             };
             document.querySelector(".answerSection").innerHTML = htmlString;
-
-            // Add Event Listeners
-            let buttons = document.getElementsByClassName("answer-button");
-            let correctIndex = possibleAnswers.indexOf(question.correct_answer);
-            console.log(correctIndex);
-            console.log(buttons);
-            for (let index = 0; index < buttons.length; index++) {
-                buttons[index].addEventListener("click", function (event) {
-                    multipleAnswer(event, buttons, index, correctIndex)
-                });
-            }
             break;
         case 'boolean':
             // missing on click event handler, to be added later.
@@ -137,28 +129,13 @@ function loadQuestion(squareIndex, modal) {
             <button class="boolean-button">True</button>
             <button class="boolean-button">False</button>
             `;
-
-            // Add Event Listeners
-            let boolButtons = document.getElementsByClassName("boolean-button");
-            for (let index = 0; index < boolButtons.length; index++) {
-                boolButtons[index].addEventListener("click", function (event) {
-                    boolAnswer(event, boolButtons, index, question.correct_answer);
-                });
-            }
             break;
         case 'text':
             // missing on click event handler, to be added later.
             document.querySelector(".answerSection").innerHTML = `
-            <input type="text" class="text-input">
+            <input type="text">
             <button class="text-submit-button">Answer</button>
             `;
-
-            // Add Event Listener
-            let submitButton = document.querySelector(".text-submit-button");
-            let textField = document.querySelector(".text-input");
-            submitButton.addEventListener("click", function (event) {
-                textAnswer(event, textField, submitButton, question.correct_answers)
-            });
             break;
         default:
             alert(`${question.type} is an unsupported or invalid question type`);
@@ -244,86 +221,3 @@ function shuffle(array) {
     };
     return array;
 };
-
-/**
- * Cleans a string of html so it can display in html.
- * @param {string} Input String Unsanitized
- * @returns Output String Santized
- */
-function htmlCleanString(inputString) {
-    let outputString = inputString.replaceAll("<", "&lt;");
-    outputString = outputString.replaceAll(">", "&gt;");
-    return outputString;
-}
-
-
-/**
- * Function that handles multiple choice answer click event.
- * @param { Event } event 
- * @param { HTMLElementCollection } buttons 
- * @param { Number } buttonIndex 
- * @param { Number } correctIndex 
- */
-function multipleAnswer(event, buttons, buttonIndex, correctIndex) {
-    if (!(buttons[buttonIndex].classList.contains("question-answered"))) {
-        if (buttonIndex == correctIndex) {
-            buttons[buttonIndex].classList.add("correct-answer");
-            console.log("Correct!");
-        } else {
-            buttons[buttonIndex].classList.add("incorrect-answer");
-            buttons[correctIndex].classList.add("correct-answer");
-            console.log("Incorrect!");
-        }
-        for (let index = 0; index < buttons.length; index++) {
-            buttons[index].classList.add("question-answered");
-        }
-    }
-};
-
-/**
- * Function that handles bool answer click event.
- * @param { Event } event 
- * @param { HTMLElementCollection } buttons 
- * @param { Number } buttonIndex 
- * @param { Boolean } correctAnswer 
- */
-function boolAnswer(event, buttons, buttonIndex, correctAnswer) {
-    if (!(buttons[buttonIndex].classList.contains("question-answered"))) {
-        if (buttons[buttonIndex].innerHTML === correctAnswer) {
-            buttons[buttonIndex].classList.add("correct-answer");
-            console.log("Correct!");
-        } else {
-            buttons[buttonIndex].classList.add("incorrect-answer");
-            if (buttonIndex === 1) {
-                buttons[0].classList.add("correct-answer");
-            } else {
-                buttons[1].classList.add("correct-answer");
-            }
-            console.log("Incorrect!");
-        }
-        for (let index = 0; index < buttons.length; index++) {
-            buttons[index].classList.add("question-answered");
-        }
-    }
-}
-
-/**
- * Function that handles text answer click event.
- * @param { Event } event 
- * @param { HTMLInputElement } textField 
- * @param { HTMLButtonElement } submitButton 
- * @param { String } correctAnswer 
- */
-function textAnswer(event, textField, submitButton, correctAnswer) {
-    console.log("buttonClicked");
-    if (!(submitButton.classList.contains("question-answered"))) {
-        if (correctAnswer.includes(textField.value)) {
-            console.log("Correct!");
-            submitButton.classList.add("correct-answer");
-        } else {
-            console.log("Incorrect!");
-            submitButton.classList.add("incorrect-answer");
-        }
-        submitButton.classList.add("question-answered");
-    }
-}
