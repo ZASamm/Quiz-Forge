@@ -77,9 +77,6 @@ function handleQuestionForm() {
             case 'boolean':
                 incorrectAnswersSection.style.display = 'none';
                 alternateAnswersSection.style.display = 'none';
-
-
-                document.getElementById('trueOrFalse').style.display = 'block';
                 break;
         }
     });
@@ -99,7 +96,6 @@ function handleQuestionForm() {
     // Handle form submission
     // on submit prevent default refresh. 
     form.addEventListener('submit', (e) => {
-
         e.preventDefault();
 
         // Create a new question object with basic properties  This makes it easier to handle the data when it's retrieved from local storage - 
@@ -243,6 +239,7 @@ function displayQuestions() {
 function deleteQuestion() {
 
     const questionsContainer = document.getElementById("questionsContainer");
+    const deleteSound = document.getElementById("delete-sound")
 
     // Add event delegation to handle all delete buttons
     questionsContainer.addEventListener('click', function (e) {
@@ -256,8 +253,9 @@ function deleteQuestion() {
                 localStorage.setItem('customQuestions', JSON.stringify(questions));
                 // Call display questions again to refresh modal
                 displayQuestions();
+                deleteSound.play()
+                console.log(deleteSound.play())
 
-                alert('Question deleted successfully!');
             } catch (error) {
                 console.error('Error deleting question:', error);
 
