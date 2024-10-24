@@ -39,11 +39,12 @@
     padding-right: 17px;
     /* Prevent content shift */
     /* Hide scrollbar for Chrome, Safari, and Opera */
+}
 
-    &::-webkit-scrollbar {
+.modal-content::-webkit-scrollbar {
         display: none;
     }
-}
+
 
 .close {
     color: var(--Bright);
