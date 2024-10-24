@@ -51,11 +51,15 @@ async function handleModal() {
         }
         if (event.key === "Enter") {
             let currentSquare = document.querySelector(".player-square");
-            loadQuestion(currentSquare.getAttribute("squareIndex"), qModal);
-            qModal.style.display = "block";
-            scanLines.classList.add("translucent")
-            clickSound.play()
-            console.log(`Loading current square ${currentSquare}`);
+            if (squareUnanswered(currentSquare) && qModal.style.display === "none") {
+                loadQuestion(currentSquare.getAttribute("squareIndex"), qModal);
+                qModal.style.display = "block";
+                scanLines.classList.add("translucent")
+                if (soundOn) {
+                    clickSound.play()
+                }
+                console.log(`Loading current square ${currentSquare}`);
+            };
         }
     });
 
