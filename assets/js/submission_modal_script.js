@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleAboutModal();
     deleteQuestion();
     handlePlayModal();
-    handleGearsModal();
+
 
 });
 
@@ -371,7 +371,7 @@ function handlePlayModal() {
 
     // Event listeners to call game style init functions. (These need making)
 
-    playBaseGame.addEventListener("click", playBaseGame)
+    playBaseGame.addEventListener("click", newBaseGame)
     playCustomGame.addEventListener("click", playCustomGame)
 
 
@@ -414,37 +414,13 @@ function handlePlayModal() {
     })
 
 
-}
-
-// Gears Modal
-
-function handleGearsModal() {
-    const mobileModal = document.getElementById("mModal");
-    const gearsbtn = document.getElementById("Gears");
-    const close = document.getElementsByClassName("close")[3];
-    const scanLines = document.getElementById("screen_scanlines")
-    const clickSound = document.getElementById("click-sound")
-    const closeSound = document.getElementById("close-beep-sound")
-
-    gearsbtn.addEventListener('click', function (e) {
-        clickSound.play()
-        mobileModal.style.display = "block";
-        scanLines.classList.add("translucent")
-        console.log(e)
-
-    });
-
-    close.addEventListener('click', function () {
-        closeSound.play()
-        mobileModal.style.display = "none";
-        scanLines.classList.remove("translucent")
-    });
-
-    window.addEventListener('click', function (e) {
-        if (e.target == mobileModal) {
+    function newBaseGame() {
+        resetBoard();
+        handleModal();
+        if (soundOn) {
             closeSound.play()
-            mobileModal.style.display = "none";
-            scanLines.classList.remove("translucent")
         }
-    });
+        playModal.style.display = "none";
+        scanLines.classList.remove("translucent")
+    }
 }

@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quiz Forge</title>
 
+  <!-- SEO -->
+  <meta name="description" content="Quiz forge is designed to be a revision tool in the form of an online quiz.">
+  <meta name="keywords"
+    content="Quiz, revision, trivia, html, Javascript, css, retro, game, learning, programming, coding, tech">
+
   <!-- Fav Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -22,15 +27,9 @@
 </head>
 
 <body>
+
   <!-- Game Title NJ -->
   <div class="container-fluid d-flex flex-column g-0">
-    <!-- <div id="gameTitle" class="container-fluid text-center g-0">
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-          <img id="Logo" src="assets/images/Logo.png" alt="Quiz Forge Logo Image" />
-        </div>
-      </div>
-    </div> -->
 
     <!-- Game Board NJ -->
     <div id="gameBoard" class="container-fluid g-0">
@@ -81,61 +80,18 @@
         <button type="button" id="display-questions-btn" class="btn btn-menu btn-lg"><i class="fa-solid fa-list"></i><i
             class="fa-solid fa-question ml-3" aria-hidden="true"><span class="sr-only">Display stored
               questions</span></i></button>
-        <button type="button" id="soundBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-volume-off"
+        <button type="button" id="soundBtn" class="btn btn-menu btn-lg grayed"><i class="fa-solid fa-volume-off"
             aria-hidden="true"></i><span class="sr-only">Sound on and off</span></button>
         <button type="button" id="about" class="btn btn-menu btn-lg"><i class="fa fa-info-circle"
             aria-hidden="true"></i><span class="sr-only">About Us</span></button>
-        <!-- <button type="button" id="Gears" class="btn btn-menu btn-lg"><i class="fa fa-gears"></i></button> -->
 
-
-        <!-- Theme Toggles -->
-        <!-- <div id="theme-toggle">
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="radio" name="theme" id="themeAqua" checked>
-            <label class="form-check-label" for="themeAqua">Aqua</label>
-          </div>
-
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="radio" name="theme" id="themeOrange">
-            <label class="form-check-label" for="themeOrange">Orange</label>
-          </div>
-
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="radio" name="theme" id="themeGreen">
-            <label class="form-check-label" for="themeGreen">Green</label>
-          </div>
-
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="radio" name="theme" id="themeLight">
-            <label class="form-check-label" for="themeLight">Light</label>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
 
-
-
-  <!-- Game Menu NJ -->
-  <!-- <footer> -->
-  <!-- <div id="gameMenu" class="container-fluid g-0">
-        <div class="row">
-          <div class="col d-flex justify-content-center my-2">
-            <
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div> -->
-
-
-
   <!-- MODALS -->
 
-
-
   <!-- QUESTION MODAL -  GUY -->
-
 
   <div id="qModal" class="modal">
     <div class="modal-content">
@@ -159,9 +115,9 @@
       <section class="questionsForm">
         <form id="addQuestionForm" class="add-question-form">
           <div>
-            <label for="type" placeholder="Select Question Type">Question Type:</label>
+            <label for="type">Question Type:</label>
             <select id="type" required>
-              <option value="boolean">True/False</option>
+              <option required value="boolean">True/False</option>
               <option value="multiple">Multiple Choice</option>
               <option value="text">Text Input</option>
             </select>
@@ -170,7 +126,7 @@
           <div>
             <label for="difficulty">Difficulty:</label>
             <select id="difficulty" required>
-              <option value="easy">Easy</option>
+              <option required value="easy">Easy</option>
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
             </select>
@@ -268,31 +224,32 @@
 
       <hr>
       <h3>Change Your Theme</h3>
-         <!-- Theme Toggles -->
-         <div id="theme-toggle">
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="radio" name="theme" id="themeAqua" checked>
-            <label class="form-check-label" for="themeAqua">Aqua</label>
-          </div>
 
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="radio" name="theme" id="themeOrange">
-            <label class="form-check-label" for="themeOrange">Orange</label>
-          </div>
-
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="radio" name="theme" id="themeGreen">
-            <label class="form-check-label" for="themeGreen">Green</label>
-          </div>
-
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="radio" name="theme" id="themeLight">
-            <label class="form-check-label" for="themeLight">Light</label>
-          </div>
+      <!-- Theme Toggles -->
+      <div id="theme-toggle">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="radio" name="theme" id="themeAqua" checked>
+          <label class="form-check-label" for="themeAqua">Aqua</label>
         </div>
 
-        <hr>
-        
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="radio" name="theme" id="themeOrange">
+          <label class="form-check-label" for="themeOrange">Orange</label>
+        </div>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="radio" name="theme" id="themeGreen">
+          <label class="form-check-label" for="themeGreen">Green</label>
+        </div>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="radio" name="theme" id="themeLight">
+          <label class="form-check-label" for="themeLight">Light</label>
+        </div>
+      </div>
+
+      <hr>
+
       <h4>Contact Us</h4>
       <!-- Social Links -->
 
@@ -337,7 +294,7 @@
       <span class="close">&times;</span>
       <h2>Start Your Game</h2>
       <button type="button" id="base-game-btn" class="btn btn-menu btn-lg">Base Game</button>
-      <button type="button" id="custom-game-btn" class="btn btn-menu btn-lg">Custom Game</button>
+      <button type="button" id="custom-game-btn" class="btn btn-menu btn-lg grayed">Custom Game</button>
     </div>
   </div>
 
@@ -351,39 +308,6 @@
   <audio id="disk-sound" src="./assets/audio/disk.wav"></audio>
   <audio id="switch-sound" src="./assets/audio/switch.wav"></audio>
   <audio id="delete-sound" src="./assets/audio/delete.wav"></audio>
-
-  <!-- Mobile Modal -->
-  <!-- <div id="mModal" class="modal">
-    <div class="modal-content display-flex justify-content-center">
-      <div class="close">&times;</div>
-      <button type="button" id="questionsBtn-mobile" class="btn btn-menu btn-lg"><i class="fa-solid fa-upload"></i></button>
-      <button type="button" id="display-questions-btn-mobile" class="btn btn-menu btn-lg"><i class="fa-solid fa-list"></i><i
-          class="fa-solid fa-question ml-3"></i></button>
-      <button type="button" id="soundBtn-mobile" class="btn btn-menu btn-lg"><i class="fa-solid fa-volume-off"></i></button>
-      <button type="button" id="about-mobile" class="btn btn-menu btn-lg"><i class="fa fa-info-circle"></i></button>
-      <div id="theme-toggle-mobile">
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="radio" name="theme" id="themeAqua-mobile" checked>
-          <label class="form-check-label" for="themeAqua">Aqua Theme</label>
-        </div>
-
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="radio" name="theme" id="themeOrange-mobile">
-          <label class="form-check-label" for="themeOrange">Orange Theme</label>
-        </div>
-
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="radio" name="theme" id="themeGreen-mobile">
-          <label class="form-check-label" for="themeGreen">Green Theme</label>
-        </div>
-
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="radio" name="theme" id="themeLight-mobile">
-          <label class="form-check-label" for="themeLight">Light Theme</label>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   <!-- Scripts -->
 

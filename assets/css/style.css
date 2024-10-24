@@ -20,7 +20,10 @@ p {
   font-family: "Ubuntu Mono", monospace;
 }
 
-
+.grayed {
+  color: rgba(0, 0, 0, 0.5);
+  filter: grayscale(100%) !important;
+}
 
 :root {
   /* Colour Variables */
@@ -34,7 +37,9 @@ p {
   color: var(--BGDark);
 }
 
-:root .add-question-form input, .add-question-form select, .add-question-form textarea{
+:root .add-question-form input,
+.add-question-form select,
+.add-question-form textarea {
   color: var(--BGDark);
 }
 
@@ -50,10 +55,10 @@ p {
 [data-theme="green"] {
   --BG: #2E4A13;
   --BGDark: #1C2E06;
-  --Medium: #32CD32; 
+  --Medium: #32CD32;
   --Bright: #98FB98;
   --offwhite: #F0FFF0;
-  --filter: sepia(1) saturate(4) brightness(1.25) hue-rotate(65deg); 
+  --filter: sepia(1) saturate(4) brightness(1.25) hue-rotate(65deg);
 }
 
 [data-theme="light"] {
@@ -67,21 +72,11 @@ p {
 
 }
 
-/* [data-theme="light"] .add-question-form input, .add-question-form select, .add-question-form textarea{
-  color: var(--offwhite);
-} */
 
 .row {
   padding: 0px;
   margin: 0px;
 }
-
-/* #gameTitle {
-  background-color: var(--BGDark);
-  border-top: var(--Medium) solid 5px;
-  border-right: var(--Medium) solid 5px;
-  border-left: var(--Medium) solid 5px;
-} */
 
 #Logo {
   height: 20vh;
@@ -133,15 +128,12 @@ p {
   background-color: var(--BGDark);
   min-height: 15vh;
   height: auto;
-  /* border-bottom: var(--Cyan) solid 5px;
-  border-left: var(--Cyan) solid 5px;
-  border-right: var(--Cyan) solid 5px; */
   color: var(--Bright);
   font-size: 1rem;
   margin-bottom: 20px;
 }
 
-.modal-content h2{
+.modal-content h2 {
   font-size: 2.5rem;
 }
 
@@ -166,27 +158,19 @@ p {
 
 /* Question Modals */
 
-.text-submit-button{
-  padding : 10px;
+.text-submit-button {
+  padding: 10px;
   font-size: 1rem;
   margin: 10px;
 }
 
-.answer-button, .boolean-button {
-  padding : 10px;
-  font-size: 1,5rem;
+.answer-button,
+.boolean-button {
+  padding: 10px;
+  font-size: 1.5rem;
   margin: 10px;
-  
-}
 
-/* .incorrect-answer {
-  background-color: rgba(0, 0, 0, 0.5);
 }
-
-.correct-answer {
-  background-color: green;
-}
- */
 
 /* Folder icons */
 
@@ -217,7 +201,6 @@ p {
   -moz-transition: all 0.05s ease-in-out;
   -webkit-transition: all 0.05s ease-in-out;
   -o-transition: all 0.05s ease-in-out;
-  /* box-shadow: 0px 0px 20px 0px #0ff; */
 }
 
 
@@ -262,6 +245,7 @@ p {
 ul li {
   font-family: "Ubuntu Mono", monospace;
 }
+
 /* Social links */
 
 
@@ -306,10 +290,7 @@ ul li {
 
 /* Media query for laptops and larger */
 
-@media (min-width: 780px) {
-
- 
-}
+@media (min-width: 780px) {}
 
 
 /* Media query for phones */
@@ -321,17 +302,8 @@ ul li {
 
   }
 
-  /* #theme-toggle , #questionsBtn, #display-questions-btn, #soundBtn, #about {
-    display: none;
-  } */
-
   #Logo {
     display: none;
-  }
-
-  #theme-toggle {
-    display: flex;
-    /* margin-bottom: 5px; */
   }
 
 }
@@ -346,5 +318,3 @@ ul li {
   }
 
 }
-
-
