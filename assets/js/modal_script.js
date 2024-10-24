@@ -242,15 +242,21 @@ function htmlCleanString(inputString) {
     return outputString;
 }
 
+
+/**
+ * Function that handles multiple choice answer click event.
+ * @param { Event } event 
+ * @param { HTMLElementCollection } buttons 
+ * @param { Number } buttonIndex 
+ * @param { Number } correctIndex 
+ */
 function multipleAnswer(event, buttons, buttonIndex, correctIndex) {
     if (!(buttons[buttonIndex].classList.contains("question-answered"))) {
         if (buttonIndex == correctIndex) {
             buttons[buttonIndex].classList.add("correct-answer");
-            console.log("Correct!");
         } else {
             buttons[buttonIndex].classList.add("incorrect-answer");
             buttons[correctIndex].classList.add("correct-answer");
-            console.log("Incorrect!");
         }
         for (let index = 0; index < buttons.length; index++) {
             buttons[index].classList.add("question-answered");
@@ -258,6 +264,13 @@ function multipleAnswer(event, buttons, buttonIndex, correctIndex) {
     }
 };
 
+/**
+ * Function that handles bool answer click event.
+ * @param { Event } event 
+ * @param { HTMLElementCollection } buttons 
+ * @param { Number } buttonIndex 
+ * @param { Boolean } correctAnswer 
+ */
 function boolAnswer(event, buttons, buttonIndex, correctAnswer) {
     if (!(buttons[buttonIndex].classList.contains("question-answered"))) {
         if (buttons[buttonIndex].innerHTML === correctAnswer) {
