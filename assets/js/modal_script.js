@@ -83,9 +83,6 @@ window.onclick = function (event) {
     }
 };
 
-
-document.addEventListener('DOMContentLoaded', handleModal);
-
 function generateQuestionList() {
     let questionList = [];
     return questionList;
