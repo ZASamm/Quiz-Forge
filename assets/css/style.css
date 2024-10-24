@@ -20,6 +20,8 @@ p {
   font-family: "Ubuntu Mono", monospace;
 }
 
+
+
 :root {
   /* Colour Variables */
 
@@ -29,6 +31,11 @@ p {
   --Bright: #6fffe9;
   --offwhite: #fafafafa;
   --filter: none;
+  color: var(--BGDark);
+}
+
+:root .add-question-form input, .add-question-form select, .add-question-form textarea{
+  color: var(--BGDark);
 }
 
 [data-theme="orange"] {
@@ -37,7 +44,7 @@ p {
   --Medium: #FFA500;
   --Bright: #FFC966;
   --offwhite: #FAEBD7;
-  --filter: sepia(1) saturate(4) brightness(1.1) hue-rotate(20deg);
+  --filter: sepia(1) saturate(2.8) brightness(0.9) hue-rotate(-10deg);
 }
 
 [data-theme="green"] {
@@ -46,34 +53,41 @@ p {
   --Medium: #32CD32; 
   --Bright: #98FB98;
   --offwhite: #F0FFF0;
-  --filter: sepia(1) saturate(5) brightness(1.2) hue-rotate(75deg); 
+  --filter: sepia(1) saturate(4) brightness(1.25) hue-rotate(65deg); 
 }
 
 [data-theme="light"] {
   --BG: #F0F0F0;
   --BGDark: #D0D0D0;
   --Medium: #000000;
-  --Bright: #333333;
+  --Bright: #330000;
   --offwhite: #FFFFFF;
   --filter: invert(0.9) brightness(0.5) contrast(1.2);
+
+
 }
+
+/* [data-theme="light"] .add-question-form input, .add-question-form select, .add-question-form textarea{
+  color: var(--offwhite);
+} */
 
 .row {
   padding: 0px;
   margin: 0px;
 }
 
-#gameTitle {
+/* #gameTitle {
   background-color: var(--BGDark);
   border-top: var(--Medium) solid 5px;
   border-right: var(--Medium) solid 5px;
   border-left: var(--Medium) solid 5px;
-}
+} */
 
 #Logo {
-  height: 10vh;
-  margin-left: 30px;
-  margin-right: 30px;
+  height: 20vh;
+  margin-left: 20px;
+  margin-right: 20px;
+  filter: var(--filter);
 }
 
 /* Game board */
@@ -85,7 +99,7 @@ p {
   height: auto;
   width: 100%;
 
-  border: var(--Medium) solid 5px;
+  border: var(--Medium) solid 2px;
 
 
 }
@@ -124,7 +138,16 @@ p {
   border-right: var(--Cyan) solid 5px; */
   color: var(--Bright);
   font-size: 1rem;
+  margin-bottom: 20px;
+}
 
+.modal-content h2{
+  font-size: 2.5rem;
+}
+
+
+.questionSection {
+  font-size: 1.5rem;
 }
 
 .btn {
@@ -140,6 +163,30 @@ p {
 .btn-lg {
   font-size: 2rem;
 }
+
+/* Question Modals */
+
+.text-submit-button{
+  padding : 10px;
+  font-size: 1rem;
+  margin: 10px;
+}
+
+.answer-button, .boolean-button {
+  padding : 10px;
+  font-size: 1,5rem;
+  margin: 10px;
+  
+}
+
+.incorrect-answer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.correct-answer {
+  background-color: green;
+}
+
 
 /* Folder icons */
 
@@ -210,12 +257,17 @@ p {
   font-family: "Ubuntu Mono", monospace;
 }
 
+/* About Page */
+
+ul li {
+  font-family: "Ubuntu Mono", monospace;
+}
 /* Social links */
 
 
 .social-links li a i {
   font-size: 40px;
-  color: var(--CyanBright);
+  color: var(--Bright);
   padding: 1rem;
   border-radius: 10px;
 }
@@ -231,18 +283,27 @@ p {
 }
 
 .social-link {
-  color: var(--CyanBright);
+  color: var(--Bright);
   text-decoration: none;
 }
 
 .social-link:hover {
   color: var(--BGDark);
-  background-color: var(--CyanBright);
+  background-color: var(--Bright);
   border-radius: 20%;
   transition: all 0.05s ease-in-out;
   -moz-transition: all 0.05s ease-in-out;
   -webkit-transition: all 0.05s ease-in-out;
   -o-transition: all 0.05s ease-in-out;
+}
+
+/* Media query for laptops and larger */
+
+@media (min-width: 780px) {
+
+  #Gears {
+    display: none;
+  }
 }
 
 
@@ -253,6 +314,10 @@ p {
   .square {
     background-size: 95%;
 
+  }
+
+  #theme-toggle , #questionsBtn, #display-questions-btn, #soundBtn, #about {
+    display: none;
   }
 
   
@@ -269,3 +334,5 @@ p {
   }
 
 }
+
+
