@@ -74,39 +74,42 @@
 
       <div id="gameMenu" class="d-flex flex-wrap justify-content-around align-items-center mx-4">
         <img class="ml-4" id="Logo" src="assets/images/logo_cyan.svg" alt="Quiz Forge Logo Image" />
-        <button type="button" id="startBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-play"></i></button>
-        <button type="button" id="questionsBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-upload"></i></button>
+        <button type="button" id="startBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-play"
+            aria-hidden="true"></i><span class="sr-only">Start Game</span></button>
+        <button type="button" id="questionsBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-upload"
+            aria-hidden="true"></i><span class="sr-only">Add your own questions</span></button>
         <button type="button" id="display-questions-btn" class="btn btn-menu btn-lg"><i class="fa-solid fa-list"></i><i
-            class="fa-solid fa-question ml-3"></i></button>
-        <!-- <button type="button" id="soundBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-volume-off"></i></button> -->
-            <!-- class="fa-solid fa-question ml-3"></i></button> -->
-        <button type="button" id="soundBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-volume-off"></i></button>
-        <button type="button" id="about" class="btn btn-menu btn-lg"><i class="fa fa-info-circle"></i></button>
-        <button type="button" id="Gears" class="btn btn-menu btn-lg"><i class="fa fa-gears"></i></button>
+            class="fa-solid fa-question ml-3" aria-hidden="true"><span class="sr-only">Display stored
+              questions</span></i></button>
+        <button type="button" id="soundBtn" class="btn btn-menu btn-lg"><i class="fa-solid fa-volume-off"
+            aria-hidden="true"></i><span class="sr-only">Sound on and off</span></button>
+        <button type="button" id="about" class="btn btn-menu btn-lg"><i class="fa fa-info-circle"
+            aria-hidden="true"></i><span class="sr-only">About Us</span></button>
+        <!-- <button type="button" id="Gears" class="btn btn-menu btn-lg"><i class="fa fa-gears"></i></button> -->
 
 
         <!-- Theme Toggles -->
-        <div id="theme-toggle">
+        <!-- <div id="theme-toggle">
           <div class="form-check form-switch">
             <input class="form-check-input" type="radio" name="theme" id="themeAqua" checked>
-            <label class="form-check-label" for="themeAqua">Aqua Theme</label>
+            <label class="form-check-label" for="themeAqua">Aqua</label>
           </div>
 
           <div class="form-check form-switch">
             <input class="form-check-input" type="radio" name="theme" id="themeOrange">
-            <label class="form-check-label" for="themeOrange">Orange Theme</label>
+            <label class="form-check-label" for="themeOrange">Orange</label>
           </div>
 
           <div class="form-check form-switch">
             <input class="form-check-input" type="radio" name="theme" id="themeGreen">
-            <label class="form-check-label" for="themeGreen">Green Theme</label>
+            <label class="form-check-label" for="themeGreen">Green</label>
           </div>
 
           <div class="form-check form-switch">
             <input class="form-check-input" type="radio" name="theme" id="themeLight">
-            <label class="form-check-label" for="themeLight">Light Theme</label>
+            <label class="form-check-label" for="themeLight">Light</label>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -264,7 +267,32 @@
       </p>
 
       <hr>
+      <h3>Change Your Theme</h3>
+         <!-- Theme Toggles -->
+         <div id="theme-toggle">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="radio" name="theme" id="themeAqua" checked>
+            <label class="form-check-label" for="themeAqua">Aqua</label>
+          </div>
 
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="radio" name="theme" id="themeOrange">
+            <label class="form-check-label" for="themeOrange">Orange</label>
+          </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="radio" name="theme" id="themeGreen">
+            <label class="form-check-label" for="themeGreen">Green</label>
+          </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="radio" name="theme" id="themeLight">
+            <label class="form-check-label" for="themeLight">Light</label>
+          </div>
+        </div>
+
+        <hr>
+        
       <h4>Contact Us</h4>
       <!-- Social Links -->
 
@@ -325,7 +353,7 @@
   <audio id="delete-sound" src="./assets/audio/delete.wav"></audio>
 
   <!-- Mobile Modal -->
-  <div id="mModal" class="modal">
+  <!-- <div id="mModal" class="modal">
     <div class="modal-content display-flex justify-content-center">
       <div class="close">&times;</div>
       <button type="button" id="questionsBtn-mobile" class="btn btn-menu btn-lg"><i class="fa-solid fa-upload"></i></button>
@@ -355,7 +383,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Scripts -->
 
