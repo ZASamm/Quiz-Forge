@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
+    const beep = document.getElementById("beep-sound")
     let positon = 0
     movePlayer(0, getSquares());
 
     document.addEventListener('keydown',function(event){ 
         if(event.key === 'ArrowRight'){
+            beep.play()
             let squares = getSquares();
             event.preventDefault();
             setCorrectSquare(positon, squares);
@@ -13,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function(){
             
         }
         if(event.key === 'ArrowLeft'){
+            beep.play()
             let squares = getSquares();
             event.preventDefault();
             setIncorrectSquare(positon, squares);
