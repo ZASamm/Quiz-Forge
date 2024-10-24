@@ -125,11 +125,39 @@
     transition: 0.1s ease-in-out
 }
 
+/* Display Modal */
+
+#questionsContainer {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.question {
+    border: 1px solid var(--Bright);
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 217, 255, 0.1); /* Changed to match new orange RGB */
+}
+
+.question h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.question p {
+    margin: 5px 0;
+}
+
+.question strong {
+    color: #fff;
+}
+
 
 /* AUDIO */
 
 .audio-on {
-    color: orange !important;
+    color: orangered !important;
 }
 
 

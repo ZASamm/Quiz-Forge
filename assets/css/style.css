@@ -138,7 +138,7 @@ p {
   border-right: var(--Cyan) solid 5px; */
   color: var(--Bright);
   font-size: 1rem;
-
+  margin-bottom: 20px;
 }
 
 .modal-content h2{
@@ -164,6 +164,8 @@ p {
   font-size: 2rem;
 }
 
+/* Question Modals */
+
 .text-submit-button{
   padding : 10px;
   font-size: 1rem;
@@ -177,6 +179,14 @@ p {
   
 }
 
+/* .incorrect-answer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.correct-answer {
+  background-color: green;
+}
+ */
 
 /* Folder icons */
 
@@ -288,6 +298,20 @@ ul li {
 }
 
 
+/* Theme toggles */
+
+#theme-toggle {
+  margin-bottom: 25px;
+}
+
+/* Media query for laptops and larger */
+
+@media (min-width: 780px) {
+
+ 
+}
+
+
 /* Media query for phones */
 
 @media (max-width: 768px) {
@@ -297,7 +321,18 @@ ul li {
 
   }
 
-  
+  /* #theme-toggle , #questionsBtn, #display-questions-btn, #soundBtn, #about {
+    display: none;
+  } */
+
+  #Logo {
+    display: none;
+  }
+
+  #theme-toggle {
+    display: flex;
+    /* margin-bottom: 5px; */
+  }
 
 }
 
@@ -311,3 +346,5 @@ ul li {
   }
 
 }
+
+
