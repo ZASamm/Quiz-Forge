@@ -67,21 +67,11 @@ p {
 
 }
 
-/* [data-theme="light"] .add-question-form input, .add-question-form select, .add-question-form textarea{
-  color: var(--offwhite);
-} */
 
 .row {
   padding: 0px;
   margin: 0px;
 }
-
-/* #gameTitle {
-  background-color: var(--BGDark);
-  border-top: var(--Medium) solid 5px;
-  border-right: var(--Medium) solid 5px;
-  border-left: var(--Medium) solid 5px;
-} */
 
 #Logo {
   height: 20vh;
@@ -133,9 +123,6 @@ p {
   background-color: var(--BGDark);
   min-height: 15vh;
   height: auto;
-  /* border-bottom: var(--Cyan) solid 5px;
-  border-left: var(--Cyan) solid 5px;
-  border-right: var(--Cyan) solid 5px; */
   color: var(--Bright);
   font-size: 1rem;
   margin-bottom: 20px;
@@ -179,15 +166,6 @@ p {
   
 }
 
-/* .incorrect-answer {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.correct-answer {
-  background-color: green;
-}
- */
-
 /* Folder icons */
 
 .square {
@@ -217,7 +195,6 @@ p {
   -moz-transition: all 0.05s ease-in-out;
   -webkit-transition: all 0.05s ease-in-out;
   -o-transition: all 0.05s ease-in-out;
-  /* box-shadow: 0px 0px 20px 0px #0ff; */
 }
 
 
@@ -321,17 +298,8 @@ ul li {
 
   }
 
-  /* #theme-toggle , #questionsBtn, #display-questions-btn, #soundBtn, #about {
-    display: none;
-  } */
-
   #Logo {
     display: none;
-  }
-
-  #theme-toggle {
-    display: flex;
-    /* margin-bottom: 5px; */
   }
 
 }
