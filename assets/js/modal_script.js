@@ -5,6 +5,7 @@
 let questions = [];
 
 async function handleModal() {
+
     let filePaths = [
         'assets/questions/programming/js-questions-json.json',
         'assets/questions/programming/html-questions-json.json',
@@ -27,18 +28,14 @@ async function handleModal() {
         const square = squares[index];
         square.setAttribute("squareIndex", index);
         square.addEventListener("click", function () {
-            position = index;
-            updateBoard(squares);
-            if (squareUnanswered(square)) {
-                loadQuestion(square.getAttribute("squareIndex"), qModal);
 
-                qModal.style.display = "block";
-                scanLines.classList.add("translucent")
-                console.log(scanLines.classList)
-                if (soundOn) {
-                    clickSound.play()
-                }
-            };
+            loadQuestion(square.getAttribute("squareIndex"), qModal);
+
+            qModal.style.display = "block";
+            scanLines.classList.add("translucent")
+            console.log(scanLines.classList)
+            clickSound.play()
+
 
             // const squareID = this.id;   - Could set modal content like this
             // setModalContent(squareID);  - Call function that switches content based on id
@@ -47,12 +44,10 @@ async function handleModal() {
 
     document.addEventListener("keydown", function (event) {
         if (qModal.style.display === "block" && event.key === "Escape") {
-            if (soundOn) {
-                closeSound.play()
-            }
+            closeSound.play()
             qModal.style.display = "none";
             scanLines.classList.remove("translucent")
-            
+
         }
         if (event.key === "Enter") {
             let currentSquare = document.querySelector(".player-square");
@@ -70,9 +65,7 @@ async function handleModal() {
 
     // add click event to close qModal
     close.addEventListener("click", function () {
-        if (soundOn) {
-            closeSound.play()
-        }
+        closeSound.play()
         qModal.style.display = "none";
         scanLines.classList.remove("translucent")
     });
@@ -91,7 +84,7 @@ window.onclick = function (event) {
 };
 
 
-//document.addEventListener('DOMContentLoaded', handleModal);
+document.addEventListener('DOMContentLoaded', handleModal);
 
 function generateQuestionList() {
     let questionList = [];
@@ -105,9 +98,7 @@ function loadQuestion(squareIndex, modal) {
     let modalContent = document.querySelector(".modal-content");
     document.querySelector(".category").innerHTML = `Question ${Number(squareIndex) + 1}`;
 
-    let questionString = question.question;
-    questionString = questionString.replaceAll("<", "&lt;");
-    questionString = questionString.replaceAll(">", "&gt;");
+    let questionString = htmlCleanString(question.question);
     document.querySelector(".questionSection").innerHTML = `${questionString}`;
 
     document.querySelector(".answerSection").innerHTML = "";
@@ -121,8 +112,7 @@ function loadQuestion(squareIndex, modal) {
             possibleAnswers = shuffle(possibleAnswers);
             let htmlString = '';
             for (let answer of possibleAnswers) {
-                answer = answer.replaceAll("<", "&lt;");
-                answer = answer.replaceAll(">", "&gt;");
+                answer = htmlCleanString(answer);
                 htmlString = htmlString + `<button class="answer-button">${answer}</button>`
             };
             document.querySelector(".answerSection").innerHTML = htmlString;
@@ -130,9 +120,11 @@ function loadQuestion(squareIndex, modal) {
             // Add Event Listeners
             let buttons = document.getElementsByClassName("answer-button");
             let correctIndex = possibleAnswers.indexOf(question.correct_answer);
+            console.log(correctIndex);
+            console.log(buttons);
             for (let index = 0; index < buttons.length; index++) {
                 buttons[index].addEventListener("click", function (event) {
-                    multipleAnswer(event, buttons, index, correctIndex, squareIndex)
+                    multipleAnswer(event, buttons, index, correctIndex)
                 });
             }
             break;
@@ -147,7 +139,7 @@ function loadQuestion(squareIndex, modal) {
             let boolButtons = document.getElementsByClassName("boolean-button");
             for (let index = 0; index < boolButtons.length; index++) {
                 boolButtons[index].addEventListener("click", function (event) {
-                    boolAnswer(event, boolButtons, index, question.correct_answer, squareIndex);
+                    boolAnswer(event, boolButtons, index, question.correct_answer);
                 });
             }
             break;
@@ -162,7 +154,7 @@ function loadQuestion(squareIndex, modal) {
             let submitButton = document.querySelector(".text-submit-button");
             let textField = document.querySelector(".text-input");
             submitButton.addEventListener("click", function (event) {
-                textAnswer(event, textField, submitButton, question.correct_answers, squareIndex)
+                textAnswer(event, textField, submitButton, question.correct_answers)
             });
             break;
         default:
@@ -269,17 +261,15 @@ function htmlCleanString(inputString) {
  * @param { Number } buttonIndex 
  * @param { Number } correctIndex 
  */
-function multipleAnswer(event, buttons, buttonIndex, correctIndex, squareIndex) {
+function multipleAnswer(event, buttons, buttonIndex, correctIndex) {
     if (!(buttons[buttonIndex].classList.contains("question-answered"))) {
         if (buttonIndex == correctIndex) {
             buttons[buttonIndex].classList.add("correct-answer");
             console.log("Correct!");
-            handleAnswer(squareIndex, true);
         } else {
             buttons[buttonIndex].classList.add("incorrect-answer");
             buttons[correctIndex].classList.add("correct-answer");
             console.log("Incorrect!");
-            handleAnswer(squareIndex, false);
         }
         for (let index = 0; index < buttons.length; index++) {
             buttons[index].classList.add("question-answered");
@@ -294,12 +284,11 @@ function multipleAnswer(event, buttons, buttonIndex, correctIndex, squareIndex) 
  * @param { Number } buttonIndex 
  * @param { Boolean } correctAnswer 
  */
-function boolAnswer(event, buttons, buttonIndex, correctAnswer, squareIndex) {
+function boolAnswer(event, buttons, buttonIndex, correctAnswer) {
     if (!(buttons[buttonIndex].classList.contains("question-answered"))) {
         if (buttons[buttonIndex].innerHTML === correctAnswer) {
             buttons[buttonIndex].classList.add("correct-answer");
             console.log("Correct!");
-            handleAnswer(squareIndex, true);
         } else {
             buttons[buttonIndex].classList.add("incorrect-answer");
             if (buttonIndex === 1) {
@@ -308,7 +297,6 @@ function boolAnswer(event, buttons, buttonIndex, correctAnswer, squareIndex) {
                 buttons[1].classList.add("correct-answer");
             }
             console.log("Incorrect!");
-            handleAnswer(squareIndex, false);
         }
         for (let index = 0; index < buttons.length; index++) {
             buttons[index].classList.add("question-answered");
@@ -323,15 +311,14 @@ function boolAnswer(event, buttons, buttonIndex, correctAnswer, squareIndex) {
  * @param { HTMLButtonElement } submitButton 
  * @param { String } correctAnswer 
  */
-function textAnswer(event, textField, submitButton, correctAnswer, squareIndex) {
+function textAnswer(event, textField, submitButton, correctAnswer) {
+    console.log("buttonClicked");
     if (!(submitButton.classList.contains("question-answered"))) {
         if (correctAnswer.includes(textField.value)) {
             console.log("Correct!");
-            handleAnswer(squareIndex, true);
             submitButton.classList.add("correct-answer");
         } else {
             console.log("Incorrect!");
-            handleAnswer(squareIndex, false);
             submitButton.classList.add("incorrect-answer");
         }
         submitButton.classList.add("question-answered");
