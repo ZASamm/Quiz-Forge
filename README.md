@@ -311,12 +311,38 @@ Validators were used to help address any issues within the projects HTML, CSS an
 <br>
 
 <p align="center">
-<img src="assets/readMe Images/css-validator.png" alt="CSS Validator Checks">
+<img src="assets/readMe Images/html-validator2.png" alt="HTML Validator Checks">
 </p>
 <br>
 
 <p align="center">
+<img src="assets/readMe Images/css-validator.png" alt="CSS Validator Checks">
+</p>
+<br>
+
+
+<p align="center">
 <img src="assets/readMe Images/js-linter.png" alt="JavaScript Linter Checks">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/js-linter2.png" alt="JavaScript Linter Checks">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/js-linter3.png" alt="JavaScript Linter Checks">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/js-linter4.png" alt="JavaScript Linter Checks">
+</p>
+<br>
+
+<p align="center">
+<img src="assets/readMe Images/js-linter5.png" alt="JavaScript Linter Checks">
 </p>
 <br>
 
