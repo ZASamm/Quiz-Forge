@@ -27,15 +27,18 @@ async function handleModal() {
         const square = squares[index];
         square.setAttribute("squareIndex", index);
         square.addEventListener("click", function () {
+            position = index;
+            updateBoard(squares);
+            if (squareUnanswered(square)) {
+                loadQuestion(square.getAttribute("squareIndex"), qModal);
 
-            loadQuestion(square.getAttribute("squareIndex"), qModal);
-
-            qModal.style.display = "block";
-            scanLines.classList.add("translucent")
-            console.log(scanLines.classList)
-            if (soundOn){
-            clickSound.play()
-            }
+                qModal.style.display = "block";
+                scanLines.classList.add("translucent")
+                console.log(scanLines.classList)
+                if (soundOn) {
+                    clickSound.play()
+                }
+            };
 
             // const squareID = this.id;   - Could set modal content like this
             // setModalContent(squareID);  - Call function that switches content based on id
@@ -53,13 +56,15 @@ async function handleModal() {
         }
         if (event.key === "Enter") {
             let currentSquare = document.querySelector(".player-square");
-            loadQuestion(currentSquare.getAttribute("squareIndex"), qModal);
-            qModal.style.display = "block";
-            scanLines.classList.add("translucent")
-            if (soundOn){
-                clickSound.play()
+            if (squareUnanswered(currentSquare)) {
+                loadQuestion(currentSquare.getAttribute("squareIndex"), qModal);
+                qModal.style.display = "block";
+                scanLines.classList.add("translucent")
+                if (soundOn) {
+                    clickSound.play()
                 }
-            console.log(`Loading current square ${currentSquare}`);
+                console.log(`Loading current square ${currentSquare}`);
+            };
         }
     });
 
@@ -70,6 +75,7 @@ async function handleModal() {
         }
         qModal.style.display = "none";
         scanLines.classList.remove("translucent")
+        updateBoard(getSquares());
     });
 
 }
