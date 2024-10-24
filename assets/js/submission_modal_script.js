@@ -42,6 +42,15 @@ function handleSubmitModal() {
             scanLines.classList.remove("translucent")
         }
     });
+
+    document.addEventListener("keydown", function (event) {
+        if (submitModal.style.display === "block" && event.key === "Escape") {
+            closeSound.play()
+            submitModal.style.display = "none";
+            scanLines.classList.remove("translucent")
+
+        }
+    })
 }
 
 
@@ -200,6 +209,14 @@ function handleDisplayModal() {
             scanLines.classList.remove("translucent")
         }
     });
+    document.addEventListener("keydown", function (event) {
+        if (displayModal.style.display === "block" && event.key === "Escape") {
+            closeSound.play()
+            displayModal.style.display = "none";
+            scanLines.classList.remove("translucent")
+
+        }
+    })
 }
 
 // DISPLAY QUESTIONS FUNCTION
@@ -295,4 +312,13 @@ function handleAboutModal() {
             scanLines.classList.remove("translucent")
         }
     });
+    document.addEventListener("keydown", function (event) {
+        if (aboutModal.style.display === "block" && event.key === "Escape") {
+            closeSound.play()
+            aboutModal.style.display = "none";
+            scanLines.classList.remove("translucent")
+
+        }
+    })
 }
+
