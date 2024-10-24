@@ -43,12 +43,6 @@
     &::-webkit-scrollbar {
         display: none;
     }
-
-    /* Hide scrollbar for IE, Edge, and Firefox */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-
 }
 
 .close {
@@ -119,11 +113,6 @@
     font-size: 2rem;
 }
 
-.floppy :hover {
-
-    transform: scale(1.1.5);
-    transition: 0.1s ease-in-out
-}
 
 /* Display Modal */
 

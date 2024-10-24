@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleAboutModal();
     deleteQuestion();
     handlePlayModal();
-    handleGearsModal();
+
 
 });
 
@@ -424,4 +424,3 @@ function handlePlayModal() {
         scanLines.classList.remove("translucent")
     }
 }
-
