@@ -7,7 +7,6 @@
 }
 
 
-
 label, option, textarea, input, select, ::placeholder {
     font-family: "Ubuntu Mono", monospace;
 }
@@ -21,3 +20,4 @@ label, option, textarea, input, select, ::placeholder {
     color: var(--offwhite);
     background-color: var(--BG);
 }
+
