@@ -142,9 +142,16 @@ function loadQuestion(squareIndex, modal) {
         case 'text':
             // missing on click event handler, to be added later.
             document.querySelector(".answerSection").innerHTML = `
-            <input type="text">
+            <input type="text" class="text-input">
             <button class="text-submit-button">Answer</button>
             `;
+
+            // Add Event Listener
+            let submitButton = document.querySelector(".text-submit-button");
+            let textField = document.querySelector(".text-input");
+            submitButton.addEventListener("click", function (event) {
+                textAnswer(event, textField, submitButton, question.correct_answers)
+            });
             break;
         default:
             alert(`${question.type} is an unsupported or invalid question type`);
@@ -284,5 +291,26 @@ function boolAnswer(event, buttons, buttonIndex, correctAnswer) {
         for (let index = 0; index < buttons.length; index++) {
             buttons[index].classList.add("question-answered");
         }
+    }
+}
+
+/**
+ * Function that handles text answer click event.
+ * @param { Event } event 
+ * @param { HTMLInputElement } textField 
+ * @param { HTMLButtonElement } submitButton 
+ * @param { String } correctAnswer 
+ */
+function textAnswer(event, textField, submitButton, correctAnswer) {
+    console.log("buttonClicked");
+    if (!(submitButton.classList.contains("question-answered"))) {
+        if (correctAnswer.includes(textField.value)) {
+            console.log("Correct!");
+            submitButton.classList.add("correct-answer");
+        } else {
+            console.log("Incorrect!");
+            submitButton.classList.add("incorrect-answer");
+        }
+        submitButton.classList.add("question-answered");
     }
 }
