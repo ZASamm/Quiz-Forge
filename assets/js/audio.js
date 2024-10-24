@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log('Sound toggled by button:', soundOn);
             
             if (soundOn) {
-                soundBtn.classList.add("audio-on");
+                soundBtn.classList.remove("grayed");
             } else {
-                soundBtn.classList.remove("audio-on");
+                soundBtn.classList.add("grayed");
             }
 
             document.querySelectorAll('audio').forEach(audio => {

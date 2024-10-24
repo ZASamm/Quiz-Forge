@@ -71,6 +71,7 @@ function clearSquare(index, squares) {
     squares[index].classList.remove('incorrect-square');
     squares[index].classList.remove('correct-square');
     squares[index].classList.remove('player-square');
+    squares[index].classList.remove("grayed");
 }
 
 /**
@@ -135,10 +136,16 @@ function updateBoard() {
         squares[position].classList.add("player-square");
         for (let index = 0; index < squares.length; index++) {
             const square = squares[index];
-            if (!square.classList.contains("player-square")) {
-                if (square.classList.contains("answer-correct")) {
+            if (square.classList.contains("answer-correct")) {
+                if (square.classList.contains("player-square")) {
+                    square.classList.add("grayed");
+                } else {
                     setCorrectSquare(index, squares);
-                } else if (square.classList.contains("answer-incorrect")) {
+                }
+            } else if (square.classList.contains("answer-incorrect")) {
+                if (square.classList.contains("player-square")) {
+                    square.classList.add("grayed");
+                } else {
                     setIncorrectSquare(index, squares);
                 }
             }
@@ -195,10 +202,10 @@ function getNextSquare() {
  * Function gets the last unanswered square.
  * @returns { Number } square index, returns -1 if all squares are answered.
  */
-function getPreviousSquare () {
+function getPreviousSquare() {
     let previousSquare = -1;
     let squares = getSquares();
-    for (let index = squares.length-1; index >= 0; index--) {
+    for (let index = squares.length - 1; index >= 0; index--) {
         const square = squares[index];
         if (squareUnanswered(square)) {
             previousSquare = index;
