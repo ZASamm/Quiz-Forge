@@ -371,7 +371,7 @@ function handlePlayModal() {
 
     // Event listeners to call game style init functions. (These need making)
 
-    playBaseGame.addEventListener("click", playBaseGame)
+    playBaseGame.addEventListener("click", newBaseGame)
     playCustomGame.addEventListener("click", playCustomGame)
 
 
@@ -414,6 +414,15 @@ function handlePlayModal() {
     })
 
 
+    function newBaseGame() {
+        resetBoard();
+        handleModal();
+        if (soundOn) {
+            closeSound.play()
+        }
+        playModal.style.display = "none";
+        scanLines.classList.remove("translucent")
+    }
 }
 
 // Gears Modal

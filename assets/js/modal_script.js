@@ -5,7 +5,6 @@
 let questions = [];
 
 async function handleModal() {
-    
     let filePaths = [
         'assets/questions/programming/js-questions-json.json',
         'assets/questions/programming/html-questions-json.json',

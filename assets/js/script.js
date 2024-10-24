@@ -104,7 +104,7 @@ function resetBoard() {
     }
     squares[0].classList.add('player-square');
     positon = 0;
-    questions=[];
+    //questions=[];
 };
 
 /**
