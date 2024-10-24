@@ -5,7 +5,6 @@
 let questions = [];
 
 async function handleModal() {
-
     let filePaths = [
         'assets/questions/programming/js-questions-json.json',
         'assets/questions/programming/html-questions-json.json',
@@ -28,15 +27,18 @@ async function handleModal() {
         const square = squares[index];
         square.setAttribute("squareIndex", index);
         square.addEventListener("click", function () {
+            position = index;
+            updateBoard(squares);
+            if (squareUnanswered(square)) {
+                loadQuestion(square.getAttribute("squareIndex"), qModal);
 
-            loadQuestion(square.getAttribute("squareIndex"), qModal);
-
-            qModal.style.display = "block";
-            scanLines.classList.add("translucent")
-            console.log(scanLines.classList)
-            if (soundOn){
-            clickSound.play()
-            }
+                qModal.style.display = "block";
+                scanLines.classList.add("translucent")
+                console.log(scanLines.classList)
+                if (soundOn) {
+                    clickSound.play()
+                }
+            };
 
             // const squareID = this.id;   - Could set modal content like this
             // setModalContent(squareID);  - Call function that switches content based on id
@@ -54,13 +56,15 @@ async function handleModal() {
         }
         if (event.key === "Enter") {
             let currentSquare = document.querySelector(".player-square");
-            loadQuestion(currentSquare.getAttribute("squareIndex"), qModal);
-            qModal.style.display = "block";
-            scanLines.classList.add("translucent")
-            if (soundOn){
-                clickSound.play()
+            if (squareUnanswered(currentSquare)) {
+                loadQuestion(currentSquare.getAttribute("squareIndex"), qModal);
+                qModal.style.display = "block";
+                scanLines.classList.add("translucent")
+                if (soundOn) {
+                    clickSound.play()
                 }
-            console.log(`Loading current square ${currentSquare}`);
+                console.log(`Loading current square ${currentSquare}`);
+            };
         }
     });
 
@@ -71,6 +75,7 @@ async function handleModal() {
         }
         qModal.style.display = "none";
         scanLines.classList.remove("translucent")
+        updateBoard(getSquares());
     });
 
 }
@@ -87,7 +92,7 @@ window.onclick = function (event) {
 };
 
 
-document.addEventListener('DOMContentLoaded', handleModal);
+//document.addEventListener('DOMContentLoaded', handleModal);
 
 function generateQuestionList() {
     let questionList = [];
@@ -122,6 +127,15 @@ function loadQuestion(squareIndex, modal) {
                 htmlString = htmlString + `<button class="answer-button">${answer}</button>`
             };
             document.querySelector(".answerSection").innerHTML = htmlString;
+
+            // Add Event Listeners
+            let buttons = document.getElementsByClassName("answer-button");
+            let correctIndex = possibleAnswers.indexOf(question.correct_answer);
+            for (let index = 0; index < buttons.length; index++) {
+                buttons[index].addEventListener("click", function (event) {
+                    multipleAnswer(event, buttons, index, correctIndex, squareIndex)
+                });
+            }
             break;
         case 'boolean':
             // missing on click event handler, to be added later.
@@ -129,6 +143,14 @@ function loadQuestion(squareIndex, modal) {
             <button class="boolean-button">True</button>
             <button class="boolean-button">False</button>
             `;
+
+            // Add Event Listeners
+            let boolButtons = document.getElementsByClassName("boolean-button");
+            for (let index = 0; index < boolButtons.length; index++) {
+                boolButtons[index].addEventListener("click", function (event) {
+                    boolAnswer(event, boolButtons, index, question.correct_answer, squareIndex);
+                });
+            }
             break;
         case 'text':
             // missing on click event handler, to be added later.
@@ -136,6 +158,13 @@ function loadQuestion(squareIndex, modal) {
             <input type="text">
             <button class="text-submit-button">Answer</button>
             `;
+
+            // Add Event Listener
+            let submitButton = document.querySelector(".text-submit-button");
+            let textField = document.querySelector(".text-input");
+            submitButton.addEventListener("click", function (event) {
+                textAnswer(event, textField, submitButton, question.correct_answers, squareIndex)
+            });
             break;
         default:
             alert(`${question.type} is an unsupported or invalid question type`);
@@ -221,3 +250,91 @@ function shuffle(array) {
     };
     return array;
 };
+
+/**
+ * Cleans a string of html so it can display in html.
+ * @param {string} Input String Unsanitized
+ * @returns Output String Santized
+ */
+function htmlCleanString(inputString) {
+    let outputString = inputString.replaceAll("<", "&lt;");
+    outputString = outputString.replaceAll(">", "&gt;");
+    return outputString;
+}
+
+
+/**
+ * Function that handles multiple choice answer click event.
+ * @param { Event } event 
+ * @param { HTMLElementCollection } buttons 
+ * @param { Number } buttonIndex 
+ * @param { Number } correctIndex 
+ */
+function multipleAnswer(event, buttons, buttonIndex, correctIndex, squareIndex) {
+    if (!(buttons[buttonIndex].classList.contains("question-answered"))) {
+        if (buttonIndex == correctIndex) {
+            buttons[buttonIndex].classList.add("correct-answer");
+            console.log("Correct!");
+            handleAnswer(squareIndex, true);
+        } else {
+            buttons[buttonIndex].classList.add("incorrect-answer");
+            buttons[correctIndex].classList.add("correct-answer");
+            console.log("Incorrect!");
+            handleAnswer(squareIndex, false);
+        }
+        for (let index = 0; index < buttons.length; index++) {
+            buttons[index].classList.add("question-answered");
+        }
+    }
+};
+
+/**
+ * Function that handles bool answer click event.
+ * @param { Event } event 
+ * @param { HTMLElementCollection } buttons 
+ * @param { Number } buttonIndex 
+ * @param { Boolean } correctAnswer 
+ */
+function boolAnswer(event, buttons, buttonIndex, correctAnswer, squareIndex) {
+    if (!(buttons[buttonIndex].classList.contains("question-answered"))) {
+        if (buttons[buttonIndex].innerHTML === correctAnswer) {
+            buttons[buttonIndex].classList.add("correct-answer");
+            console.log("Correct!");
+            handleAnswer(squareIndex, true);
+        } else {
+            buttons[buttonIndex].classList.add("incorrect-answer");
+            if (buttonIndex === 1) {
+                buttons[0].classList.add("correct-answer");
+            } else {
+                buttons[1].classList.add("correct-answer");
+            }
+            console.log("Incorrect!");
+            handleAnswer(squareIndex, false);
+        }
+        for (let index = 0; index < buttons.length; index++) {
+            buttons[index].classList.add("question-answered");
+        }
+    }
+}
+
+/**
+ * Function that handles text answer click event.
+ * @param { Event } event 
+ * @param { HTMLInputElement } textField 
+ * @param { HTMLButtonElement } submitButton 
+ * @param { String } correctAnswer 
+ */
+function textAnswer(event, textField, submitButton, correctAnswer, squareIndex) {
+    if (!(submitButton.classList.contains("question-answered"))) {
+        if (correctAnswer.includes(textField.value)) {
+            console.log("Correct!");
+            handleAnswer(squareIndex, true);
+            submitButton.classList.add("correct-answer");
+        } else {
+            console.log("Incorrect!");
+            handleAnswer(squareIndex, false);
+            submitButton.classList.add("incorrect-answer");
+        }
+        submitButton.classList.add("question-answered");
+    }
+}
