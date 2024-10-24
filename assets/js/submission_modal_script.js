@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleDisplayModal();
     displayQuestions();
     handleAboutModal();
+    deleteQuestion();
 
 });
 
@@ -17,20 +18,26 @@ function handleSubmitModal() {
     const submitbtn = document.getElementById("questionsBtn");
     const close = document.getElementsByClassName("close")[1];
     const scanLines = document.getElementById("screen_scanlines")
+    const clickSound = document.getElementById("click-sound")
+    const closeSound = document.getElementById("close-beep-sound")
+
     console.log(scanLines)
 
     submitbtn.addEventListener('click', function () {
+        clickSound.play()
         submitModal.style.display = "block";
         scanLines.classList.add("translucent")
     });
 
     close.addEventListener('click', function () {
+        closeSound.play()
         submitModal.style.display = "none";
         scanLines.classList.remove("translucent")
     });
 
     window.addEventListener('click', function (e) {
         if (e.target == submitModal) {
+            closeSound.play()
             submitModal.style.display = "none";
             scanLines.classList.remove("translucent")
         }
@@ -49,6 +56,8 @@ function handleQuestionForm() {
     const typeSelect = document.getElementById('type');
     const incorrectAnswersSection = document.getElementById('incorrectAnswersSection');
     const alternateAnswersSection = document.getElementById('alternateAnswersSection');
+    const saveSound = document.getElementById("disk-sound")
+    const qSavedNotice = document.getElementById("qSaved")
 
     typeSelect.addEventListener('change', function () { // "change" here is the event for when the user changes the question type
 
@@ -68,9 +77,6 @@ function handleQuestionForm() {
             case 'boolean':
                 incorrectAnswersSection.style.display = 'none';
                 alternateAnswersSection.style.display = 'none';
-
-
-                document.getElementById('trueOrFalse').style.display = 'block';
                 break;
         }
     });
@@ -119,6 +125,8 @@ function handleQuestionForm() {
             delete newQuestion.correct_answer; // Remove the single correct_answer property
         }
 
+        // SAVE TO LOCAL STORAGE
+
         try {
             // Try to get existing questions from localStorage
             // If none exist, use an empty array ('[]')
@@ -133,8 +141,16 @@ function handleQuestionForm() {
 
 
             console.log('Question saved to localStorage:', newQuestion);
+            qSavedNotice.classList.remove("GC-hidden")
+            saveSound.play() // play save sound
+            setTimeout(() => {
+                qSavedNotice.classList.add("GC-hidden");
+            }, 1500);
+
+
             form.reset();
-            alert('Question saved successfully!');
+
+            displayQuestions(); // update question display - this fixes the page needing refresh
         } catch (error) {
 
             console.error('Error saving question:', error);
@@ -155,37 +171,43 @@ function getCustomQuestions() {
 
 // ----------------------------------------------------------------------------------------------------------
 
-// DISPLAY QUESTIONS MODAL -- Just for testing local cache retrieval (Now a feature)
-
-
+// DISPLAY CUSTOM QUESTIONS MODAL -- Just for testing local cache retrieval (Now a feature)
 
 function handleDisplayModal() {
     const displayModal = document.getElementById("display-modal");
     const displayBtn = document.getElementById("display-questions-btn");
     const close = document.getElementsByClassName("close")[2];
     const scanLines = document.getElementById("screen_scanlines")
+    const clickSound = document.getElementById("click-sound")
+    const closeSound = document.getElementById("close-beep-sound")
 
     displayBtn.addEventListener('click', function () {
+        clickSound.play()
         displayModal.style.display = "block";
         scanLines.classList.add("translucent")
     });
 
     close.addEventListener('click', function () {
+        closeSound.play()
         displayModal.style.display = "none";
         scanLines.classList.remove("translucent")
     });
 
     window.addEventListener('click', function (e) {
         if (e.target == displayModal) {
+            closeSound.play()
             displayModal.style.display = "none";
             scanLines.classList.remove("translucent")
         }
     });
 }
 
+// DISPLAY QUESTIONS FUNCTION
+
 function displayQuestions() {
     const questionsContainer = document.getElementById("questionsContainer");
     const questions = getCustomQuestions();
+
 
     if (questions.length === 0) {
         questionsContainer.innerHTML = "<p>No questions added yet.</p>";
@@ -196,29 +218,64 @@ function displayQuestions() {
     questions.forEach((question, index) => {
         questionsHTML += `
             <div class="question">
-                <h3>Question ${index + 1}</h3>
+                <h3 class="mb-3">Question ${index + 1}</h3>
                 <p><strong>Type:</strong> ${question.type}</p>
                 <p><strong>Difficulty:</strong> ${question.difficulty}</p>
                 <p><strong>Category:</strong> ${question.category}</p>
                 <p><strong>Question:</strong> ${question.question}</p>
                 <p><strong>Correct Answer:</strong> ${question.correct_answer || question.correct_answers.join(", ")}</p>
-                ${question.incorrect_answers ? `<p><strong>Incorrect Answers:</strong> ${question.incorrect_answers.join(", ")}</p>` : ""}
+                ${question.incorrect_answers ? `<p><strong>Incorrect Answers:</strong> ${question.incorrect_answers.join(", ")}</p>` : ""} 
             </div>
+            <button type="button" id="${index}" class="btn btn-menu delete-btn mb-4">Delete question</button> 
+            
         `;
-    });
+    }); // storing question index as delete buttin ID so i can use it to delete the correct question.
 
     questionsContainer.innerHTML = questionsHTML;
 }
 
+// DELETE QUESTION
+
+function deleteQuestion() {
+
+    const questionsContainer = document.getElementById("questionsContainer");
+    const deleteSound = document.getElementById("delete-sound")
+
+    // Add event delegation to handle all delete buttons
+    questionsContainer.addEventListener('click', function (e) {
+        // Check if the clicked element is a delete button
+        if (e.target.classList.contains('delete-btn')) {
+            const qIndex = parseInt(e.target.id); // Parsed into an integer as the index comes back as a string from html
+
+            try {
+                let questions = JSON.parse(localStorage.getItem('customQuestions') || '[]');
+                questions.splice(qIndex, 1);
+                localStorage.setItem('customQuestions', JSON.stringify(questions));
+                // Call display questions again to refresh modal
+                displayQuestions();
+                deleteSound.play()
+                console.log(deleteSound.play())
+
+            } catch (error) {
+                console.error('Error deleting question:', error);
+
+            }
+        }
+    });
+}
+
+// ABOUT MODAL
 
 function handleAboutModal() {
     const aboutModal = document.getElementById("aModal");
     const aboutbtn = document.getElementById("about");
-    
     const close = document.getElementsByClassName("close")[3];
     const scanLines = document.getElementById("screen_scanlines")
+    const clickSound = document.getElementById("click-sound")
+    const closeSound = document.getElementById("close-beep-sound")
 
     aboutbtn.addEventListener('click', function (e) {
+        clickSound.play()
         aboutModal.style.display = "block";
         scanLines.classList.add("translucent")
         console.log(e)
@@ -226,12 +283,14 @@ function handleAboutModal() {
     });
 
     close.addEventListener('click', function () {
+        closeSound.play()
         aboutModal.style.display = "none";
         scanLines.classList.remove("translucent")
     });
 
     window.addEventListener('click', function (e) {
         if (e.target == aboutModal) {
+            closeSound.play()
             aboutModal.style.display = "none";
             scanLines.classList.remove("translucent")
         }

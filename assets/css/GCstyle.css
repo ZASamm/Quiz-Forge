@@ -5,6 +5,11 @@
 
 }
 
+
+.GC-hidden {
+    display: none;
+}
+
 /* MODAL */
 
 .modal {
@@ -22,13 +27,27 @@
 
 .modal-content {
     background-color: var(--BGDark);
-    margin: 5% auto;
+    margin: 10vh auto;
     padding: 20px;
     border: 1px solid var(--Bright);
+    height: 80vh;
     width: 90vw;
     max-width: 1400px;
     color: var(--Bright);
-    
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    padding-right: 17px;
+    /* Prevent content shift */
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
 
 }
 
@@ -76,7 +95,7 @@
 .add-question-form label {
     display: block;
     margin-bottom: 5px;
-    
+
 }
 
 .add-question-form input,
@@ -86,7 +105,7 @@
     padding: 8px;
     margin-bottom: 10px;
     color: black;
-    background-color: var(--Medium); 
+    background-color: var(--Medium);
 }
 
 .add-question-form textarea {
@@ -101,10 +120,24 @@
 }
 
 .floppy :hover {
-    
+
     transform: scale(1.1.5);
     transition: 0.1s ease-in-out
 }
 
 
+/* AUDIO */
 
+.audio-on {
+    color: orange !important;
+}
+
+
+/* MEDIA QUERIES */
+
+/* @media (max-width: 768px) {
+    .modal-content {
+        margin-top: 10vh;
+        
+    }
+} */
