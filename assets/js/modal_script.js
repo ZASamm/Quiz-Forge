@@ -75,7 +75,6 @@ async function handleModal() {
         }
         qModal.style.display = "none";
         scanLines.classList.remove("translucent")
-        updateBoard(getSquares());
     });
 
 }
@@ -155,7 +154,7 @@ function loadQuestion(squareIndex, modal) {
         case 'text':
             // missing on click event handler, to be added later.
             document.querySelector(".answerSection").innerHTML = `
-            <input type="text">
+            <input type="text" class="text-input">
             <button class="text-submit-button">Answer</button>
             `;
 
