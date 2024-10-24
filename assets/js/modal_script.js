@@ -261,9 +261,11 @@ function multipleAnswer(event, buttons, buttonIndex, correctIndex) {
     if (!(buttons[buttonIndex].classList.contains("question-answered"))) {
         if (buttonIndex == correctIndex) {
             buttons[buttonIndex].classList.add("correct-answer");
+            console.log("Correct!");
         } else {
             buttons[buttonIndex].classList.add("incorrect-answer");
             buttons[correctIndex].classList.add("correct-answer");
+            console.log("Incorrect!");
         }
         for (let index = 0; index < buttons.length; index++) {
             buttons[index].classList.add("question-answered");
@@ -285,7 +287,11 @@ function boolAnswer(event, buttons, buttonIndex, correctAnswer) {
             console.log("Correct!");
         } else {
             buttons[buttonIndex].classList.add("incorrect-answer");
-            buttons[correctIndex].classList.add("correct-answer");
+            if (buttonIndex === 1) {
+                buttons[0].classList.add("correct-answer");
+            } else {
+                buttons[1].classList.add("correct-answer");
+            }
             console.log("Incorrect!");
         }
         for (let index = 0; index < buttons.length; index++) {

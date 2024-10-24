@@ -16,3 +16,12 @@ label, option, textarea, input, select, ::placeholder {
     font-family: "Ubuntu Mono", monospace;
 }
 
+.correct-answer {
+    color: var(--BGDark);
+    background-color: var(--Bright);
+}
+
+.incorrect-answer {
+    color: var(--offwhite);
+    background-color: var(--BG);
+}
