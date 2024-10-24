@@ -130,6 +130,14 @@ function loadQuestion(squareIndex, modal) {
             <button class="boolean-button">True</button>
             <button class="boolean-button">False</button>
             `;
+
+            // Add Event Listeners
+            let boolButtons = document.getElementsByClassName("boolean-button");
+            for (let index = 0; index < boolButtons.length; index++) {
+                boolButtons[index].addEventListener("click", function (event) {
+                    boolAnswer(event, boolButtons, index, question.correct_answer);
+                });
+            }
             break;
         case 'text':
             // missing on click event handler, to be added later.
@@ -236,7 +244,6 @@ function htmlCleanString(inputString) {
 
 function multipleAnswer(event, buttons, buttonIndex, correctIndex) {
     if (!(buttons[buttonIndex].classList.contains("question-answered"))) {
-        console.log(buttonIndex, correctIndex);
         if (buttonIndex == correctIndex) {
             buttons[buttonIndex].classList.add("correct-answer");
             console.log("Correct!");
@@ -250,3 +257,19 @@ function multipleAnswer(event, buttons, buttonIndex, correctIndex) {
         }
     }
 };
+
+function boolAnswer(event, buttons, buttonIndex, correctAnswer) {
+    if (!(buttons[buttonIndex].classList.contains("question-answered"))) {
+        if (buttons[buttonIndex].innerHTML === correctAnswer) {
+            buttons[buttonIndex].classList.add("correct-answer");
+            console.log("Correct!");
+        } else {
+            buttons[buttonIndex].classList.add("incorrect-answer");
+            buttons[correctIndex].classList.add("correct-answer");
+            console.log("Incorrect!");
+        }
+        for (let index = 0; index < buttons.length; index++) {
+            buttons[index].classList.add("question-answered");
+        }
+    }
+}
