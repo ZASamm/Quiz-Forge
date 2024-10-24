@@ -138,13 +138,13 @@ function updateBoard() {
             const square = squares[index];
             if (square.classList.contains("answer-correct")) {
                 if (square.classList.contains("player-square")) {
-                    squares.classList.add("grayed");
+                    square.classList.add("grayed");
                 } else {
                     setCorrectSquare(index, squares);
                 }
             } else if (square.classList.contains("answer-incorrect")) {
                 if (square.classList.contains("player-square")) {
-                    squares.classList.add("grayed");
+                    square.classList.add("grayed");
                 } else {
                     setIncorrectSquare(index, squares);
                 }
