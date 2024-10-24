@@ -1,6 +1,9 @@
+
+let positon = 0;
+
 document.addEventListener('DOMContentLoaded', function(){
     const beep = document.getElementById("beep-sound")
-    let positon = 0
+    
     movePlayer(0, getSquares());
 
     document.addEventListener('keydown',function(event){ 
@@ -8,17 +11,15 @@ document.addEventListener('DOMContentLoaded', function(){
             beep.play()
             let squares = getSquares();
             event.preventDefault();
-            setCorrectSquare(positon, squares);
+            // setCorrectSquare(positon, squares);
             positon = (positon + 1)%squares.length;
             movePlayer(positon, squares);
-            
-            
         }
         if(event.key === 'ArrowLeft'){
             beep.play()
             let squares = getSquares();
             event.preventDefault();
-            setIncorrectSquare(positon, squares);
+            // setIncorrectSquare(positon, squares);
             if(positon === 0){
                 positon = squares.length -1;
             } else {
@@ -85,4 +86,33 @@ function setCorrectSquare(index, squares){
 function setIncorrectSquare(index, squares){
     clearSquare(index, squares)
     squares[index].classList.add('incorrect-square');
+}
+
+/**
+ * Resets the board back to default values.
+ */
+function resetBoard() {
+    let squares = getSquares();
+    for (let i = 0; i < squares.length; i++) {
+        clearSquare(i, squares);
+        squares[i].classList.remove('answer-correct');
+        squares[i].classList.remove('answer-incorrect'); 
+    }
+    squares[0].classList.add('player-square');
+    positon = 0;
+    questions=[];
+};
+
+/**
+ * 
+ * @param { Number } index index of square 
+ * @param { Boolean } isCorrect whether the question was answered correctly or not
+ */
+function handleAnswer(index, isCorrect) {
+    let squares = getSquares();
+    if(isCorrect){
+        squares[index].classList.add("answer-correct");
+    } else {
+        squares[index].classList.add("answer-incorrect");
+    };
 }
