@@ -52,7 +52,7 @@ async function handleModal() {
             }
             qModal.style.display = "none";
             scanLines.classList.remove("translucent")
-
+            
         }
         if (event.key === "Enter") {
             let currentSquare = document.querySelector(".player-square");
@@ -106,7 +106,9 @@ function loadQuestion(squareIndex, modal) {
     let modalContent = document.querySelector(".modal-content");
     document.querySelector(".category").innerHTML = `Question ${Number(squareIndex) + 1}`;
 
-    let questionString = htmlCleanString(question.question);
+    let questionString = question.question;
+    questionString = questionString.replaceAll("<", "&lt;");
+    questionString = questionString.replaceAll(">", "&gt;");
     document.querySelector(".questionSection").innerHTML = `${questionString}`;
 
     document.querySelector(".answerSection").innerHTML = "";
@@ -120,7 +122,8 @@ function loadQuestion(squareIndex, modal) {
             possibleAnswers = shuffle(possibleAnswers);
             let htmlString = '';
             for (let answer of possibleAnswers) {
-                answer = htmlCleanString(answer);
+                answer = answer.replaceAll("<", "&lt;");
+                answer = answer.replaceAll(">", "&gt;");
                 htmlString = htmlString + `<button class="answer-button">${answer}</button>`
             };
             document.querySelector(".answerSection").innerHTML = htmlString;
@@ -152,7 +155,7 @@ function loadQuestion(squareIndex, modal) {
         case 'text':
             // missing on click event handler, to be added later.
             document.querySelector(".answerSection").innerHTML = `
-            <input type="text" class="text-input">
+            <input type="text">
             <button class="text-submit-button">Answer</button>
             `;
 

@@ -297,13 +297,18 @@ ul li {
   -o-transition: all 0.05s ease-in-out;
 }
 
+
+/* Theme toggles */
+
+#theme-toggle {
+  margin-bottom: 25px;
+}
+
 /* Media query for laptops and larger */
 
 @media (min-width: 780px) {
 
-  #Gears {
-    display: none;
-  }
+ 
 }
 
 
@@ -316,11 +321,18 @@ ul li {
 
   }
 
-  #theme-toggle , #questionsBtn, #display-questions-btn, #soundBtn, #about {
+  /* #theme-toggle , #questionsBtn, #display-questions-btn, #soundBtn, #about {
+    display: none;
+  } */
+
+  #Logo {
     display: none;
   }
 
-  
+  #theme-toggle {
+    display: flex;
+    /* margin-bottom: 5px; */
+  }
 
 }
 
