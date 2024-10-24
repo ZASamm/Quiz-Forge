@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
     document.addEventListener('keydown',function(event){ 
         if(event.key === 'ArrowRight'){
-            beep.play()
+            if(soundOn){
+                beep.play()
+                beep.currentTime = 0;}
             let squares = getSquares();
             event.preventDefault();
             // setCorrectSquare(positon, squares);
@@ -16,7 +18,9 @@ document.addEventListener('DOMContentLoaded', function(){
             movePlayer(positon, squares);
         }
         if(event.key === 'ArrowLeft'){
+            if(soundOn){
             beep.play()
+            beep.currentTime = 0;}
             let squares = getSquares();
             event.preventDefault();
             // setIncorrectSquare(positon, squares);

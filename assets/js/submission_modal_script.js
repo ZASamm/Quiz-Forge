@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleAboutModal();
     deleteQuestion();
     handlePlayModal();
+    handleGearsModal();
 
 });
 
@@ -28,20 +29,27 @@ function handleSubmitModal() {
     console.log(scanLines)
 
     submitbtn.addEventListener('click', function () {
-        clickSound.play()
+        if (soundOn) {
+            clickSound.play()
+        }
+
         submitModal.style.display = "block";
         scanLines.classList.add("translucent")
     });
 
     close.addEventListener('click', function () {
-        closeSound.play()
+        if (soundOn) {
+            closeSound.play()
+        }
         submitModal.style.display = "none";
         scanLines.classList.remove("translucent")
     });
 
     window.addEventListener('click', function (e) {
         if (e.target == submitModal) {
-            closeSound.play()
+            if (soundOn) {
+                closeSound.play()
+            }
             submitModal.style.display = "none";
             scanLines.classList.remove("translucent")
         }
@@ -49,7 +57,9 @@ function handleSubmitModal() {
 
     document.addEventListener("keydown", function (event) {
         if (submitModal.style.display === "block" && event.key === "Escape") {
-            closeSound.play()
+            if (soundOn) {
+                closeSound.play()
+            }
             submitModal.style.display = "none";
             scanLines.classList.remove("translucent")
 
@@ -195,27 +205,35 @@ function handleDisplayModal() {
     const closeSound = document.getElementById("close-beep-sound")
 
     displayBtn.addEventListener('click', function () {
-        clickSound.play()
+        if (soundOn) {
+            clickSound.play()
+        }
         displayModal.style.display = "block";
         scanLines.classList.add("translucent")
     });
 
     close.addEventListener('click', function () {
-        closeSound.play()
+        if (soundOn) {
+            closeSound.play()
+        }
         displayModal.style.display = "none";
         scanLines.classList.remove("translucent")
     });
 
     window.addEventListener('click', function (e) {
         if (e.target == displayModal) {
-            closeSound.play()
+            if (soundOn) {
+                closeSound.play()
+            }
             displayModal.style.display = "none";
             scanLines.classList.remove("translucent")
         }
     });
     document.addEventListener("keydown", function (event) {
         if (displayModal.style.display === "block" && event.key === "Escape") {
-            closeSound.play()
+            if (soundOn) {
+                closeSound.play()
+            }
             displayModal.style.display = "none";
             scanLines.classList.remove("translucent")
 
@@ -289,6 +307,7 @@ function deleteQuestion() {
 
 function handleAboutModal() {
     const aboutModal = document.getElementById("aModal");
+    console.log(aboutModal)
     const aboutbtn = document.getElementById("about");
     const close = document.getElementsByClassName("close")[3];
     const scanLines = document.getElementById("screen_scanlines")
@@ -296,7 +315,10 @@ function handleAboutModal() {
     const closeSound = document.getElementById("close-beep-sound")
 
     aboutbtn.addEventListener('click', function (e) {
-        clickSound.play()
+        console.log(e)
+        if (soundOn) {
+            clickSound.play()
+        }
         aboutModal.style.display = "block";
         scanLines.classList.add("translucent")
         console.log(e)
@@ -304,21 +326,27 @@ function handleAboutModal() {
     });
 
     close.addEventListener('click', function () {
-        closeSound.play()
+        if (soundOn) {
+            closeSound.play()
+        }
         aboutModal.style.display = "none";
         scanLines.classList.remove("translucent")
     });
 
     window.addEventListener('click', function (e) {
         if (e.target == aboutModal) {
-            closeSound.play()
+            if (soundOn) {
+                closeSound.play()
+            }
             aboutModal.style.display = "none";
             scanLines.classList.remove("translucent")
         }
     });
     document.addEventListener("keydown", function (event) {
         if (aboutModal.style.display === "block" && event.key === "Escape") {
-            closeSound.play()
+            if (soundOn) {
+                closeSound.play()
+            }
             aboutModal.style.display = "none";
             scanLines.classList.remove("translucent")
 
@@ -348,7 +376,9 @@ function handlePlayModal() {
 
 
     playBtn.addEventListener('click', function (e) {
-        clickSound.play()
+        if (soundOn) {
+            clickSound.play()
+        }
         playModal.style.display = "block";
         scanLines.classList.add("translucent")
         console.log(e)
@@ -356,26 +386,65 @@ function handlePlayModal() {
     });
 
     close.addEventListener('click', function () {
-        closeSound.play()
+        if (soundOn) {
+            closeSound.play()
+        }
         playModal.style.display = "none";
         scanLines.classList.remove("translucent")
     });
 
     window.addEventListener('click', function (e) {
         if (e.target == playModal) {
-            closeSound.play()
+            if (soundOn) {
+                closeSound.play()
+            }
             playModal.style.display = "none";
             scanLines.classList.remove("translucent")
         }
     });
     document.addEventListener("keydown", function (event) {
         if (playModal.style.display === "block" && event.key === "Escape") {
-            closeSound.play()
+            if (soundOn) {
+                closeSound.play()
+            }
             playModal.style.display = "none";
             scanLines.classList.remove("translucent")
 
         }
     })
 
-    
+
+}
+
+// Gears Modal
+
+function handleGearsModal() {
+    const mobileModal = document.getElementById("mModal");
+    const gearsbtn = document.getElementById("Gears");
+    const close = document.getElementsByClassName("close")[3];
+    const scanLines = document.getElementById("screen_scanlines")
+    const clickSound = document.getElementById("click-sound")
+    const closeSound = document.getElementById("close-beep-sound")
+
+    gearsbtn.addEventListener('click', function (e) {
+        clickSound.play()
+        mobileModal.style.display = "block";
+        scanLines.classList.add("translucent")
+        console.log(e)
+
+    });
+
+    close.addEventListener('click', function () {
+        closeSound.play()
+        mobileModal.style.display = "none";
+        scanLines.classList.remove("translucent")
+    });
+
+    window.addEventListener('click', function (e) {
+        if (e.target == mobileModal) {
+            closeSound.play()
+            mobileModal.style.display = "none";
+            scanLines.classList.remove("translucent")
+        }
+    });
 }
