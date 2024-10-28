@@ -22,6 +22,10 @@ async function handleModal() {
     const clickSound = document.getElementById("click-sound")
     const closeSound = document.getElementById("close-beep-sound")
 
+    // Unhide Modal
+    let gameboard = document.querySelector(".zs_folder_row");
+    gameboard.classList.remove("GC-hidden");
+
     // Add click event to each square
     for (let index = 0; index < squares.length; index++) {
         const square = squares[index];
