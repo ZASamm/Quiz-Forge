@@ -30,6 +30,7 @@ async function handleModal() {
     for (let index = 0; index < squares.length; index++) {
         const square = squares[index];
         square.setAttribute("squareIndex", index);
+        square.classList.add(questions[index].type);
         square.addEventListener("click", function () {
             position = index;
             updateBoard(squares);
@@ -69,6 +70,29 @@ async function handleModal() {
                 }
                 console.log(`Loading current square ${currentSquare}`);
             };
+        }
+
+        if (qModal.style.display === "block")
+        {
+            let currentSquare = document.querySelector(".player-square");
+            if (currentSquare.classList.contains("multiple")) {
+                let answerButtons = document.querySelectorAll(".answer-button");
+                if(event.key > 0 && event.key <= answerButtons.length) {
+                    answerButtons[event.key-1].click();
+                }
+            }
+            if (currentSquare.classList.contains("boolean")) {
+                let booleanButtons = document.querySelectorAll(".boolean-button");
+                if(event.key > 0 && event.key <= booleanButtons.length) {
+                    booleanButtons[event.key-1].click();
+                }
+            }
+            if (currentSquare.classList.contains("text")) {
+                let answerButton = document.querySelector(".text-submit-button");
+                if(event.key === "Enter"){
+                    answerButton.click();
+                }
+            }
         }
     });
 
