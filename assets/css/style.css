@@ -25,6 +25,10 @@ p {
   filter: grayscale(100%) !important;
 }
 
+.close {
+  font-size: 5vh;
+}
+
 :root {
   /* Colour Variables */
 
@@ -286,7 +290,11 @@ ul li {
 
 #theme-toggle {
   margin-bottom: 25px;
-}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  }
+
 
 /* Media query for laptops and larger */
 

@@ -23,4 +23,5 @@ label, option, textarea, input, select, ::placeholder {
 
 .gameboard-container {
     min-height: 75vh;
+    width: 100%;
 }
