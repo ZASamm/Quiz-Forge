@@ -88,6 +88,7 @@ async function handleModal() {
                 }
             }
             if (currentSquare.classList.contains("text")) {
+                //let answerText = document.querySelector(".text-input");
                 let answerButton = document.querySelector(".text-submit-button");
                 if(event.key === "Enter"){
                     answerButton.click();
@@ -190,7 +191,12 @@ function loadQuestion(squareIndex, modal) {
             let submitButton = document.querySelector(".text-submit-button");
             let textField = document.querySelector(".text-input");
             submitButton.addEventListener("click", function (event) {
-                textAnswer(event, textField, submitButton, question.correct_answers, squareIndex)
+                if(textField.value === ""){
+                    textField.focus();
+                }
+                else {
+                    textAnswer(event, textField, submitButton, question.correct_answers, squareIndex);
+                }
             });
             break;
         default:
